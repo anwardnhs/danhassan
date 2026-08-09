@@ -1,0 +1,6 @@
+- [ ] Add stock.jpg as background image in hero section
+- [ ] Add dark overlay for text visibility
+- [ ] Change h1 to white text, remove gradient
+- [ ] Ensure StockTicker text is white
+- [ ] Fix design of DANH badges (make more prominent)
+- [ ] Fix styling of Download Annual Report button
