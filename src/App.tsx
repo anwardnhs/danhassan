@@ -1,6 +1,7 @@
 // src/App.jsx
 
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 // Remove the Footer import from here
 // import Footer from './components/Footer'; 
@@ -49,6 +50,7 @@ function App() {
       </main>
       {/* --- REMOVE THE FOOTER FROM HERE --- */}
       {/* <Footer onNavigate={setCurrentPage} /> */}
+      <Analytics />
     </div>
   );
 }
