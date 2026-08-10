@@ -224,45 +224,35 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
       
       {/* POWER CONTENT */}
       {activeSegment === 'power' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center animate-in fade-in slide-in-from-right-8 duration-700">
-          <div className="lg:col-span-5 order-2 lg:order-1 pr-0 lg:pr-8">
-            <h3 className="text-3xl font-bold text-slate-900 mb-2">South Atlantic Energy</h3>
-            <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              We entered the power sector through Nigeria's landmark 2013 privatisation — acquiring generation and distribution assets that most investors considered too complex to operate. A decade later, our vertically integrated energy platform spans three countries and serves 4.4 million customers. The complexity that others avoided became our competitive advantage.
-            </p>
-            
-            <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mb-8">
-              <div>
-                <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">Annual Revenue</div>
-                <div className="text-4xl font-light text-slate-900">$6.3<span className="text-xl text-slate-400">B</span></div>
-              </div>
-              <div>
-                <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">Operating Profit</div>
-                <div className="text-4xl font-light text-slate-900">$1.7<span className="text-xl text-slate-400">B</span></div>
-              </div>
+        <div className="animate-in fade-in slide-in-from-right-8 duration-700">
+          {/* Full-width image with subtle overlay */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] mb-12 group">
+            <img src={damImage} alt="Hydroelectric Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">Subsidiary</span>
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mt-1">South Atlantic Energy</h3>
             </div>
           </div>
-          
-          <div className="lg:col-span-7 order-1 lg:order-2 relative rounded-2xl overflow-hidden aspect-[4/3] group shadow-2xl">
-            <img src={damImage} alt="Hydroelectric Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-slate-900/20"></div>
-            
-            {/* Glassmorphism Floating Card */}
-            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-auto bg-white/10 backdrop-blur-md border border-white/20 p-6 sm:p-8 rounded-xl max-w-sm">
-              <ul className="space-y-5">
-                <li className="flex justify-between items-end border-b border-white/20 pb-4">
-                  <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Capacity</span>
-                  <span className="text-2xl font-bold text-white">4,850 <span className="text-sm font-normal">MW</span></span>
-                </li>
-                <li className="flex justify-between items-end border-b border-white/20 pb-4">
-                  <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Customers</span>
-                  <span className="text-2xl font-bold text-white">4.4 <span className="text-sm font-normal">Million</span></span>
-                </li>
-                <li className="flex justify-between items-end">
-                  <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Footprint</span>
-                  <span className="text-xl font-bold text-white">3 Countries</span>
-                </li>
-              </ul>
+
+          {/* Content grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
+            <p className="text-lg text-slate-600 leading-relaxed">
+              We entered the power sector through Nigeria's landmark 2013 privatisation — acquiring generation and distribution assets that most investors considered too complex to operate. A decade later, our vertically integrated energy platform spans three countries and serves 4.4 million customers. The complexity that others avoided became our competitive advantage.
+            </p>
+            <div className="grid grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">4,850</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">MW Capacity</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">4.4<span className="text-2xl text-slate-400">M</span></div>
+                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">Customers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">3</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">Countries</div>
+              </div>
             </div>
           </div>
         </div>
@@ -270,40 +260,35 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
 
       {/* INFRASTRUCTURE CONTENT */}
       {activeSegment === 'infra' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center animate-in fade-in slide-in-from-right-8 duration-700">
-          <div className="lg:col-span-5 order-2 lg:order-1 pr-0 lg:pr-8">
-            <h3 className="text-3xl font-bold text-slate-900 mb-2">Ironwood Engineering</h3>
-            <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              Ironwood Engineering began as a procurement desk supplying electrical equipment to government projects in northern Nigeria. Over three decades, it evolved into a full-service EPC contractor — one that now builds the power grids, substations, and civil infrastructure that the Group's own energy assets depend on. That captive demand pipeline is what separates Ironwood from conventional contractors competing purely on price.
-            </p>
-            
-            <div className="border-t border-slate-200 pt-8 mb-8">
-              <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">Annual Revenue</div>
-              <div className="text-4xl font-light text-slate-900">$1.43<span className="text-xl text-slate-400">B</span></div>
+        <div className="animate-in fade-in slide-in-from-right-8 duration-700">
+          {/* Full-width image with subtle overlay */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] mb-12 group">
+            <img src={pacificImage} alt="Infrastructure Project" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">Subsidiary</span>
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mt-1">Ironwood Engineering</h3>
             </div>
           </div>
 
-          <div className="lg:col-span-7 order-1 lg:order-2 relative rounded-2xl overflow-hidden aspect-[4/3] group shadow-2xl">
-            <img src={pacificImage} alt="Infrastructure Project" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-slate-900/20"></div>
-            
-            {/* Glassmorphism Floating Card */}
-            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-auto bg-slate-900/40 backdrop-blur-md border border-white/20 p-6 sm:p-8 rounded-xl max-w-md">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-white/70 mb-5">Core Capabilities</h4>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-4 text-white">
-                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
-                  <span className="font-medium">Power Grid Expansion (132kV - 330kV)</span>
-                </li>
-                <li className="flex items-center gap-4 text-white">
-                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
-                  <span className="font-medium">Roads, Bridges & Civil Infrastructure</span>
-                </li>
-                <li className="flex items-center gap-4 text-white">
-                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
-                  <span className="font-medium">Power Plant Construction & Rehab</span>
-                </li>
-              </ul>
+          {/* Content grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Ironwood Engineering began as a procurement desk supplying electrical equipment to government projects in northern Nigeria. Over three decades, it evolved into a full-service EPC contractor — one that now builds the power grids, substations, and civil infrastructure that the Group's own energy assets depend on. That captive demand pipeline is what separates Ironwood from conventional contractors competing purely on price.
+            </p>
+            <div className="space-y-5">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0" />
+                <span className="text-sm font-semibold text-slate-800">High-Voltage Transmission (132kV – 330kV)</span>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0" />
+                <span className="text-sm font-semibold text-slate-800">Roads, Bridges & Civil Infrastructure</span>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0" />
+                <span className="text-sm font-semibold text-slate-800">Power Plant Construction & Rehabilitation</span>
+              </div>
             </div>
           </div>
         </div>
@@ -311,54 +296,40 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
 
       {/* REAL ESTATE CONTENT */}
       {activeSegment === 'realestate' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center animate-in fade-in slide-in-from-right-8 duration-700">
-          <div className="lg:col-span-5 order-2 lg:order-1 pr-0 lg:pr-8">
-            <h3 className="text-3xl font-bold text-slate-900 mb-2">Harbor & Hedge</h3>
-            <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              Harbor & Hedge does not build in isolation. Every development sits within an infrastructure corridor that the Group is already powering or constructing — a co-location strategy that drives higher occupancy from day one, reduces speculative risk, and generates the kind of recurring rental income that balances the capital intensity of our energy and engineering operations.
-            </p>
-            
-            <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mb-8">
-              <div>
-                <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">Annual Revenue</div>
-                <div className="text-4xl font-light text-slate-900">$672<span className="text-xl text-slate-400">M</span></div>
-              </div>
-              <div>
-                <div className="text-xs text-slate-500 uppercase tracking-widest font-semibold mb-2">Profit Margin</div>
-                <div className="text-4xl font-light text-slate-900">24<span className="text-xl text-slate-400">%</span></div>
-              </div>
+        <div className="animate-in fade-in slide-in-from-right-8 duration-700">
+          {/* Full-width image with subtle overlay */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] mb-12 group">
+            <img src={southBlueImage} alt="Real Estate Development" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">Subsidiary</span>
+              <h3 className="text-3xl sm:text-4xl font-bold text-white mt-1">Harbor & Hedge</h3>
             </div>
           </div>
 
-          <div className="lg:col-span-7 order-1 lg:order-2 relative rounded-2xl overflow-hidden aspect-[4/3] group shadow-2xl">
-            <img src={southBlueImage} alt="Real Estate Asset" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-slate-900/20"></div>
-            
-            {/* Glassmorphism Floating Card */}
-            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 bg-blue-900/30 backdrop-blur-md border border-white/20 p-6 sm:p-8 rounded-xl sm:max-w-md">
-              <div className="mb-6 flex items-baseline gap-2">
-                <span className="text-4xl font-bold text-white">$1.9B</span>
-                <span className="text-sm font-medium text-white/80 uppercase tracking-wider">Total Value</span>
+          {/* Content grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Harbor & Hedge does not build in isolation. Every development sits within an infrastructure corridor that the Group is already powering or constructing — a co-location strategy that drives higher occupancy from day one, reduces speculative risk, and generates the kind of recurring rental income that balances the capital intensity of our energy and engineering operations.
+            </p>
+            <div className="grid grid-cols-3 gap-6">
+              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="text-2xl font-bold text-slate-900 mb-1">52%</div>
+                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Commercial</div>
               </div>
-              
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between text-xs font-semibold uppercase tracking-wider mb-2 text-white"><span>Commercial</span><span>52%</span></div>
-                  <div className="h-1.5 bg-black/20 rounded-full overflow-hidden"><div className="h-full bg-white w-[52%]"></div></div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-semibold uppercase tracking-wider mb-2 text-white"><span>Industrial</span><span>31%</span></div>
-                  <div className="h-1.5 bg-black/20 rounded-full overflow-hidden"><div className="h-full bg-white/80 w-[31%]"></div></div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-semibold uppercase tracking-wider mb-2 text-white"><span>Residential</span><span>17%</span></div>
-                  <div className="h-1.5 bg-black/20 rounded-full overflow-hidden"><div className="h-full bg-white/50 w-[17%]"></div></div>
-                </div>
+              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="text-2xl font-bold text-slate-900 mb-1">31%</div>
+                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Industrial</div>
+              </div>
+              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="text-2xl font-bold text-slate-900 mb-1">17%</div>
+                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Residential</div>
               </div>
             </div>
           </div>
         </div>
       )}
+
 
     </div>
   </div>
