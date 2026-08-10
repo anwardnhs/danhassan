@@ -66,7 +66,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 font-bold max-w-4xl mx-auto drop-shadow-lg leading-relaxed px-4 mb-8 sm:mb-12">
-            Danhassan & Co is a diversified investment holding company with core positions in power, engineering, and real estate across key African markets.
+            From power stations lighting West Africa to logistics hubs reshaping continental trade — we build the infrastructure that economies are built on.
           </p>
           
           {/* Simplified CTAs - Hick's Law: 2 clear choices */}
@@ -168,7 +168,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <span className="font-bold">Business Lines</span>
       </h2>
       <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
-        A diversified portfolio bridging critical gaps across essential infrastructure sectors to drive sustainable economic growth.
+        Three verticals, one mandate: building the critical systems that Africa's growing economies depend on.
       </p>
     </div>
 
@@ -183,7 +183,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Power & Energy
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed mb-10">
-            We operate and manage a diversified portfolio of power generation assets, including thermal and solar plants, across West Africa. Our focus is on delivering reliable energy solutions to support industrial growth and community development.
+            Behind the grid that lights millions of homes across Nigeria, Ghana, and Kenya sits a fleet of thermal and renewable assets — quietly generating the baseload power that keeps industries running and cities growing.
           </p>
           
           <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mt-4">
@@ -239,7 +239,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Infrastructure & Engineering
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed">
-            We provide engineering, procurement, and construction (EPC) services for large-scale infrastructure projects across Africa. Our expertise spans power plants, water treatment facilities, and transportation networks, ensuring sustainable and efficient project delivery.
+            Every megawatt we generate needs a way to reach the people who use it. Our engineering arm designs and builds the high-voltage transmission lines, substations, and civil works that connect power generation to the communities and industries it serves.
           </p>
         </div>
       </div>
@@ -254,7 +254,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Real Estate & Property
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed">
-            We manage a diversified real estate portfolio across West Africa, including residential, commercial, and mixed-use developments. Our focus is on sustainable urban growth and community-centric projects that enhance local economies.
+            Where we build power plants, communities follow. Our property division develops the commercial offices, logistics hubs, and residential estates that turn infrastructure corridors into thriving economic zones across West Africa's fastest-growing cities.
           </p>
         </div>
 
@@ -293,7 +293,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </h2>
         
         <p className="text-lg text-slate-600 leading-relaxed mb-10">
-          Executive leadership supported by a seasoned board and independent directors across finance, strategy, and ESG committees.
+          Steered by leaders who have spent careers building Africa's energy and industrial landscape — from landmark privatisation deals to billion-dollar capital raises on international markets.
         </p>
         
         {/* Leadership Profile Cards */}
@@ -420,23 +420,23 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* INVESTOR CTA - Prominent, clear action */}
       <section className="py-16 sm:py-20 md:py-24 bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-white">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6">Investor Resources</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6">The Numbers Behind the Mission</h2>
           <p className="text-base sm:text-lg text-slate-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
-            Access financial reports, stock information, and corporate governance documents.
+            Our latest annual report is now available. Explore the full financial picture — from segment performance and capital allocation to our long-term strategic priorities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onNavigate('investors')}
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-emerald-900 font-bold uppercase tracking-wide rounded-lg hover:bg-slate-100 transition-all shadow-xl hover:shadow-2xl touch-manipulation"
             >
-              Investor Relations
+              Read the Annual Report
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
             <button 
               onClick={() => onNavigate('about')}
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-bold uppercase tracking-wide rounded-lg hover:bg-white hover:text-emerald-900 transition-all shadow-xl touch-manipulation"
             >
-              Corporate Profile
+              Investor Relations
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
           </div>

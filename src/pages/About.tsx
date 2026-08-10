@@ -115,7 +115,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           </h1>
           
           <p className="text-2xl text-slate-600 font-light max-w-4xl leading-relaxed mb-16">
-            Danhassan & Co, Plc is a diversified investment holding company deploying patient capital into the energy, real estate , and industrial infrastructure that powers emerging economies.
+            Where others see emerging markets, we see essential infrastructure waiting to be built — and we have spent six decades proving it can be done with discipline, patience, and lasting impact.
           </p>
 
           {/* NEW FOUNDATION IMAGE */}
@@ -192,7 +192,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           
           <div>
             <p className="text-xl text-slate-700 leading-relaxed mb-8">
-              Danhassan & Co, Plc is a pan-African infrastructure investment company focused on purpose-built energy, real estate and industrial assets. We pursue disciplined growth through operational rigor, sustainable investments and strategic partnerships that deliver measurable value for stakeholders across the continent.
+              We pursue disciplined growth through operational rigour, sustainable investment, and strategic partnerships that deliver measurable value for stakeholders across the continent. Our approach is straightforward: acquire essential assets, operate them to world-class standards, and hold for the long term.
             </p>
             <div className="h-[480px] w-full rounded-2xl overflow-hidden shadow-2xl group">
               <img src={frontImage} alt="Danhassan House, Abuja" className="h-full w-full object-cover" />
@@ -219,7 +219,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
         </h2>
       </div>
       <p className="text-lg text-slate-600 max-w-md pb-2">
-        Three core areas of focus, working together to build and power the future of African infrastructure.
+        The strategic rationale behind each of our core business lines — why we entered, what sets us apart, and where we are headed.
       </p>
     </div>
 
@@ -259,7 +259,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           <div className="lg:col-span-5 order-2 lg:order-1 pr-0 lg:pr-8">
             <h3 className="text-3xl font-bold text-slate-900 mb-2">South Atlantic Energy</h3>
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              We generate, manage, and distribute reliable energy across Nigeria, Ghana, and Kenya. By blending hydro, solar, wind, and thermal power, we provide stable electricity to millions of homes and businesses.
+              We entered the power sector through Nigeria's landmark 2013 privatisation — acquiring generation and distribution assets that most investors considered too complex to operate. A decade later, our vertically integrated energy platform spans three countries and serves 4.4 million customers. The complexity that others avoided became our competitive advantage.
             </p>
             
             <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mb-8">
@@ -305,7 +305,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           <div className="lg:col-span-5 order-2 lg:order-1 pr-0 lg:pr-8">
             <h3 className="text-3xl font-bold text-slate-900 mb-2">Ironwood Engineering</h3>
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              We design and build the physical backbone of growing economies. From expansive power grids to vital roads and bridges, we deliver large-scale projects from start to finish, ensuring quality and longevity.
+              Ironwood Engineering began as a procurement desk supplying electrical equipment to government projects in northern Nigeria. Over three decades, it evolved into a full-service EPC contractor — one that now builds the power grids, substations, and civil infrastructure that the Group's own energy assets depend on. That captive demand pipeline is what separates Ironwood from conventional contractors competing purely on price.
             </p>
             
             <div className="border-t border-slate-200 pt-8 mb-8">
@@ -346,7 +346,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           <div className="lg:col-span-5 order-2 lg:order-1 pr-0 lg:pr-8">
             <h3 className="text-3xl font-bold text-slate-900 mb-2">Harbor & Hedge</h3>
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-              We develop smart, sustainable spaces where people live, work, and connect. Our portfolio spans modern commercial offices, efficient industrial logistics hubs, and premium residential communities.
+              Harbor & Hedge does not build in isolation. Every development sits within an infrastructure corridor that the Group is already powering or constructing — a co-location strategy that drives higher occupancy from day one, reduces speculative risk, and generates the kind of recurring rental income that balances the capital intensity of our energy and engineering operations.
             </p>
             
             <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mb-8">
@@ -399,8 +399,8 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
       <section className="py-32 bg-gradient-to-b from-white to-[#FAF9F6]">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
           <div className="mb-16 text-center">
-            <h2 className="text-5xl font-serif text-slate-900 mb-6 leading-tight">Leadership</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Executive leadership supported by a seasoned board with deep institutional oversight.</p>
+            <h2 className="text-5xl font-serif text-slate-900 mb-6 leading-tight">Governance</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">Eleven directors. Four independent committees. A board built to challenge management, protect minority shareholders, and hold every capital allocation decision to account.</p>
           </div>
           
           <div className="mb-20">
@@ -509,11 +509,11 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
       {/* CTA BAND */}
       <section className="bg-gradient-to-br from-slate-900  to-slate-900 py-28 text-white text-center border-y border-slate-700">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">For comprehensive financial disclosures</h2>
-          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">Access detailed financial reports, governance documents, and investor presentations.</p>
+          <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">See Where the Capital Goes</h2>
+          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">Our portfolio page breaks down every subsidiary — capacity figures, revenue splits, and the operating metrics behind the headlines.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button onClick={() => onNavigate('investors')} className="group w-full sm:w-auto px-10 py-5 bg-white text-slate-900 text-sm font-bold uppercase tracking-[0.15em] hover:bg-emerald-600 hover:text-white transition-all duration-300 rounded-full hover:scale-105 shadow-2xl flex items-center justify-center gap-3">
-              Investor Relations Portal <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <button onClick={() => onNavigate('portfolio')} className="group w-full sm:w-auto px-10 py-5 bg-white text-slate-900 text-sm font-bold uppercase tracking-[0.15em] hover:bg-emerald-600 hover:text-white transition-all duration-300 rounded-full hover:scale-105 shadow-2xl flex items-center justify-center gap-3">
+              Explore the Portfolio <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
             <button className="group w-full sm:w-auto px-10 py-5 border-2 border-slate-600 text-white text-sm font-bold uppercase tracking-[0.15em] hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-300 rounded-full hover:scale-105 flex items-center justify-center gap-3">
               <Download className="h-5 w-5" /> Download PDF Profile

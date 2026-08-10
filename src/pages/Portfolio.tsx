@@ -228,7 +228,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
         Core Operations Powering <span className="text-slate-500">Regional Growth</span>
       </h2>
       <p className="text-xl text-slate-700 leading-relaxed">
-        We invest in and operate essential businesses across three key sectors, building the foundational infrastructure needed for an expanding economy.
+        Detailed operating profiles for each subsidiary — including installed capacity, revenue contribution, and project scope across our three core verticals.
       </p>
     </div>
 
@@ -449,7 +449,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center text-white">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6">Portfolio Financial Data</h2>
           <p className="text-base sm:text-lg text-slate-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
-            Access detailed subsidiary financials, segment analysis, and portfolio performance metrics.
+            For audited financials, credit ratings, stock data, and governance documents, visit our dedicated Investor Relations portal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button 

@@ -407,35 +407,16 @@ export default function Investors({ onNavigate }: InvestorsProps) {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-serif mb-6">Stay Informed</h2>
           <p className="text-slate-100 text-lg mb-10 max-w-xl mx-auto">
-            Receive regulatory filings, financial results, and press releases directly to your inbox.
+            Stay up to date with regulatory filings, financial results, and corporate announcements through our Newsroom.
           </p>
           
-          {subscribeStatus === 'success' ? (
-            <div className="bg-emerald-800 border border-emerald-700 p-6 rounded-lg inline-flex items-center gap-4 animate-in fade-in zoom-in duration-300">
-              <div className="p-2 bg-emerald-700 rounded-full">
-                <ShieldCheck className="w-6 h-6 text-emerald-100" />
-              </div>
-              <span className="font-bold text-lg text-white">Successfully subscribed!</span>
-            </div>
-          ) : (
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-0 max-w-lg mx-auto bg-white/10 p-1 rounded-sm border border-white/20">
-              <input 
-                type="email" 
-                value={emailSubscribe}
-                onChange={(e) => setEmailSubscribe(e.target.value)}
-                placeholder="Enter your email address" 
-                required
-                className="flex-1 px-6 py-4 bg-transparent text-white placeholder-white/50 focus:outline-none text-base"
-              />
-              <button 
-                type="submit" 
-                disabled={subscribeStatus === 'submitting'}
-                className="px-8 py-4 bg-white text-emerald-900 font-bold uppercase tracking-widest text-sm hover:bg-emerald-50 transition-all disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
-              >
-                {subscribeStatus === 'submitting' ? '...' : 'Subscribe Now'}
-              </button>
-            </form>
-          )}
+          <button 
+            onClick={() => onNavigate('newsroom')}
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white text-sm font-bold uppercase tracking-wider rounded-lg hover:bg-slate-800 transition-all"
+          >
+            Visit the Newsroom
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </button>
         </div>
       </section>
 

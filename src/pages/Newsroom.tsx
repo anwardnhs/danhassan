@@ -204,7 +204,7 @@ export default function Newsroom({ onNavigate }: NewsroomProps) {
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Media Inquiries</h3>
             <h2 className="text-3xl font-serif text-slate-900 mb-6">Corporate Communications</h2>
             <p className="text-slate-600 mb-8">
-              For press inquiries, interview requests, and official statements from Danhassan & Co.
+              For press inquiries and official statements, reach us at media@danhassan.co or visit our Contact page for the full media team directory.
             </p>
             
             <div className="space-y-4">
