@@ -66,7 +66,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 font-bold max-w-4xl mx-auto drop-shadow-lg leading-relaxed px-4 mb-8 sm:mb-12">
-            From power stations lighting West Africa to logistics hubs reshaping continental trade — we build the infrastructure that economies are built on.
+            Building the critical systems that power Africa's economies from energy and infrastructure to real estate and community development.  
           </p>
           
           {/* Simplified CTAs - Hick's Law: 2 clear choices */}
