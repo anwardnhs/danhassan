@@ -138,13 +138,13 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
             <div>
               <div className="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-3">Market Cap</div>
               <div className="text-4xl font-poppins text-slate-900">
-                <CountUpText end={19.5} prefix="$" suffix="B" decimals={1} />
+                <CountUpText end={27.3} prefix="₦" suffix="T" decimals={1} />
               </div>
             </div>
             <div>
               <div className="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold mb-3">Revenue (FY25)</div>
               <div className="text-4xl font-poppins text-slate-900">
-                <CountUpText end={8.4} prefix="$" suffix="B" decimals={1} />
+                <CountUpText end={11.8} prefix="₦" suffix="T" decimals={1} />
               </div>
             </div>
             <div>

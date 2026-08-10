@@ -62,10 +62,10 @@ const CountUpText = ({
 // --- DATA STRUCTURES ---
 
 const keyMetrics = [
-  { label: 'Market Cap', num: 19.5, prefix: '$', suffix: 'B', decimals: 1, sub: 'NGX: DANHASSAN', trend: 'up', icon: TrendingUp },
-  { label: 'Revenue (FY25)', num: 8.4, prefix: '$', suffix: 'B', decimals: 1, sub: 'YoY Growth: +12%', trend: 'up', icon: BarChart3 },
-  { label: 'EBITDA', num: 2.1, prefix: '$', suffix: 'B', decimals: 1, sub: 'Margin: 25%', trend: 'neutral', icon: BarChart3 },
-  { label: 'Net Income', num: 1.45, prefix: '$', suffix: 'B', decimals: 2, sub: 'EPS: $0.17', trend: 'up', icon: TrendingUp },
+  { label: 'Market Cap', num: 27.3, prefix: '₦', suffix: 'T', decimals: 1, sub: 'NGX: DANHASSAN', trend: 'up', icon: TrendingUp },
+  { label: 'Revenue (FY25)', num: 11.8, prefix: '₦', suffix: 'T', decimals: 1, sub: 'YoY Growth: +12%', trend: 'up', icon: BarChart3 },
+  { label: 'EBITDA', num: 2.9, prefix: '₦', suffix: 'T', decimals: 1, sub: 'Margin: 25%', trend: 'neutral', icon: BarChart3 },
+  { label: 'Net Income', num: 1.45, prefix: '₦', suffix: 'T', decimals: 2, sub: 'EPS: ₦170.00', trend: 'up', icon: TrendingUp },
   { label: 'ROE', num: 12.0, prefix: '', suffix: '%', decimals: 1, sub: 'Return on Equity', trend: 'neutral', icon: BarChart3 },
   { label: 'Debt/Equity', num: 0.58, prefix: '', suffix: 'x', decimals: 2, sub: 'Prudent Leverage', trend: 'neutral', icon: ShieldCheck }
 ];

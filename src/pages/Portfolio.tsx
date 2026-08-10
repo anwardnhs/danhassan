@@ -136,7 +136,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                 <div className="bg-slate-50 border-2 border-slate-200 p-4 sm:p-6 rounded-lg">
                   <div className="text-xs sm:text-sm uppercase tracking-wider text-slate-700 font-bold mb-2">Total Assets</div>
                   <div className="text-2xl sm:text-3xl font-bold text-slate-900">
-                    <CountUpText end={24.5} prefix="$" suffix="B" decimals={1} />
+                    <CountUpText end={34.3} prefix="₦" suffix="T" decimals={1} />
                   </div>
                 </div>
                 <div className="bg-slate-50 border-2 border-slate-200 p-4 sm:p-6 rounded-lg">
