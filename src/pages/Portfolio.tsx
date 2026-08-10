@@ -259,181 +259,150 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
       </div>
     </div>
 
-    {/* Tab Content Display - Cleaned up layouts and positioning */}
-    <div className="min-h-[450px]">
+    {/* Tab Content Display */}
+    <div className="min-h-[500px]">
       
-      {/* POWER CONTENT - Jargon reduced: "Vertically-integrated power sector platform" -> clear description */}
+      {/* POWER CONTENT */}
       {activeSegment === 'power' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in slide-in-from-right-8 duration-700">
-          <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
+        <div className="animate-in fade-in slide-in-from-right-8 duration-700">
+          {/* Full-width image with subtle overlay */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] mb-12 group">
+            <img src={damImage} alt="Hydroelectric Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8 flex flex-col sm:flex-row sm:items-end justify-between right-8 gap-4">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">Subsidiary</span>
+                <h3 className="text-3xl sm:text-4xl font-bold text-white mt-1">South Atlantic Energy Plc</h3>
+              </div>
+              <a 
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-slate-900 transition-all duration-300 w-fit cursor-pointer"
+              >
+                <span>Visit site — www.sae.com</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Content grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
             <div>
-              <h3 className="text-3xl font-bold text-slate-950 mb-3">Reliable Energy Generation & Supply</h3>
-              <h4 className="text-xl font-medium text-emerald-700 mb-5">South Atlantic Energy Plc</h4>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">
+              <h4 className="text-2xl font-bold text-slate-900 mb-4">Reliable Energy Generation & Supply</h4>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 We own and manage the complete energy lifecycle, from producing power using sun, water, and traditional fuels, to delivering it directly to homes and businesses across Nigeria, Ghana, and Kenya.
               </p>
             </div>
-            
-            {/* Simplified Key Financials */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-              <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-5">
-                <TrendingUp className="w-10 h-10 text-emerald-600 shrink-0" />
-                <div>
-                  <div className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">Annual Revenue</div>
-                  <div className="text-3xl font-bold text-slate-950">$6.30<span className="text-2xl font-medium text-slate-500">B</span></div>
-                </div>
+            <div className="grid grid-cols-3 gap-8 pt-2">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">4,850</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">MW Capacity</div>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-5">
-                <BarChart3 className="w-10 h-10 text-emerald-600 shrink-0" />
-                <div>
-                  <div className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">Operating Profit</div>
-                  <div className="text-3xl font-bold text-slate-950">$1.70<span className="text-2xl font-medium text-slate-500">B</span></div>
-                </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">4.4<span className="text-2xl text-slate-400">M</span></div>
+                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">Customers</div>
               </div>
-            </div>
-          </div>
-          
-          {/* Visual Highlight Card */}
-          <div className="lg:col-span-5 order-1 lg:order-2 relative bg-emerald-950 text-white rounded-3xl overflow-hidden p-8 lg:p-10 shadow-2xl aspect-[4/3] lg:aspect-auto min-h-[350px] flex flex-col">
-            <div className="absolute inset-0 z-0">
-              <img src={damImage} alt="Hydroelectric Dam" className="w-full h-full object-cover transition-transform duration-10000 hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/80 to-transparent"></div>
-            </div>
-            
-            <div className="relative z-10 mt-auto space-y-6">
-              <div className="h-px w-16 bg-emerald-400" />
-              <h4 className="text-base font-semibold uppercase tracking-widest text-emerald-200">Scale of Operations</h4>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-4xl font-extrabold">4,850</div>
-                  <div className="text-xs font-medium uppercase tracking-wide text-emerald-200 mt-1">MW Capacity</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-extrabold">4.4<span className="text-3xl">M</span></div>
-                  <div className="text-xs font-medium uppercase tracking-wide text-emerald-200 mt-1">Customers</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-extrabold">3</div>
-                  <div className="text-xs font-medium uppercase tracking-wide text-emerald-200 mt-1">Countries</div>
-                </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-slate-900 mb-2">3</div>
+                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">Countries</div>
               </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* INFRA CONTENT - Jargon reduced: "Turnkey construction" -> clear description */}
+      {/* INFRASTRUCTURE CONTENT */}
       {activeSegment === 'infra' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in slide-in-from-right-8 duration-700">
-          <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
+        <div className="animate-in fade-in slide-in-from-right-8 duration-700">
+          {/* Full-width image with subtle overlay */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] mb-12 group">
+            <img src={pacificImage} alt="Infrastructure Project" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8 flex flex-col sm:flex-row sm:items-end justify-between right-8 gap-4">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">Subsidiary</span>
+                <h3 className="text-3xl sm:text-4xl font-bold text-white mt-1">Ironwood Engineering Limited</h3>
+              </div>
+              <a 
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-slate-900 transition-all duration-300 w-fit cursor-pointer"
+              >
+                <span>Visit site — www.ironwoodeng.com</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Content grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
             <div>
-              <h3 className="text-3xl font-bold text-slate-950 mb-3">Major Infrastructure Development</h3>
-              <h4 className="text-xl font-medium text-slate-700 mb-5">Ironwood Engineering Limited</h4>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">
+              <h4 className="text-2xl font-bold text-slate-900 mb-4">Major Infrastructure Development</h4>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 We handle the complete design, building, and fixing of large-scale projects, focusing on high-voltage power lines and essential concrete work needed for industrial growth.
               </p>
             </div>
-            
-            {/* Key Fact */}
-            <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm inline-flex gap-5 items-center">
-                <Building2 className="w-12 h-12 text-slate-600 shrink-0" />
-                <div>
-                    <div className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-1">Annual Revenue</div>
-                    <div className="text-4xl font-bold text-slate-950">$1.43<span className="text-3xl font-medium text-slate-500">B</span></div>
-                </div>
-            </div>
-          </div>
-
-          {/* List Style Highlight Card */}
-          <div className="lg:col-span-5 order-1 lg:order-2 relative bg-slate-950 text-white rounded-3xl overflow-hidden p-8 lg:p-10 shadow-2xl aspect-[4/3] lg:aspect-auto min-h-[350px]">
-            <div className="absolute inset-0 z-0">
-              <img src={pacificImage} alt="Infrastructure Project" className="w-full h-full object-cover transition-transform duration-10000 hover:scale-110" />
-              <div className="absolute inset-0 bg-slate-950/90 mix-blend-multiply"></div>
-            </div>
-
-            <div className="relative z-10 flex flex-col h-full space-y-6">
-              <h4 className="text-base font-semibold uppercase tracking-widest text-slate-300 pb-3 border-b border-slate-700">Core Capabilities</h4>
-              <ul className="space-y-5 flex-grow justify-center flex flex-col">
-                {[
-                    { title: "High-Voltage Transmission", desc: "Building the main power grid (132kV - 330kV)" },
-                    { title: "Large Civil Works", desc: "Roads, bridges, and industrial developments" },
-                    { title: "Power Plant Construction", desc: "Building new and modernizing existing plants" }
-                ].map(item => (
-                  <li key={item.title} className="flex gap-4 items-start">
-                    <CheckCircle2 className="h-6 w-6 text-emerald-400 shrink-0 mt-0.5" />
-                    <div>
-                      <span className="block font-semibold text-lg text-white">{item.title}</span>
-                      <span className="text-sm text-slate-300">{item.desc}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                <span className="text-sm font-semibold text-slate-800">High-Voltage Transmission (132kV – 330kV)</span>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                <span className="text-sm font-semibold text-slate-800">Roads, Bridges & Civil Infrastructure</span>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                <span className="text-sm font-semibold text-slate-800">Power Plant Construction & Rehabilitation</span>
+              </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* REAL ESTATE CONTENT - Jargon reduced: "supports infrastructure nodes", "EBITDA Margin", "AUM" */}
+      {/* REAL ESTATE CONTENT */}
       {activeSegment === 'realestate' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-in fade-in slide-in-from-right-8 duration-700">
-          <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
-            <div>
-              <h3 className="text-3xl font-bold text-slate-950 mb-3">Developing Strategic Property</h3>
-              <h4 className="text-xl font-medium text-blue-700 mb-5">Harbor & Hedge Properties</h4>
-              <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">
-                We develop and manage commercial spaces, industrial logistics hubs, and high-end residential areas located near our major infrastructure projects to maximize value and regional utility.
-              </p>
-            </div>
-            
-            {/* Simple Metrics Grid */}
-            <div className="grid grid-cols-2 gap-6 pt-4">
-              <div className="bg-white p-6 rounded-2xl border border-blue-50 shadow-sm">
-                <div className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Segment Revenue</div>
-                <div className="text-3xl font-bold text-slate-950">$672<span className="text-2xl font-medium text-slate-500">M</span></div>
+        <div className="animate-in fade-in slide-in-from-right-8 duration-700">
+          {/* Full-width image with subtle overlay */}
+          <div className="relative rounded-2xl overflow-hidden aspect-[21/9] mb-12 group">
+            <img src={southBlueImage} alt="Real Estate Development" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8 flex flex-col sm:flex-row sm:items-end justify-between right-8 gap-4">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">Subsidiary</span>
+                <h3 className="text-3xl sm:text-4xl font-bold text-white mt-1">Harbor & Hedge Properties</h3>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-blue-50 shadow-sm">
-                <div className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-2">Operational Profitability</div>
-                <div className="text-3xl font-bold text-slate-950">24<span className="text-2xl font-medium text-slate-500">%</span></div>
-                <div className="text-xs text-slate-400 mt-1">Cash flow efficiency</div>
-              </div>
+              <a 
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-white hover:bg-white hover:text-slate-900 transition-all duration-300 w-fit cursor-pointer"
+              >
+                <span>Visit site — www.harborhedge.com</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </div>
           </div>
 
-          {/* Visual Progress Highlight Card */}
-          <div className="lg:col-span-5 order-1 lg:order-2 relative bg-blue-950 text-white rounded-3xl overflow-hidden p-8 lg:p-10 shadow-2xl aspect-[4/3] lg:aspect-auto min-h-[350px]">
-            <div className="absolute inset-0 z-0">
-              <img src={southBlueImage} alt="Real Estate Asset" className="w-full h-full object-cover transition-transform duration-10000 hover:scale-110" />
-              <div className="absolute inset-0 bg-blue-950/80 mix-blend-multiply"></div>
+          {/* Content grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-start">
+            <div>
+              <h4 className="text-2xl font-bold text-slate-900 mb-4">Developing Strategic Property</h4>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                We develop and manage commercial spaces, industrial logistics hubs, and high-end residential areas located near our major infrastructure projects to maximize value and regional utility.
+              </p>
             </div>
-
-            <div className="relative z-10 flex flex-col h-full space-y-6">
-                <div className="flex items-center justify-between gap-4">
-                    <h4 className="text-base font-semibold uppercase tracking-widest text-blue-200">Total Portfolio Value</h4>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-xs font-medium">Global Value</span>
-                </div>
-              
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-extrabold">$1.9<span className="text-5xl">B</span></span>
-                <span className="text-sm text-blue-200 uppercase tracking-wider">Property Assets Managed</span>
+            <div className="grid grid-cols-3 gap-6 pt-2">
+              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="text-2xl font-bold text-slate-900 mb-1">52%</div>
+                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Commercial</div>
               </div>
-              
-              <div className="space-y-4 pt-4 border-t border-blue-800 flex-grow justify-center flex flex-col">
-                <h5 className="text-sm font-medium text-blue-200">Asset Distribution</h5>
-                {[
-                    { label: "Commercial & Office", value: 52, color: "bg-white" },
-                    { label: "Industrial & Logistics", value: 31, color: "bg-blue-300" },
-                    { label: "Residential Estates", value: 17, color: "bg-blue-500" }
-                ].map(item => (
-                  <div key={item.label} className="space-y-1.5">
-                    <div className="flex justify-between text-sm font-medium">
-                        <span className="text-white">{item.label}</span>
-                        <span className="text-blue-200">{item.value}%</span>
-                    </div>
-                    <div className="h-2 w-full bg-blue-900 rounded-full overflow-hidden">
-                      <div className={`h-full ${item.color} rounded-full`} style={{ width: `${item.value}%` }}></div>
-                    </div>
-                  </div>
-                ))}
+              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="text-2xl font-bold text-slate-900 mb-1">31%</div>
+                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Industrial</div>
+              </div>
+              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
+                <div className="text-2xl font-bold text-slate-900 mb-1">17%</div>
+                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Residential</div>
               </div>
             </div>
           </div>
