@@ -179,9 +179,9 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
             <div className="bg-white border-2 border-slate-200 rounded-3xl p-10 md:p-12 shadow-xl">
               <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-4">Message from the Group CEO</div>
               <blockquote className="text-2xl md:text-3xl font-serif text-slate-900 leading-relaxed">
-                “Our mandate is to build durable infrastructure platforms that compound value over decades. We invest with discipline, partner with institutions, and deliver the systems that power economic resilience across Africa.”
+                "At Danhassan & Co, we are committed to building a sustainable future for West Africa. Our focus on strategic investments, operational excellence, and community impact drives every decision we make. We believe in creating value not just for our shareholders, but for the communities we serve." 
               </blockquote>
-              <div className="mt-8 text-sm text-slate-600 font-semibold">Anwar Alhassan, Group Chief Executive Officer</div>
+              <div className="mt-8 text-sm text-slate-600 font-semibold">Anwar Alhassan, Chief Executive Officer</div>
             </div>
           </div>
 

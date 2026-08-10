@@ -82,19 +82,19 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
     {
       icon: TrendingUp,
       title: 'Patient Capital',
-      description: 'Long-term compounding over short-term exits. Infinite investment horizon.',
+      description: 'Long-term investments in essential infrastructure with a focus on sustainable growth and value creation.  ',
       color: 'emerald'
     },
     {
       icon: ShieldCheck,
       title: 'Operational Control',
-      description: 'Majority stakes ensure rigorous governance and operational excellence.',
+      description: 'Hands-on management of assets to ensure operational efficiency, risk mitigation, and consistent performance.  ',
       color: 'slate'
     },
     {
       icon: Globe,
       title: 'Essential Services',
-      description: 'Non-cyclical industries providing critical services to African economies.',
+      description: 'Investing in sectors that provide critical services to communities, driving economic development and societal benefit.    ',
       color: 'blue'
     }
   ];
@@ -228,7 +228,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
         Core Operations Powering <span className="text-slate-500">Regional Growth</span>
       </h2>
       <p className="text-xl text-slate-700 leading-relaxed">
-        Detailed operating profiles for each subsidiary — including installed capacity, revenue contribution, and project scope across our three core verticals.
+        Our diversified portfolio spans three essential sectors, each contributing to the economic resilience and development of West Africa. Explore how we generate value through strategic investments in Power, Infrastructure, and Real Estate.  
       </p>
     </div>
 
@@ -290,7 +290,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             <div>
               <h4 className="text-2xl font-bold text-slate-900 mb-4">Reliable Energy Generation & Supply</h4>
               <p className="text-lg text-slate-600 leading-relaxed">
-                We own and manage the complete energy lifecycle, from producing power using sun, water, and traditional fuels, to delivering it directly to homes and businesses across Nigeria, Ghana, and Kenya.
+                We develop and operate power generation facilities, including hydroelectric and renewable energy plants, ensuring a stable and sustainable electricity supply to support regional growth and industrial development.  
               </p>
             </div>
             <div className="grid grid-cols-3 gap-8 pt-2">
@@ -339,23 +339,10 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             <div>
               <h4 className="text-2xl font-bold text-slate-900 mb-4">Major Infrastructure Development</h4>
               <p className="text-lg text-slate-600 leading-relaxed">
-                We handle the complete design, building, and fixing of large-scale projects, focusing on high-voltage power lines and essential concrete work needed for industrial growth.
+                We specialize in the construction and rehabilitation of critical infrastructure, including high-voltage transmission lines, roads, bridges, and power plants, ensuring long-term operational efficiency and regional connectivity.  
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
-                <span className="text-sm font-semibold text-slate-800">High-Voltage Transmission (132kV – 330kV)</span>
-              </div>
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
-                <span className="text-sm font-semibold text-slate-800">Roads, Bridges & Civil Infrastructure</span>
-              </div>
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
-                <span className="text-sm font-semibold text-slate-800">Power Plant Construction & Rehabilitation</span>
-              </div>
-            </div>
+            
           </div>
         </div>
       )}
@@ -388,23 +375,10 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             <div>
               <h4 className="text-2xl font-bold text-slate-900 mb-4">Developing Strategic Property</h4>
               <p className="text-lg text-slate-600 leading-relaxed">
-                We develop and manage commercial spaces, industrial logistics hubs, and high-end residential areas located near our major infrastructure projects to maximize value and regional utility.
+                We focus on the development and management of commercial, industrial, and residential properties, creating sustainable communities and business hubs that drive economic growth and enhance quality of life.  
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-6 pt-2">
-              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-2xl font-bold text-slate-900 mb-1">52%</div>
-                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Commercial</div>
-              </div>
-              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-2xl font-bold text-slate-900 mb-1">31%</div>
-                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Industrial</div>
-              </div>
-              <div className="text-center p-5 rounded-xl bg-slate-50 border border-slate-100">
-                <div className="text-2xl font-bold text-slate-900 mb-1">17%</div>
-                <div className="text-xs uppercase tracking-[0.1em] text-slate-500 font-semibold">Residential</div>
-              </div>
-            </div>
+            
           </div>
         </div>
       )}
