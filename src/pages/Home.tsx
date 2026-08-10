@@ -168,7 +168,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <span className="font-bold">Business Lines</span>
       </h2>
       <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
-        Three verticals, one mandate: building the critical systems that Africa's growing economies depend on.
+      Our diversified portfolio spans three key sectors: Power & Energy, Infrastructure & Engineering, and Real Estate & Property. Each segment is strategically positioned to drive sustainable growth and deliver long-term value across West Africa. 
       </p>
     </div>
 
@@ -183,7 +183,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Power & Energy
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed mb-10">
-            Behind the grid that lights millions of homes across Nigeria, Ghana, and Kenya sits a fleet of thermal and renewable assets — quietly generating the baseload power that keeps industries running and cities growing.
+            We generate electricity from a mix of thermal and solar sources, powering homes, businesses, and industries across West Africa. Our energy segment is the backbone of our operations, ensuring reliable and sustainable power supply to meet the region's growing demand. 
           </p>
           
           <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mt-4">
@@ -239,7 +239,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Infrastructure & Engineering
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Every megawatt we generate needs a way to reach the people who use it. Our engineering arm designs and builds the high-voltage transmission lines, substations, and civil works that connect power generation to the communities and industries it serves.
+           We deliver end-to-end engineering, procurement, and construction (EPC) services for critical infrastructure projects. From roads and bridges to industrial facilities, our expertise ensures that West Africa's infrastructure is built to last, supporting economic growth and regional connectivity. 
           </p>
         </div>
       </div>
@@ -254,7 +254,7 @@ export default function Home({ onNavigate }: HomeProps) {
             Real Estate & Property
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Where we build power plants, communities follow. Our property division develops the commercial offices, logistics hubs, and residential estates that turn infrastructure corridors into thriving economic zones across West Africa's fastest-growing cities.
+            Providing sustainable residential, commercial, and mixed-use developments that enhance urban living. Our real estate projects are designed with a focus on community impact, environmental responsibility, and long-term value creation for investors and residents alike.  
           </p>
         </div>
 
@@ -293,7 +293,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </h2>
         
         <p className="text-lg text-slate-600 leading-relaxed mb-10">
-          Steered by leaders who have spent careers building Africa's energy and industrial landscape — from landmark privatisation deals to billion-dollar capital raises on international markets.
+          Our Board of Directors and executive team bring decades of experience across energy, infrastructure, finance, and governance. Their strategic oversight ensures that our operations align with best practices, regulatory standards, and long-term shareholder value. 
         </p>
         
 
@@ -356,7 +356,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="p-5 sm:p-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Press Release</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors leading-snug">Danhassan & Co expands power capacity in West Africa</h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Strategic investments across Ghana and Kenya strengthen grid reliability.</p>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">We are pleased to announce the expansion of our power generation capacity in key markets across West Africa. </p>
               </div>
             </article>
             
@@ -368,7 +368,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="p-5 sm:p-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Investor Update</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors leading-snug">FY2025 performance highlights</h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Revenue of $8.4B driven by South Atlantic Energy and Ironwood Engineering.</p>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Our financial performance reflects strong execution across all segments, with particular strength in Power & Energy and Infrastructure & Engineering.</p>
               </div>
             </article>
 
@@ -380,7 +380,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="p-5 sm:p-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Sustainability</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors leading-snug">Danhassan Foundation impact report</h3>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Annual budget $22M focused on education, healthcare, and environment.</p>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Explore the positive change we're creating in communities across West Africa through our sustainability initiatives.</p>
               </div>
             </article>
           </div>
@@ -392,7 +392,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-white">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6">The Numbers Behind the Mission</h2>
           <p className="text-base sm:text-lg text-slate-100 mb-8 sm:mb-10 max-w-2xl mx-auto">
-            Our latest annual report is now available. Explore the full financial picture — from segment performance and capital allocation to our long-term strategic priorities.
+            Explore our annual report and investor relations materials to understand how we are driving sustainable growth and delivering value to our stakeholders across West Africa. 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
