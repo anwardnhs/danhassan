@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { ArrowUpRight, Download, Building2, Globe, FileText, CheckCircle2, TrendingUp, Users, Award, Zap, HardHat, Home } from 'lucide-react';
 import Footer from '../components/Footer';
-import frontImage from '../images/hqd.jpg';
+
 import damImage from '../images/dam.jpg';
 import pacificImage from '../images/pacifc.jpg';
 import southBlueImage from '../images/south blue.jpg';
@@ -115,7 +115,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           </h1>
           
           <p className="text-2xl text-slate-600 font-light max-w-4xl leading-relaxed mb-16">
-            Where others see emerging markets, we see essential infrastructure waiting to be built — and we have spent six decades proving it can be done with discipline, patience, and lasting impact.
+            Pioneering a new era of infrastructure development across West Africa, we combine strategic investment, operational excellence, and sustainable practices to deliver long-term value for communities and stakeholders alike.  
           </p>
 
           {/* NEW FOUNDATION IMAGE */}
@@ -133,6 +133,10 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
               </div>
             </div>
           </div>
+
+          <p className="text-xl text-slate-600 leading-relaxed max-w-4xl mt-16 mb-16">
+            We pursue disciplined growth through operational rigour, sustainable investment, and strategic partnerships that deliver measurable value for stakeholders across the continent. Our approach is straightforward: acquire essential assets, operate them to world-class standards, and hold for the long term.
+          </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pt-12 border-t border-slate-200">
             <div>
@@ -165,41 +169,6 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
         </div>
       </section>
 
-      {/* COMPANY OVERVIEW */}
-      <section className="py-32 bg-gradient-to-b from-[#FAF9F6] to-white">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-20 items-start">
-          <div className="lg:sticky lg:top-32">
-            <h2 className="text-4xl font-serif text-slate-900 mb-8 leading-tight">Company Overview</h2>
-            <div className="space-y-4 bg-white p-8 rounded-[2rem] border border-slate-200 shadow-[0_20px_45px_-25px_rgba(15,23,42,0.3)]">
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-slate-50 px-5 py-4 border border-slate-200">
-                <span className="text-sm uppercase tracking-[0.2em] text-slate-600 font-semibold">Legal Name</span>
-                <span className="text-sm text-slate-900 font-semibold text-right">Danhassan & Co, Plc</span>
-              </div>
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-slate-50 px-5 py-4 border border-slate-200">
-                <span className="text-sm uppercase tracking-[0.2em] text-slate-600 font-semibold">Stock Symbol</span>
-                <span className="text-sm font-semibold text-slate-900 text-right bg-white px-3 py-1.5 rounded-full border border-emerald-200">NGX: DANHASSAN</span>
-              </div>
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-slate-50 px-5 py-4 border border-slate-200">
-                <span className="text-sm uppercase tracking-[0.2em] text-slate-600 font-semibold">Industry</span>
-                <span className="text-sm text-slate-900 font-semibold text-right">Diversified Conglomerate</span>
-              </div>
-              <div className="flex items-center justify-between gap-4 rounded-3xl bg-slate-50 px-5 py-4 border border-slate-200">
-                <span className="text-sm uppercase tracking-[0.2em] text-slate-600 font-semibold">Regional Hubs</span>
-                <span className="text-sm text-slate-900 font-semibold text-right">Lagos, Accra, Nairobi, JNB</span>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <p className="text-xl text-slate-700 leading-relaxed mb-8">
-              We pursue disciplined growth through operational rigour, sustainable investment, and strategic partnerships that deliver measurable value for stakeholders across the continent. Our approach is straightforward: acquire essential assets, operate them to world-class standards, and hold for the long term.
-            </p>
-            <div className="h-[480px] w-full rounded-2xl overflow-hidden shadow-2xl group">
-              <img src={frontImage} alt="Danhassan House, Abuja" className="h-full w-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* --- REDESIGNED OPERATING SEGMENTS (TABS) --- */}
       <section className="py-24 md:py-32 bg-white border-t border-slate-100 overflow-hidden">
