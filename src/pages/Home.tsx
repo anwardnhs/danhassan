@@ -296,36 +296,6 @@ export default function Home({ onNavigate }: HomeProps) {
           Steered by leaders who have spent careers building Africa's energy and industrial landscape — from landmark privatisation deals to billion-dollar capital raises on international markets.
         </p>
         
-        {/* Leadership Profile Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
-          {/* Card 1 */}
-          <div className="group relative bg-white p-6 rounded-xl border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] transition-all duration-300 overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-slate-900 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-            <div className="text-xs text-slate-400 font-semibold uppercase tracking-[0.15em] mb-3">
-              Group CEO
-            </div>
-            <div className="text-xl font-bold text-slate-900 mb-1">
-              Anwar Alhassan
-            </div>
-            <div className="text-sm font-medium text-slate-500">
-              Since 2007
-            </div>
-          </div>
-          
-          {/* Card 2 */}
-          <div className="group relative bg-white p-6 rounded-xl border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] transition-all duration-300 overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-slate-900 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-            <div className="text-xs text-slate-400 font-semibold uppercase tracking-[0.15em] mb-3">
-              Chairman
-            </div>
-            <div className="text-xl font-bold text-slate-900 mb-1">
-              Abdullahi Alhassan
-            </div>
-            <div className="text-sm font-medium text-slate-500">
-             Former GMD/CEO
-            </div>
-          </div>
-        </div>
 
         {/* Action Button */}
         <button 
