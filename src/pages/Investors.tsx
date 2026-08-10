@@ -1,16 +1,73 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Download, FileText, TrendingUp, BarChart3, ExternalLink, ArrowUpRight, ShieldCheck, Mail, Phone, Calendar, ChevronRight } from 'lucide-react';
 import Footer from '../components/Footer';
+
+// --- COUNT UP ANIMATION HOOK & COMPONENT ---
+
+const useCountUp = (end: number, duration = 1800) => {
+  const [value, setValue] = useState(0);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!ref.current || hasAnimated.current) return;
+    const node = ref.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || hasAnimated.current) return;
+        hasAnimated.current = true;
+        const start = performance.now();
+
+        const tick = (now: number) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setValue(end * eased);
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+
+        requestAnimationFrame(tick);
+        observer.disconnect();
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return { ref, value };
+};
+
+const CountUpText = ({
+  end,
+  prefix = '',
+  suffix = '',
+  decimals = 0,
+}: {
+  end: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
+}) => {
+  const { ref, value } = useCountUp(end);
+  const display = useMemo(() => {
+    const base = value.toFixed(decimals);
+    return `${prefix}${base}${suffix}`;
+  }, [value, prefix, suffix, decimals]);
+
+  return <div ref={ref}>{display}</div>;
+};
 
 // --- DATA STRUCTURES ---
 
 const keyMetrics = [
-  { label: 'Market Cap', value: '$19.5B', sub: 'NGX: DANHASSAN', trend: 'up', icon: TrendingUp },
-  { label: 'Revenue (FY25)', value: '$8.4B', sub: 'YoY Growth: +12%', trend: 'up', icon: BarChart3 },
-  { label: 'EBITDA', value: '$2.1B', sub: 'Margin: 25%', trend: 'neutral', icon: BarChart3 },
-  { label: 'Net Income', value: '$1.45B', sub: 'EPS: $0.17', trend: 'up', icon: TrendingUp },
-  { label: 'ROE', value: '12.0%', sub: 'Return on Equity', trend: 'neutral', icon: BarChart3 },
-  { label: 'Debt/Equity', value: '0.58x', sub: 'Prudent Leverage', trend: 'neutral', icon: ShieldCheck }
+  { label: 'Market Cap', num: 19.5, prefix: '$', suffix: 'B', decimals: 1, sub: 'NGX: DANHASSAN', trend: 'up', icon: TrendingUp },
+  { label: 'Revenue (FY25)', num: 8.4, prefix: '$', suffix: 'B', decimals: 1, sub: 'YoY Growth: +12%', trend: 'up', icon: BarChart3 },
+  { label: 'EBITDA', num: 2.1, prefix: '$', suffix: 'B', decimals: 1, sub: 'Margin: 25%', trend: 'neutral', icon: BarChart3 },
+  { label: 'Net Income', num: 1.45, prefix: '$', suffix: 'B', decimals: 2, sub: 'EPS: $0.17', trend: 'up', icon: TrendingUp },
+  { label: 'ROE', num: 12.0, prefix: '', suffix: '%', decimals: 1, sub: 'Return on Equity', trend: 'neutral', icon: BarChart3 },
+  { label: 'Debt/Equity', num: 0.58, prefix: '', suffix: 'x', decimals: 2, sub: 'Prudent Leverage', trend: 'neutral', icon: ShieldCheck }
 ];
 
 const latestReports = [
@@ -156,7 +213,9 @@ export default function Investors({ onNavigate }: InvestorsProps) {
                     <div className="text-xs font-bold uppercase tracking-wider text-slate-400">{metric.label}</div>
                     <Icon className="h-5 w-5 text-slate-300 group-hover:text-emerald-600 transition-colors" />
                   </div>
-                  <div className="text-3xl font-poppins text-slate-900 mb-2">{metric.value}</div>
+                  <div className="text-3xl font-poppins text-slate-900 mb-2">
+                    <CountUpText end={metric.num} prefix={metric.prefix} suffix={metric.suffix} decimals={metric.decimals} />
+                  </div>
                   <div className="text-xs font-bold text-slate-700 uppercase tracking-wide">{metric.sub}</div>
                 </div>
               );
