@@ -71,6 +71,62 @@ const PowerImageTransition = () => {
   );
 };
 
+const InfraImageTransition = () => {
+  const images = [
+    {
+      src: "https://media.istockphoto.com/id/1420678520/photo/building-site-at-sunset.jpg?s=612x612&w=0&k=20&c=HoDUK1RxsH78Fj9D34nao_MUTbf-vR3G97zUWMtES4k=",
+      alt: "Building Construction Site at Sunset",
+      label: "Civil & Industrial EPC"
+    },
+    {
+      src: "https://media.istockphoto.com/id/2162566864/photo/aerial-view-of-busy-american-highway-road-under-construction-development-of-roundabout.jpg?s=612x612&w=0&k=20&c=EwrUjhrr02BB_9uJx25VL-dNZYzQ5K4WkcnOtGmJ538=",
+      alt: "Highway and Transport Infrastructure Construction",
+      label: "Roads & Grid Expansion"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
+      {images.map((image, index) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+            index === currentIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+          }`}
+        />
+      ))}
+
+      {/* Indicator overlay badge */}
+      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
+        <span className="text-[11px] font-semibold text-white tracking-wider uppercase">
+          {images[currentIndex].label}
+        </span>
+        <div className="flex gap-1.5">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === currentIndex ? 'w-4 bg-emerald-400' : 'w-1.5 bg-white/40'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Home({ onNavigate }: HomeProps) {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -272,13 +328,7 @@ export default function Home({ onNavigate }: HomeProps) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         <div className="lg:col-span-6 relative group">
           <div className="absolute inset-0 bg-slate-200 -translate-x-4 translate-y-4 rounded-xl transition-transform duration-500 ease-out group-hover:-translate-x-6 group-hover:translate-y-6"></div>
-          <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
-            <img
-              src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGVuZ2luZWVyfGVufDB8fDB8fHww"
-              alt="Infrastructure and Engineering EPC Services"
-              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-            />
-          </div>
+          <InfraImageTransition />
         </div>
 
         <div className="lg:col-span-5 lg:col-start-8 relative">
