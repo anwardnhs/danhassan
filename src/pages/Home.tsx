@@ -37,7 +37,7 @@ const PowerImageTransition = () => {
   }, [images.length]);
 
   return (
-    <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
+    <div className="relative h-[380px] sm:h-[480px] md:h-[520px] w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80 shadow-xl">
       {images.map((image, index) => (
         <img
           key={image.src}
@@ -74,7 +74,7 @@ const InfraImageTransition = () => {
   }, [images.length]);
 
   return (
-    <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
+    <div className="relative h-[380px] sm:h-[480px] md:h-[520px] w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80 shadow-xl">
       {images.map((image, index) => (
         <img
           key={image.src}
@@ -111,7 +111,7 @@ const RealEstateImageTransition = () => {
   }, [images.length]);
 
   return (
-    <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
+    <div className="relative h-[380px] sm:h-[480px] md:h-[520px] w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80 shadow-xl">
       {images.map((image, index) => (
         <img
           key={image.src}
@@ -293,40 +293,19 @@ export default function Home({ onNavigate }: HomeProps) {
           <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
             Power & Energy
           </h3>
-          <p className="text-lg text-slate-600 leading-relaxed mb-10">
+          <p className="text-lg text-slate-600 leading-relaxed">
             We generate electricity from a mix of thermal and solar sources, powering homes, businesses, and industries across West Africa. Our energy segment is the backbone of our operations, ensuring reliable and sustainable power supply to meet the region's growing demand. 
           </p>
-          
-          <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8 mt-4">
-            <div>
-              <div className="text-xs text-slate-500 mb-2 uppercase tracking-[0.15em] font-semibold">
-                Thermal
-              </div>
-              <div className="text-4xl font-light text-slate-900">
-                3,420 <span className="text-lg font-medium text-slate-400">MW</span>
-              </div>
-            </div>
-            <div>
-              <div className="text-xs text-slate-500 mb-2 uppercase tracking-[0.15em] font-semibold">
-                Solar
-              </div>
-              <div className="text-4xl font-light text-slate-900">
-                680 <span className="text-lg font-medium text-slate-400">MW</span>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 relative group">
-          <div className="absolute inset-0 bg-slate-200 translate-x-4 translate-y-4 rounded-xl transition-transform duration-500 ease-out group-hover:translate-x-6 group-hover:translate-y-6"></div>
+        <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2">
           <PowerImageTransition />
         </div>
       </div>
 
       {/* Segment 2 - Infrastructure */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        <div className="lg:col-span-6 relative group">
-          <div className="absolute inset-0 bg-slate-200 -translate-x-4 translate-y-4 rounded-xl transition-transform duration-500 ease-out group-hover:-translate-x-6 group-hover:translate-y-6"></div>
+        <div className="lg:col-span-6">
           <InfraImageTransition />
         </div>
 
@@ -357,8 +336,7 @@ export default function Home({ onNavigate }: HomeProps) {
           </p>
         </div>
 
-        <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 relative group">
-          <div className="absolute inset-0 bg-slate-200 translate-x-4 translate-y-4 rounded-xl transition-transform duration-500 ease-out group-hover:translate-x-6 group-hover:translate-y-6"></div>
+        <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2">
           <RealEstateImageTransition />
         </div>
       </div>
