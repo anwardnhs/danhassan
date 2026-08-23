@@ -289,6 +289,12 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-50/90 via-white/80 to-slate-50/90" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans text-slate-900 font-bold tracking-tight">
+              Group at a Glance
+            </h2>
+          </div>
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Metric 1 */}
             <div className="bg-white/80 backdrop-blur-sm border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
