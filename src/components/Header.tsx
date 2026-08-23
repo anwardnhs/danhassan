@@ -160,14 +160,10 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             <div className="hidden lg:flex items-center gap-6">
               <button 
                 onClick={() => setIsSearchOpen(true)}
-                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors group p-1"
+                className="text-slate-400 hover:text-white transition-colors p-1"
                 aria-label="Open search"
-                title="Search (Ctrl+K)"
               >
-                <Search className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                <span className="text-[11px] font-medium text-slate-400 bg-slate-800 px-1.5 py-0.5 rounded border border-slate-700">
-                  Ctrl+K
-                </span>
+                <Search className="h-4 w-4" />
               </button>
               
               {/* Divider */}
