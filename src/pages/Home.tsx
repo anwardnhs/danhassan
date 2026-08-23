@@ -215,19 +215,25 @@ export default function Home({ onNavigate }: HomeProps) {
         
         {/* Background Image with Parallax Effect */}
         <div 
-          className="absolute inset-0 z-0"
-          style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+          className="absolute -top-[15%] inset-x-0 h-[135%] z-0 pointer-events-none will-change-transform"
+          style={{ transform: `translate3d(0, ${scrollY * 0.35}px, 0)` }}
         >
-            <img 
-              src={impactheroImage} 
-              alt="Power infrastructure" 
-              className="h-[110%] sm:h-[120%] w-full object-cover opacity-80" 
-            />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
+          <img 
+            src={impactheroImage} 
+            alt="Power infrastructure" 
+            className="h-full w-full object-cover opacity-80" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/60" />
         </div>
 
-        {/* Content Container - Simplified for clarity */}
-        <div className={`relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        {/* Content Container - Smooth Text Parallax & Fade */}
+        <div 
+          className={`relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          style={{ 
+            transform: `translate3d(0, ${scrollY * 0.15}px, 0)`,
+            opacity: Math.max(0, 1 - scrollY / 600)
+          }}
+        >
           
          
 
