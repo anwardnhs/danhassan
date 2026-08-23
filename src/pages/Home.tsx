@@ -279,7 +279,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <span className="font-bold">Business Lines</span>
       </h2>
       <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl">
-      Our diversified portfolio spans three key sectors: Power & Energy, Infrastructure & Engineering, and Real Estate & Property. Each segment is strategically positioned to drive sustainable growth and deliver long-term value across West Africa. 
+        Three essential pillars powering growth and urban development in West Africa.
       </p>
     </div>
 
