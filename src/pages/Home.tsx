@@ -293,7 +293,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 block mb-2">
               Group at a Glance
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-slate-900 font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans text-slate-900 font-bold tracking-tight">
               Scale & Impact Across West Africa
             </h2>
           </div>
