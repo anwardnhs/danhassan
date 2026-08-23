@@ -127,6 +127,62 @@ const InfraImageTransition = () => {
   );
 };
 
+const RealEstateImageTransition = () => {
+  const images = [
+    {
+      src: "https://media.istockphoto.com/id/2204417262/photo/modern-housing-dwelling-architectural-facade-design-real-estate-background.jpg?s=612x612&w=0&k=20&c=bhf-t9_5DtejliBEgkzjdJr9jWxfZTSnKamIBeBhlrk=",
+      alt: "Modern Housing Dwelling Architectural Facade",
+      label: "Commercial & Mixed-Use"
+    },
+    {
+      src: "https://media.istockphoto.com/id/1644622448/photo/new-houses-construction-residential-house-development.jpg?s=612x612&w=0&k=20&c=toO5Hy1DE-VZcZfJsgVPEmoWVB7VcxBf99WbB_SP49Y=",
+      alt: "Residential House Development Construction",
+      label: "Residential Estates"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
+      {images.map((image, index) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+            index === currentIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+          }`}
+        />
+      ))}
+
+      {/* Indicator overlay badge */}
+      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
+        <span className="text-[11px] font-semibold text-white tracking-wider uppercase">
+          {images[currentIndex].label}
+        </span>
+        <div className="flex gap-1.5">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === currentIndex ? 'w-4 bg-emerald-400' : 'w-1.5 bg-white/40'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Home({ onNavigate }: HomeProps) {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -360,13 +416,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
         <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 relative group">
           <div className="absolute inset-0 bg-slate-200 translate-x-4 translate-y-4 rounded-xl transition-transform duration-500 ease-out group-hover:translate-x-6 group-hover:translate-y-6"></div>
-          <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
-            <img
-              src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnNpb258ZW58MHx8MHx8fDA%3D"
-              alt="Real Estate and Property Development"
-              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-            />
-          </div>
+          <RealEstateImageTransition />
         </div>
       </div>
     </div>
