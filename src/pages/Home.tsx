@@ -434,7 +434,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Card 2 */}
             <article className="group bg-white border-2 border-slate-200 rounded-lg overflow-hidden hover:border-emerald-500 hover:shadow-2xl transition-all cursor-pointer">
               <div className="h-48 sm:h-56 overflow-hidden">
-                <img src={lombardcapitalImage} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Financial results" />
+                <img src="https://media.istockphoto.com/id/1484126874/photo/five-cowrie-creek.jpg?s=612x612&w=0&k=20&c=hzTp7Q2MmTHMrHwc9eDGKqyG03Nx6HIlafoJvpJZtQ0=" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FY2025 performance highlights - Five Cowrie Creek" />
               </div>
               <div className="p-5 sm:p-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Investor Update</div>
