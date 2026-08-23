@@ -15,6 +15,62 @@ interface HomeProps {
   onNavigate: (page: string) => void;
 }
 
+const PowerImageTransition = () => {
+  const images = [
+    {
+      src: "https://media.istockphoto.com/id/1314056830/photo/aerial-view-of-coal-fired-power-plant-on-the-ohio-river.jpg?s=612x612&w=0&k=20&c=u460MmpBBt8mM9u1PWfj3MrlVkSkLd0V5UrPVLNmqlE=",
+      alt: "Thermal Power Generation Plant",
+      label: "Thermal Power — 3,420 MW"
+    },
+    {
+      src: "https://media.istockphoto.com/id/1870890449/photo/electric-photovoltaic-solar-panels-installed-on-shopping-mall-building-rooftop-for-production.jpg?s=612x612&w=0&k=20&c=jgauKDM08guh8P4SGxXxC_9C9kya4sCG7LOb3MBGm3g=",
+      alt: "Solar Photovoltaic Generation Installation",
+      label: "Solar Energy — 680 MW"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
+      {images.map((image, index) => (
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt}
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+            index === currentIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+          }`}
+        />
+      ))}
+
+      {/* Indicator overlay badge */}
+      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
+        <span className="text-[11px] font-semibold text-white tracking-wider uppercase">
+          {images[currentIndex].label}
+        </span>
+        <div className="flex gap-1.5">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === currentIndex ? 'w-4 bg-emerald-400' : 'w-1.5 bg-white/40'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function Home({ onNavigate }: HomeProps) {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -208,13 +264,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
         <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 relative group">
           <div className="absolute inset-0 bg-slate-200 translate-x-4 translate-y-4 rounded-xl transition-transform duration-500 ease-out group-hover:translate-x-6 group-hover:translate-y-6"></div>
-          <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 z-10 border border-black/5">
-            <img
-              src="https://plus.unsplash.com/premium_vector-1697729519978-e21fa714742f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBvd2VyJTIwcGxhbnR8ZW58MHx8MHx8fDA%3D"
-              alt="Thermal and Solar Power Plant Operations"
-              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
-            />
-          </div>
+          <PowerImageTransition />
         </div>
       </div>
 
