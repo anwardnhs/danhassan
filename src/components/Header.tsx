@@ -48,10 +48,9 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             {/* Logo Section - White Text */}
             <div 
               onClick={() => handleNavClick('home')}
-              className="cursor-pointer z-50 relative group flex items-center gap-3"
+              className="cursor-pointer z-50 relative group flex items-center"
             >
-              <img src="/favicon.png" alt="Danhassan Logo" className="h-8 w-8 object-contain brightness-0 invert" />
-              <span className="font-poppins text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-slate-200 transition-colors">
+              <span className="font-poppins text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-slate-400 transition-colors">
                 DANHASSAN & CO.
               </span>
             </div>

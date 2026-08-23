@@ -19,13 +19,11 @@ const PowerImageTransition = () => {
   const images = [
     {
       src: "https://media.istockphoto.com/id/1314056830/photo/aerial-view-of-coal-fired-power-plant-on-the-ohio-river.jpg?s=612x612&w=0&k=20&c=u460MmpBBt8mM9u1PWfj3MrlVkSkLd0V5UrPVLNmqlE=",
-      alt: "Thermal Power Generation Plant",
-      label: "Thermal Power — 3,420 MW"
+      alt: "Thermal Power Generation Plant"
     },
     {
       src: "https://media.istockphoto.com/id/1870890449/photo/electric-photovoltaic-solar-panels-installed-on-shopping-mall-building-rooftop-for-production.jpg?s=612x612&w=0&k=20&c=jgauKDM08guh8P4SGxXxC_9C9kya4sCG7LOb3MBGm3g=",
-      alt: "Solar Photovoltaic Generation Installation",
-      label: "Solar Energy — 680 MW"
+      alt: "Solar Photovoltaic Generation Installation"
     }
   ];
 
@@ -50,23 +48,6 @@ const PowerImageTransition = () => {
           }`}
         />
       ))}
-
-      {/* Indicator overlay badge */}
-      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
-        <span className="text-[11px] font-semibold text-white tracking-wider uppercase">
-          {images[currentIndex].label}
-        </span>
-        <div className="flex gap-1.5">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === currentIndex ? 'w-4 bg-emerald-400' : 'w-1.5 bg-white/40'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
@@ -75,13 +56,11 @@ const InfraImageTransition = () => {
   const images = [
     {
       src: "https://media.istockphoto.com/id/1420678520/photo/building-site-at-sunset.jpg?s=612x612&w=0&k=20&c=HoDUK1RxsH78Fj9D34nao_MUTbf-vR3G97zUWMtES4k=",
-      alt: "Building Construction Site at Sunset",
-      label: "Civil & Industrial EPC"
+      alt: "Building Construction Site at Sunset"
     },
     {
       src: "https://media.istockphoto.com/id/2162566864/photo/aerial-view-of-busy-american-highway-road-under-construction-development-of-roundabout.jpg?s=612x612&w=0&k=20&c=EwrUjhrr02BB_9uJx25VL-dNZYzQ5K4WkcnOtGmJ538=",
-      alt: "Highway and Transport Infrastructure Construction",
-      label: "Roads & Grid Expansion"
+      alt: "Highway and Transport Infrastructure Construction"
     }
   ];
 
@@ -106,23 +85,6 @@ const InfraImageTransition = () => {
           }`}
         />
       ))}
-
-      {/* Indicator overlay badge */}
-      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
-        <span className="text-[11px] font-semibold text-white tracking-wider uppercase">
-          {images[currentIndex].label}
-        </span>
-        <div className="flex gap-1.5">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === currentIndex ? 'w-4 bg-emerald-400' : 'w-1.5 bg-white/40'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
@@ -131,13 +93,11 @@ const RealEstateImageTransition = () => {
   const images = [
     {
       src: "https://media.istockphoto.com/id/2204417262/photo/modern-housing-dwelling-architectural-facade-design-real-estate-background.jpg?s=612x612&w=0&k=20&c=bhf-t9_5DtejliBEgkzjdJr9jWxfZTSnKamIBeBhlrk=",
-      alt: "Modern Housing Dwelling Architectural Facade",
-      label: "Commercial & Mixed-Use"
+      alt: "Modern Housing Dwelling Architectural Facade"
     },
     {
       src: "https://media.istockphoto.com/id/1644622448/photo/new-houses-construction-residential-house-development.jpg?s=612x612&w=0&k=20&c=toO5Hy1DE-VZcZfJsgVPEmoWVB7VcxBf99WbB_SP49Y=",
-      alt: "Residential House Development Construction",
-      label: "Residential Estates"
+      alt: "Residential House Development Construction"
     }
   ];
 
@@ -162,23 +122,6 @@ const RealEstateImageTransition = () => {
           }`}
         />
       ))}
-
-      {/* Indicator overlay badge */}
-      <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
-        <span className="text-[11px] font-semibold text-white tracking-wider uppercase">
-          {images[currentIndex].label}
-        </span>
-        <div className="flex gap-1.5">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === currentIndex ? 'w-4 bg-emerald-400' : 'w-1.5 bg-white/40'
-              }`}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
