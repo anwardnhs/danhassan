@@ -364,7 +364,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </h2>
         
         <p className="text-lg text-slate-600 leading-relaxed mb-10">
-          Our Board of Directors and executive team bring decades of experience across energy, infrastructure, finance, and governance. Their strategic oversight ensures that our operations align with best practices, regulatory standards, and long-term shareholder value. 
+          Guided by veteran leadership with decades of experience in African energy, infrastructure, and capital markets.
         </p>
         
 
