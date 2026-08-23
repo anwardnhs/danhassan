@@ -1,6 +1,65 @@
-import { ArrowUpRight, ChevronDown, TrendingUp, Users, Globe, Award } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { ArrowUpRight, ChevronDown, TrendingUp, Users, Globe, Award, Building2 } from 'lucide-react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import Footer from '../components/Footer';
+
+// --- COUNT UP ANIMATION HOOK & COMPONENT ---
+
+const useCountUp = (end: number, duration = 1800) => {
+  const [value, setValue] = useState(0);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!ref.current || hasAnimated.current) return;
+    const node = ref.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || hasAnimated.current) return;
+        hasAnimated.current = true;
+        const start = performance.now();
+
+        const tick = (now: number) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setValue(end * eased);
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+
+        requestAnimationFrame(tick);
+        observer.disconnect();
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return { ref, value };
+};
+
+const CountUpText = ({
+  end,
+  prefix = '',
+  suffix = '',
+  decimals = 0,
+  formatter,
+}: {
+  end: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
+  formatter?: (v: number) => string;
+}) => {
+  const { ref, value } = useCountUp(end);
+  const display = useMemo(() => {
+    const base = formatter ? formatter(value) : value.toFixed(decimals);
+    return `${prefix}${base}${suffix}`;
+  }, [value, prefix, suffix, decimals, formatter]);
+
+  return <div ref={ref}>{display}</div>;
+};
 import heroImage from '../images/heroimg.jpg';
 import saepImage from '../images/saep.jpg';
 import ironwoodImage from '../images/ironwood2.jpg';
@@ -211,43 +270,75 @@ export default function Home({ onNavigate }: HomeProps) {
 
       
 
-      {/* TRUST INDICATORS - Enhanced with icons and better mobile layout */}
-      <section className="py-16 sm:py-20 md:py-28 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* GROUP AT A GLANCE - Minimalist animated metrics strip */}
+      <section className="relative py-16 sm:py-24 border-b border-slate-200/80 overflow-hidden">
+        {/* Background Image with elegant overlay for high contrast and readability */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-60"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdoaXRlJTIwdGV4dHVyZXxlbnwwfHwwfHx8MA%3D%3D')",
+          }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-50/90 via-white/80 to-slate-50/90" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-slate-900 mb-4">Company Highlights</h2>
-            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">Key information for investors and stakeholders</p>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 block mb-2">
+              Group at a Glance
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-slate-900 font-bold tracking-tight">
+              Scale & Impact Across West Africa
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
-            {/* Card 1 */}
-            <div className="bg-white border-2 border-slate-200 p-6 sm:p-8 rounded-lg hover:border-emerald-500 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-emerald-700" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {/* Metric 1 */}
+            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-3 flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-emerald-600" />
+                Market Cap
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3">Ownership</div>
-              <div className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">Institutional Base</div>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Strategic shareholders with strong institutional governance and broad public float on the Nigerian Exchange.</p>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 mb-2 font-sans tracking-tight">
+                <CountUpText end={27.3} prefix="₦" suffix="T" decimals={1} />
+              </div>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium">Nigerian Exchange (NGX)</p>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-white border-2 border-slate-200 p-6 sm:p-8 rounded-lg hover:border-emerald-500 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-emerald-700" />
+            {/* Metric 2 */}
+            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-3 flex items-center gap-2">
+                <Award className="h-4 w-4 text-emerald-600" />
+                Annual Revenue
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3">Credit Ratings</div>
-              <div className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">BB- / Ba3 / BB-</div>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Fitch and S&P stable outlook, Moody's positive outlook as of January 2026.</p>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 mb-2 font-sans tracking-tight">
+                <CountUpText end={11.8} prefix="₦" suffix="T" decimals={1} />
+              </div>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium">FY2025 Audited</p>
             </div>
 
-            {/* Card 3 */}
-            <div className="bg-white border-2 border-slate-200 p-6 sm:p-8 rounded-lg hover:border-emerald-500 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="h-6 w-6 text-emerald-700" />
+            {/* Metric 3 */}
+            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-3 flex items-center gap-2">
+                <Users className="h-4 w-4 text-emerald-600" />
+                Workforce
               </div>
-              <div className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3">Headquarters</div>
-              <div className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">Abuja, Nigeria</div>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">Regional offices in Lagos, Port Harcourt, Kano, Accra, Nairobi, and Johannesburg.</p>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 mb-2 font-sans tracking-tight">
+                <CountUpText end={25200} formatter={(v) => Math.round(v).toLocaleString()} suffix="+" />
+              </div>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium">Across West Africa</p>
+            </div>
+
+            {/* Metric 4 */}
+            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-3 flex items-center gap-2">
+                <Building2 className="h-4 w-4 text-emerald-600" />
+                Operating History
+              </div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 mb-2 font-sans tracking-tight">
+                <CountUpText end={60} suffix="+" />
+              </div>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium">Years of Operations</p>
             </div>
           </div>
         </div>
