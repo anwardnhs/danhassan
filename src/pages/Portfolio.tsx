@@ -162,35 +162,36 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
       {/* INVESTMENT PHILOSOPHY */}
       <section className="py-24 sm:py-32 bg-white">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
-            <div className="lg:col-span-4">
-              <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 mb-6 leading-tight">Investment Philosophy</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Three core principles guide every capital allocation decision. We focus on long-term sustainability rather than short-term market fluctuations.
-              </p>
-            </div>
+          <div className="max-w-2xl mb-16 md:mb-24">
+            <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 mb-6 leading-tight">Investment Philosophy</h2>
+            <p className="text-xl text-slate-600 font-light leading-relaxed">
+              Three core principles guide every capital allocation decision. We focus on long-term sustainability rather than short-term market fluctuations.
+            </p>
+          </div>
 
-            <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {philosophies.map((item, idx) => {
-                  const Icon = item.icon;
-                  return (
-                    <div 
-                      key={idx}
-                      className="bg-[#FAF9F6] border border-slate-200/60 p-8 rounded-2xl group hover:bg-slate-50 transition-colors duration-300 flex flex-col h-full"
-                    >
-                      <Icon className="h-6 w-6 text-slate-400 mb-8 group-hover:text-slate-900 transition-colors" />
-                      <h3 className="text-lg font-semibold text-slate-900 font-sans mb-3 mt-auto">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {philosophies.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div 
+                  key={idx}
+                  className="group relative bg-[#FAF9F6] border border-slate-200/60 p-8 sm:p-10 rounded-[24px] hover:bg-white hover:shadow-xl hover:shadow-slate-200/20 hover:border-slate-300/60 transition-all duration-500 overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none">
+                    <Icon className="w-32 h-32 transform translate-x-4 -translate-y-4" />
+                  </div>
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/50 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
+                    <Icon className="h-5 w-5 text-slate-700" />
+                  </div>
+                  <h3 className="text-xl font-serif text-slate-900 mb-4 relative z-10">
+                    {item.title}
+                  </h3>
+                  <p className="text-base text-slate-600 font-light leading-relaxed relative z-10">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
