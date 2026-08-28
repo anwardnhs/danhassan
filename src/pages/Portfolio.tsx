@@ -3,7 +3,7 @@ import { ArrowUpRight, ChevronRight, TrendingUp, ShieldCheck, Globe, ExternalLin
 import Footer from '../components/Footer';
 import atlas2Image from '../images/atlas2.jpg';
 import damImage from '../images/dam.jpg';
-import pacificImage from '../images/pacifc.jpg';
+const pacificImage = 'https://media.istockphoto.com/id/1340900748/photo/high-angle-shot-of-cars-travelling-on-a-freeway.jpg?s=612x612&w=0&k=20&c=WRdV9Aen2sD_9fodRWgS-_iNxZ68M1cErYcXiyfcyYI=';
 const southBlueImage = 'https://media.istockphoto.com/id/2209675907/photo/modern-apartment-houses.jpg?s=612x612&w=0&k=20&c=E3_ZHISZ_nT_T4_tyxoDTCM9qKhkJYEYyqZpJJRhZaI=';
 
 interface PortfolioProps {
