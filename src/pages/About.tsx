@@ -95,14 +95,10 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end mb-24">
             <div className="lg:col-span-8">
               <p className="text-xl sm:text-2xl text-slate-600 font-light leading-relaxed max-w-3xl">
-                Pioneering a new era of infrastructure development across West Africa. We combine strategic investment, operational excellence, and sustainable practices to deliver long-term value for communities and stakeholders alike.  
+                Danhassan & Co. is a Nigerian Investment Holding Company with a diversified portfolio of subsidiaries across power, energy, and infrastructure sectors. We are committed to delivering sustainable growth and value creation for our shareholders, employees, and the communities we serve. 
               </p>
             </div>
-            <div className="lg:col-span-4 lg:justify-self-end">
-               <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-                We pursue disciplined growth through operational rigour, sustainable investment, and strategic partnerships.
-              </p>
-            </div>
+            
           </div>
 
           {/* HERO IMAGE */}
@@ -168,7 +164,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
             <div className="lg:col-span-4">
               <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 mb-6 leading-tight">Governance</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Eleven directors. Four independent committees. A board built to challenge management, protect minority shareholders, and hold every capital allocation decision to account.
+                Our board of directors combines deep industry expertise with a commitment to ethical leadership, ensuring that our strategic vision is executed with integrity and accountability.  
               </p>
             </div>
             
@@ -225,7 +221,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
               <div className="sticky top-32">
                 <h2 className="text-4xl sm:text-5xl font-serif text-slate-900 mb-6 leading-tight">Strategic<br/>Evolution</h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Six decades of transformation from regional trading to pan-African infrastructure leadership.
+                  From humble beginnings in general trading to becoming a powerhouse in power and infrastructure, our journey reflects a commitment to innovation, resilience, and sustainable growth. Each phase of our history has been marked by strategic pivots that have positioned us as leaders in the African investment landscape.  
                 </p>
               </div>
             </div>
@@ -246,23 +242,23 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
                   <div className="absolute -left-1.5 top-2 w-3 h-3 rounded-full bg-slate-200 group-hover:bg-slate-900 transition-colors"></div>
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">1988 – 2002</div>
                   <h3 className="text-2xl font-serif text-slate-900 mb-4">The Industrial Pivot</h3>
-                  <p className="text-base text-slate-600 leading-relaxed">Rebranded to Sambo Group. Established Ironwood Engineering Division to shift from procurement to EPC contracting, taking early equity stakes in power projects.</p>
+                  <p className="text-base text-slate-600 leading-relaxed">Expanded into engineering and construction, establishing a strong presence in the Nigerian infrastructure market. </p>
                 </div>
 
                 {/* Timeline Item */}
                 <div className="group relative border-l border-slate-200 pl-8 pb-4 transition-colors hover:border-slate-900">
                   <div className="absolute -left-1.5 top-2 w-3 h-3 rounded-full bg-slate-200 group-hover:bg-slate-900 transition-colors"></div>
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">2003 – 2010</div>
-                  <h3 className="text-2xl font-serif text-slate-900 mb-4">Consolidation & IPO</h3>
-                  <p className="text-base text-slate-600 leading-relaxed">Corporate restructuring into Danhassan & Co. Successful 2009 listing on the Nigerian Stock Exchange, raising capital to fund heavy infrastructure expansion.</p>
+                  <h3 className="text-2xl font-serif text-slate-900 mb-4">Corporate Restructuring</h3>
+                  <p className="text-base text-slate-600 leading-relaxed">Transformed into a modern, diversified investment holding company with a focus on sustainable growth and value creation.  </p>
                 </div>
 
                 {/* Timeline Item */}
                 <div className="group relative border-l border-slate-200 pl-8 pb-4 transition-colors hover:border-slate-900">
                   <div className="absolute -left-1.5 top-2 w-3 h-3 rounded-full bg-slate-200 group-hover:bg-slate-900 transition-colors"></div>
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">2011 – 2020</div>
-                  <h3 className="text-2xl font-serif text-slate-900 mb-4">Power Sector Dominance</h3>
-                  <p className="text-base text-slate-600 leading-relaxed">Creation of South Atlantic Energy. Won massive assets during Nigeria's 2013 power privatization. Commissioned Ikorodu (750MW) and Calabar (630MW) IPPs.</p>
+                  <h3 className="text-2xl font-serif text-slate-900 mb-4">Strategic Growth</h3>
+                  <p className="text-base text-slate-600 leading-relaxed">Established ourselves as a leading player in the Nigerian power sector through strategic investments and project development. </p>
                 </div>
 
                 {/* Timeline Item */}
@@ -270,7 +266,7 @@ export default function CorporateProfile({ onNavigate }: ProfileProps) {
                   <div className="absolute -left-1.5 top-2 w-3 h-3 rounded-full bg-slate-200 group-hover:bg-slate-900 transition-colors"></div>
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">2021 – 2026</div>
                   <h3 className="text-2xl font-serif text-slate-900 mb-4">Pan-African Expansion</h3>
-                  <p className="text-base text-slate-600 leading-relaxed">Acquisition of Volta Distribution (Ghana), $500M Eurobond issuance, and formation of a $285M Gas-to-Power Joint Venture with TotalEnergies.</p>
+                  <p className="text-base text-slate-600 leading-relaxed">Extended our operations across Africa, establishing a strong presence in key markets and diversifying our portfolio with strategic investments in renewable energy and infrastructure projects.   </p>
                 </div>
 
               </div>
