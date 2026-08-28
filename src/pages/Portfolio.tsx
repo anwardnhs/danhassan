@@ -79,17 +79,20 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
     {
       icon: TrendingUp,
       title: 'Patient Capital',
-      description: 'Long-term investments in essential infrastructure with a focus on sustainable growth and value creation.'
+      description: 'Long-term investments in essential infrastructure with a focus on sustainable growth and value creation.',
+      bgImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'
     },
     {
       icon: ShieldCheck,
       title: 'Operational Control',
-      description: 'Hands-on management of assets to ensure operational efficiency, risk mitigation, and consistent performance.'
+      description: 'Hands-on management of assets to ensure operational efficiency, risk mitigation, and consistent performance.',
+      bgImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669&auto=format&fit=crop'
     },
     {
       icon: Globe,
       title: 'Essential Services',
-      description: 'Investing in sectors that provide critical services to communities, driving economic development and societal benefit.'
+      description: 'Investing in sectors that provide critical services to communities, driving economic development and societal benefit.',
+      bgImage: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop'
     }
   ];
 
@@ -175,20 +178,31 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
               return (
                 <div 
                   key={idx}
-                  className="group relative bg-[#FAF9F6] border border-slate-200/60 p-8 sm:p-10 rounded-[24px] hover:bg-white hover:shadow-xl hover:shadow-slate-200/20 hover:border-slate-300/60 transition-all duration-500 overflow-hidden"
+                  className="group relative border border-slate-200/60 p-8 sm:p-10 rounded-[24px] hover:shadow-2xl hover:shadow-slate-900/20 transition-all duration-700 overflow-hidden min-h-[360px] flex flex-col justify-end"
                 >
-                  <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none">
-                    <Icon className="w-32 h-32 transform translate-x-4 -translate-y-4" />
+                  <img 
+                    src={item.bgImage} 
+                    alt={item.title} 
+                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[2000ms] ease-out group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-slate-900/60 to-slate-900/95 transition-opacity duration-700 group-hover:opacity-90"></div>
+                  
+                  <div className="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity duration-500 pointer-events-none">
+                    <Icon className="w-32 h-32 text-white transform translate-x-4 -translate-y-4" />
                   </div>
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/50 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                    <Icon className="h-5 w-5 text-slate-700" />
+
+                  <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 flex items-center justify-center mb-auto relative z-10 group-hover:scale-110 group-hover:bg-white transition-all duration-300">
+                    <Icon className="h-5 w-5 text-white group-hover:text-slate-900 transition-colors" />
                   </div>
-                  <h3 className="text-xl font-serif text-slate-900 mb-4 relative z-10">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-slate-600 font-light leading-relaxed relative z-10">
-                    {item.description}
-                  </p>
+                  
+                  <div className="relative z-10 mt-12">
+                    <h3 className="text-2xl font-serif text-white mb-4">
+                      {item.title}
+                    </h3>
+                    <p className="text-base text-slate-200 font-light leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               );
             })}
