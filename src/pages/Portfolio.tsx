@@ -80,19 +80,19 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
       icon: TrendingUp,
       title: 'Patient Capital',
       description: 'Long-term investments in essential infrastructure with a focus on sustainable growth and value creation.',
-      bgImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'
+      bgImage: 'https://images.unsplash.com/photo-1554755229-ca4470e07232?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRleHR1cmV8ZW58MHx8MHx8fDA%3D'
     },
     {
       icon: ShieldCheck,
       title: 'Operational Control',
       description: 'Hands-on management of assets to ensure operational efficiency, risk mitigation, and consistent performance.',
-      bgImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669&auto=format&fit=crop'
+      bgImage: 'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGV4dHVyZXxlbnwwfHwwfHx8MA%3D%3D'
     },
     {
       icon: Globe,
       title: 'Essential Services',
       description: 'Investing in sectors that provide critical services to communities, driving economic development and societal benefit.',
-      bgImage: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop'
+      bgImage: 'https://images.unsplash.com/photo-1528459105426-b9548367069b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGV4dHVyZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D'
     }
   ];
 
@@ -178,7 +178,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
               return (
                 <div 
                   key={idx}
-                  className="group relative border border-slate-200/60 p-8 sm:p-10 rounded-[24px] hover:shadow-2xl hover:shadow-slate-900/20 transition-all duration-700 overflow-hidden min-h-[360px] flex flex-col justify-end"
+                  className="group relative border border-slate-200/60 p-8 sm:p-12 rounded-[32px] hover:shadow-2xl hover:shadow-slate-900/20 transition-all duration-700 overflow-hidden min-h-[440px] sm:min-h-[500px] flex flex-col justify-end"
                 >
                   <img 
                     src={item.bgImage} 
