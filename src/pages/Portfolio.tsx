@@ -1,13 +1,10 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { ArrowUpRight, ChevronRight, TrendingUp, ShieldCheck, Globe, ExternalLink, Download, BarChart3, Building2, CheckCircle2 } from 'lucide-react';
 import Footer from '../components/Footer';
-import saepImage from '../images/saep.jpg';
-import ironwoodImage from '../images/atlas.jpg';
-import harborImage from '../images/harbor.jpg';
 import atlas2Image from '../images/atlas2.jpg';
 import damImage from '../images/dam.jpg';
 import pacificImage from '../images/pacifc.jpg';
-import southBlueImage from '../images/south blue.jpg';
+const southBlueImage = 'https://media.istockphoto.com/id/2209675907/photo/modern-apartment-houses.jpg?s=612x612&w=0&k=20&c=E3_ZHISZ_nT_T4_tyxoDTCM9qKhkJYEYyqZpJJRhZaI=';
 
 interface PortfolioProps {
   onNavigate: (page: string) => void;
@@ -293,20 +290,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
                 We develop and operate power generation facilities, including hydroelectric and renewable energy plants, ensuring a stable and sustainable electricity supply to support regional growth and industrial development.  
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-8 pt-2">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-slate-900 mb-2">4,850</div>
-                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">MW Capacity</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-slate-900 mb-2">4.4<span className="text-2xl text-slate-400">M</span></div>
-                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">Customers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-slate-900 mb-2">3</div>
-                <div className="text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">Countries</div>
-              </div>
-            </div>
+            
           </div>
         </div>
       )}
