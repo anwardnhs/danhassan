@@ -98,7 +98,7 @@ const PowerImageTransition = () => {
   return (
     <div className="relative h-[380px] sm:h-[480px] md:h-[520px] w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80 shadow-xl">
       {images.map((image, index) => (
-        <img
+        <img loading="lazy" decoding="async"
           key={image.src}
           src={image.src}
           alt={image.alt}
@@ -135,7 +135,7 @@ const InfraImageTransition = () => {
   return (
     <div className="relative h-[380px] sm:h-[480px] md:h-[520px] w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80 shadow-xl">
       {images.map((image, index) => (
-        <img
+        <img loading="lazy" decoding="async"
           key={image.src}
           src={image.src}
           alt={image.alt}
@@ -172,7 +172,7 @@ const RealEstateImageTransition = () => {
   return (
     <div className="relative h-[380px] sm:h-[480px] md:h-[520px] w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80 shadow-xl">
       {images.map((image, index) => (
-        <img
+        <img loading="lazy" decoding="async"
           key={image.src}
           src={image.src}
           alt={image.alt}
@@ -481,7 +481,7 @@ export default function Home({ onNavigate }: HomeProps) {
         
         {/* Main Image Wrapper */}
         <div className="relative aspect-[4/5] sm:aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 z-10 border border-black/5 shadow-xl">
-          <img 
+          <img loading="lazy" decoding="async" 
             src={boarddanImage} 
             alt="Board of Directors" 
             className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" 
@@ -516,7 +516,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Card 1 */}
             <article className="group bg-white border-2 border-slate-200 rounded-lg overflow-hidden hover:border-emerald-500 hover:shadow-2xl transition-all cursor-pointer">
               <div className="h-48 sm:h-56 overflow-hidden">
-                <img src={signingImage} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="News" />
+                <img loading="lazy" decoding="async" src={signingImage} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="News" />
               </div>
               <div className="p-5 sm:p-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Press Release</div>
@@ -528,7 +528,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Card 2 */}
             <article className="group bg-white border-2 border-slate-200 rounded-lg overflow-hidden hover:border-emerald-500 hover:shadow-2xl transition-all cursor-pointer">
               <div className="h-48 sm:h-56 overflow-hidden">
-                <img src="https://media.istockphoto.com/id/1484126874/photo/five-cowrie-creek.jpg?s=612x612&w=0&k=20&c=hzTp7Q2MmTHMrHwc9eDGKqyG03Nx6HIlafoJvpJZtQ0=" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FY2025 performance highlights - Five Cowrie Creek" />
+                <img loading="lazy" decoding="async" src="https://media.istockphoto.com/id/1484126874/photo/five-cowrie-creek.jpg?s=612x612&w=0&k=20&c=hzTp7Q2MmTHMrHwc9eDGKqyG03Nx6HIlafoJvpJZtQ0=" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="FY2025 performance highlights - Five Cowrie Creek" />
               </div>
               <div className="p-5 sm:p-6">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Investor Update</div>

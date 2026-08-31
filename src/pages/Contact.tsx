@@ -96,7 +96,7 @@ export default function Contact({ onNavigate }: { onNavigate: (page: string) => 
 
             {/* Right: HQ Image (Card Style) */}
             <div className="relative h-[500px] w-full bg-slate-100 rounded-sm overflow-hidden shadow-2xl group">
-              <img 
+              <img loading="lazy" decoding="async" 
                 src={officeImage} 
                 alt="Danhassan House HQ" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 

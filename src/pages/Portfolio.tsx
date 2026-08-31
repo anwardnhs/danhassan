@@ -150,7 +150,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             <div className="lg:col-span-6">
               <div className="w-full aspect-[4/5] sm:h-[700px] rounded-2xl sm:rounded-[32px] overflow-hidden relative group">
                 <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-1000 z-10"></div>
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={atlas2Image} 
                   alt="Portfolio infrastructure" 
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-out group-hover:scale-105" 
@@ -178,31 +178,24 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
               return (
                 <div 
                   key={idx}
-                  className="group relative border border-slate-200/60 p-8 sm:p-12 rounded-[32px] hover:shadow-2xl hover:shadow-slate-900/20 transition-all duration-700 overflow-hidden min-h-[440px] sm:min-h-[500px] flex flex-col justify-end"
+                  className="group relative bg-[#FAF9F6] border border-slate-200/60 p-8 sm:p-10 rounded-[24px] hover:bg-white hover:shadow-xl hover:shadow-slate-200/40 hover:border-slate-300/60 transition-all duration-500 overflow-hidden flex flex-col"
                 >
-                  <img 
-                    src={item.bgImage} 
-                    alt={item.title} 
-                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-[2000ms] ease-out group-hover:scale-110" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-slate-900/60 to-slate-900/95 transition-opacity duration-700 group-hover:opacity-90"></div>
-                  
-                  <div className="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity duration-500 pointer-events-none">
-                    <Icon className="w-32 h-32 text-white transform translate-x-4 -translate-y-4" />
-                  </div>
-
-                  <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 flex items-center justify-center mb-auto relative z-10 group-hover:scale-110 group-hover:bg-white transition-all duration-300">
-                    <Icon className="h-5 w-5 text-white group-hover:text-slate-900 transition-colors" />
+                  {/* Subtle decorative icon watermark */}
+                  <div className="absolute top-0 right-0 p-8 opacity-[0.02] group-hover:opacity-[0.04] transition-opacity duration-500 pointer-events-none">
+                    <Icon className="w-40 h-40 transform translate-x-8 -translate-y-8" />
                   </div>
                   
-                  <div className="relative z-10 mt-12">
-                    <h3 className="text-2xl font-serif text-white mb-4">
-                      {item.title}
-                    </h3>
-                    <p className="text-base text-slate-200 font-light leading-relaxed">
-                      {item.description}
-                    </p>
+                  {/* Icon Box */}
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200/60 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:shadow-md transition-all duration-300 relative z-10">
+                    <Icon className="h-5 w-5 text-slate-700 group-hover:text-slate-900 transition-colors" />
                   </div>
+                  
+                  <h3 className="text-xl sm:text-2xl font-serif text-slate-900 mb-4 relative z-10">
+                    {item.title}
+                  </h3>
+                  <p className="text-base text-slate-600 font-light leading-relaxed relative z-10">
+                    {item.description}
+                  </p>
                 </div>
               );
             })}
@@ -251,7 +244,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             {activeSegment === 'power' && (
               <div className="animate-in fade-in duration-700">
                 <div className="relative rounded-2xl sm:rounded-[32px] overflow-hidden aspect-[21/9] mb-12 group">
-                  <img src={damImage} alt="Hydroelectric Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105" />
+                  <img src={damImage} alt="Hydroelectric Dam" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105" />
                   <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors duration-1000" />
                   <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 flex flex-col items-start gap-4">
                     <div>
@@ -281,7 +274,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             {activeSegment === 'infra' && (
               <div className="animate-in fade-in duration-700">
                 <div className="relative rounded-2xl sm:rounded-[32px] overflow-hidden aspect-[21/9] mb-12 group">
-                  <img src={pacificImage} alt="Infrastructure Project" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105" />
+                  <img src={pacificImage} alt="Infrastructure Project" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105" />
                   <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors duration-1000" />
                   <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 flex flex-col items-start gap-4">
                     <div>
@@ -311,7 +304,7 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             {activeSegment === 'realestate' && (
               <div className="animate-in fade-in duration-700">
                 <div className="relative rounded-2xl sm:rounded-[32px] overflow-hidden aspect-[21/9] mb-12 group">
-                  <img src={southBlueImage} alt="Real Estate Development" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105" />
+                  <img src={southBlueImage} alt="Real Estate Development" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-105" />
                   <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors duration-1000" />
                   <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 flex flex-col items-start gap-4">
                     <div>

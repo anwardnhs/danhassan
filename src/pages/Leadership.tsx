@@ -213,7 +213,7 @@ const LeaderCard = ({ leader, onClick }: { leader: any, onClick: () => void }) =
       {/* Strict Oando Aspect Ratio */}
       <div className="relative aspect-[3/4] overflow-hidden bg-slate-50 mb-3 sm:mb-4 md:mb-5">
         {leader.image ? (
-          <img 
+          <img loading="lazy" decoding="async" 
             src={leader.image} 
             alt={leader.name} 
             className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105"
@@ -311,7 +311,7 @@ export default function Leadership({ onNavigate }: LeadershipProps) {
       {/* 2. FEATURE IMAGE - Mobile Responsive */}
       <section className="px-4 sm:px-6 lg:px-16">
         <div className="max-w-[1440px] mx-auto h-[220px] sm:h-[280px] md:h-[360px] lg:h-[440px] overflow-hidden rounded-lg relative">
-          <img 
+          <img loading="lazy" decoding="async" 
             src={peopleImage} 
             alt="Leadership" 
             className="w-full h-full object-cover object-center grayscale-[10%]" 
@@ -409,7 +409,7 @@ export default function Leadership({ onNavigate }: LeadershipProps) {
             {/* Left: Fixed Image - Mobile Adjusted */}
             <div className="md:w-[40%] bg-slate-100 h-[280px] sm:h-[320px] md:h-auto relative flex-shrink-0">
               {selectedLeader.image ? (
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={selectedLeader.image} 
                   alt={selectedLeader.name} 
                   className="absolute inset-0 w-full h-full object-cover object-top"

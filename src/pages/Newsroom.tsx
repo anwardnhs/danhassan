@@ -127,7 +127,7 @@ export default function Newsroom({ onNavigate }: NewsroomProps) {
             </div>
             
             <div className="order-1 lg:order-2 h-[360px] sm:h-[420px] lg:h-[560px] bg-slate-100 relative overflow-hidden rounded-sm">
-              <img
+              <img loading="lazy" decoding="async"
                 src={portImage}
                 alt="Featured newsroom"
                 className="h-full w-full object-cover object-center"
