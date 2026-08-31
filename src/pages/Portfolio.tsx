@@ -109,48 +109,48 @@ export default function Portfolio({ onNavigate }: PortfolioProps) {
             <span className="text-slate-900">Portfolio</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
             
-            <div className="lg:col-span-6">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-serif text-slate-900 leading-[1.05] tracking-tight mb-8">
+            <div className="lg:col-span-5">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[72px] font-serif text-slate-900 leading-[1.05] tracking-tight mb-8">
                 Portfolio<br />Overview
               </h1>
-              <p className="text-xl sm:text-2xl text-slate-600 font-light leading-relaxed max-w-xl mb-16">
+              <p className="text-lg sm:text-xl text-slate-600 font-light leading-relaxed max-w-lg mb-12">
                 A concentrated portfolio of cash-generative assets across three essential infrastructure verticals: Power, Engineering, and Real Estate.
               </p>
               
-              <div className="grid grid-cols-2 gap-x-8 gap-y-12">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-10">
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">Total Assets</div>
-                  <div className="text-4xl sm:text-5xl font-light text-slate-900 font-sans tracking-tight">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Total Assets</div>
+                  <div className="text-3xl sm:text-4xl font-light text-slate-900 font-sans tracking-tight">
                     <CountUpText end={34.3} prefix="₦" suffix="T" decimals={1} />
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">Return on Equity</div>
-                  <div className="text-4xl sm:text-5xl font-light text-slate-900 font-sans tracking-tight">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Return on Equity</div>
+                  <div className="text-3xl sm:text-4xl font-light text-slate-900 font-sans tracking-tight">
                     <CountUpText end={12.0} suffix="%" decimals={1} />
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">Core Sectors</div>
-                  <div className="text-4xl sm:text-5xl font-light text-slate-900 font-sans tracking-tight">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Core Sectors</div>
+                  <div className="text-3xl sm:text-4xl font-light text-slate-900 font-sans tracking-tight">
                     <CountUpText end={3} />
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">Free Float</div>
-                  <div className="text-4xl sm:text-5xl font-light text-slate-900 font-sans tracking-tight">
+                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">Free Float</div>
+                  <div className="text-3xl sm:text-4xl font-light text-slate-900 font-sans tracking-tight">
                     <CountUpText end={63.6} suffix="%" decimals={1} />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-6">
-              <div className="w-full aspect-[4/5] sm:h-[700px] rounded-2xl sm:rounded-[32px] overflow-hidden relative group">
+            <div className="lg:col-span-7">
+              <div className="w-full aspect-[4/3] sm:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden relative group shadow-xl shadow-slate-200/50">
                 <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-1000 z-10"></div>
-                <img loading="lazy" decoding="async" 
+                <img loading="eager" decoding="async" 
                   src={atlas2Image} 
                   alt="Portfolio infrastructure" 
                   className="w-full h-full object-cover transform transition-transform duration-[2000ms] ease-out group-hover:scale-105" 
