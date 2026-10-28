@@ -1,39 +1,11 @@
-import { useRef, useEffect } from 'react';
-import Lottie from 'lottie-react';
-import { playLottie } from '../lib/animations';
-
+import { Lottie } from 'lottie-react';
 interface LottieAnimationProps {
-  animationData: any; // JSON data for Lottie animation
+  animationData: object;
   loop?: boolean;
   autoplay?: boolean;
   className?: string;
   onComplete?: () => void;
 }
-
-export default function LottieAnimation({
-  animationData,
-  loop = true,
-  autoplay = true,
-  className = '',
-  onComplete,
-}: LottieAnimationProps) {
-  const lottieRef = useRef<unknown>(null);
-
-  useEffect(() => {
-    if (autoplay) {
-      playLottie(lottieRef as React.RefObject<any>, loop);
-    }
-  }, [autoplay, loop]);
-
-  return (
-    <div className={className}>
-      <Lottie
-        lottieRef={lottieRef}
-        animationData={animationData}
-        loop={loop}
-        autoplay={autoplay}
-        onComplete={onComplete}
-      />
-    </div>
-  );
+export default function LottieAnimation({ animationData, loop = true, autoplay = true, className = '', onComplete }: LottieAnimationProps) {
+  return <Lottie className={className} src={animationData} loop={loop} autoplay={autoplay} subscriptions={onComplete ? { complete: onComplete } : undefined} />;
 }
