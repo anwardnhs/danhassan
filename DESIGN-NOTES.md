@@ -35,3 +35,9 @@ The supplied logo was edited with the built-in image tool to isolate the stag, r
 Image edit prompt: Edit the provided existing Danhassan logo into a favicon asset. Keep the exact original navy stag/deer emblem including its antlers and legs. Remove ALL text and remove the curved ground line below the stag. Isolate only the original stag silhouette, centered on a square transparent canvas, with the stag/antlers filling 90% of the canvas height and a very small even padding. Preserve the original animal shape and original navy palette; do not redesign it or add details or letters. Clean crisp solid navy edges suitable for rendering at 16 and 32 pixels. Output a transparent PNG logo asset.
 
 Vercel rewrites serve the application shell for the six inner page URLs, preserving direct navigation and refresh. Deployment follows the existing GitHub main branch integration.
+
+## Copy cleanup, metrics, and Harbor imagery
+
+Removed the homepage hero caption row (company descriptor and discover link) and the footer slogan. The provided Bernd Dittrich photograph now appears in the homepage real estate card and the Harbor & Hedge portfolio section.
+
+Headline group figures, portfolio totals and percentages, governance counts, financial highlights, and the share price now count up once when they enter view. Formatting preserves currency, grouping, decimal places, percentage units, and the two-digit sector total. Dates, ranges, identifiers, and credit ratings remain static. Screen readers receive the final value, and reduced-motion users see static figures.

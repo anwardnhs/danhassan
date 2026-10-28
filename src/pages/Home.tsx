@@ -1,8 +1,9 @@
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import CountUpText from '../components/CountUpText';
+import { ArrowUpRight } from 'lucide-react';
 import heroImage from '../images/portfolio-hero.jpg';
 import energyImage from '../images/saep.jpg';
 import engineeringImage from '../images/ironwood2.jpg';
-import propertyImage from '../images/harbor.jpg';
+import propertyImage from '../images/harbor-residences.jpg';
 import boardImage from '../images/people.jpg';
 import portImage from '../images/port.jpg';
 import signingImage from '../images/signing.jpg';
@@ -33,11 +34,10 @@ export default function Home({ onNavigate }: { onNavigate: (page: string) => voi
           <a className="button button-white" href="/portfolio" onClick={navigate('portfolio')}>Explore our portfolio <ArrowUpRight size={18} /></a>
         </div>
       </div>
-      <div className="site-container hero-caption"><span>Danhassan & Co. / Investment holding company</span><a href="#introduction" aria-label="Discover Danhassan"><ArrowDown size={17} /><span>Discover our world</span></a></div>
     </section>
     <section id="introduction" className="intro-section site-container">
       <div className="intro-grid"><div><h2>Progress is built on<br /><em>strong foundations.</em></h2><div className="intro-copy"><p>From the power that lights a city to the infrastructure that connects it, we invest in what Africa needs to grow. We bring patient capital and operational expertise to businesses that make a lasting difference.</p><a className="text-link" href="/about" onClick={navigate('about')}>Get to know Danhassan & Co. <ArrowUpRight size={18} /></a></div></div></div>
-      <div className="group-figures"><div><strong>₦27.3<span>T</span></strong><p>Market capitalisation</p></div><div><strong>₦11.8<span>T</span></strong><p>FY2025 revenue</p></div><div><strong>25,200<span>+</span></strong><p>People across the group</p></div><div><strong>03</strong><p>Essential business sectors</p></div></div>
+      <div className="group-figures"><div><strong><CountUpText end={27.3} prefix="₦" suffix="T" decimals={1} /></strong><p>Market capitalisation</p></div><div><strong><CountUpText end={11.8} prefix="₦" suffix="T" decimals={1} /></strong><p>FY2025 revenue</p></div><div><strong><CountUpText end={25200} suffix="+" /></strong><p>People across the group</p></div><div><strong><CountUpText end={3} minimumIntegerDigits={2} /></strong><p>Essential business sectors</p></div></div>
       <p className="figure-note">Group figures as presented in FY2025 reporting.</p>
     </section>
     <section className="sectors-section"><div className="site-container"><div className="section-heading"><div><h2>Essential sectors.<br /><em>Extraordinary possibility.</em></h2></div><a className="text-link" href="/portfolio" onClick={navigate('portfolio')}>The full portfolio <ArrowUpRight size={18} /></a></div>

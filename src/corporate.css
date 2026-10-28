@@ -8,7 +8,6 @@
 .hero-bottom p { font-size: 19px; line-height: 1.75; }
 .hero-content { padding-top: clamp(62px, 8vh, 100px); }
 .home-hero h1 { margin-top: 0; }
-.hero-caption { font-size: 13px; text-transform: none; letter-spacing: .02em; }
 .intro-grid { grid-template-columns: 1fr; }
 .intro-grid > div { display: grid; grid-template-columns: 1.2fr 1fr; gap: 8%; }
 .intro-copy { margin-top: 0; }
@@ -60,7 +59,7 @@
 .facts-row > div { border-left: 1px solid #1e293b26; padding-left: 28px; }
 .facts-row > div:first-child { border: 0; padding-left: 0; }
 .facts-row strong { display: block; font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -.055em; font-weight: 400; }
-.facts-row span { display: block; color: var(--body); font-size: 16px; margin-top: 10px; }
+.facts-row > div > span { display: block; color: var(--body); font-size: 16px; margin-top: 10px; }
 .group-history { display: grid; grid-template-columns: .9fr 1.3fr; gap: 10%; padding-block: 110px; }
 .history-intro { align-self: start; position: sticky; top: 125px; }
 .history-intro > p { margin-block: 24px; }
@@ -136,7 +135,7 @@
 .financial-metrics > div { padding: 26px 0; border-top: 1px solid var(--line); }
 .financial-metrics dt { font-size: 17px; color: var(--body); }
 .financial-metrics dd { font-size: clamp(34px, 3.7vw, 50px); letter-spacing: -.05em; line-height: 1.4; margin-block: 9px; }
-.financial-metrics span { font-size: 15px; color: var(--green); }
+.financial-metrics > div > span { font-size: 15px; color: var(--green); }
 .investor-market { background: #eef0eb; padding-block: 70px; }
 .market-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 8%; }
 .market-heading { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
@@ -219,7 +218,6 @@
   .button, .text-link { font-size: 16px; }
   .intro-copy > p, .leadership-copy > p:not(.eyebrow), .investor-band p:not(.eyebrow) { font-size: 17px; }
   .group-figures p { font-size: 15px; }
-  .hero-caption { font-size: 12px; }
   .footer-grid a, .footer-address > p:not(.eyebrow) { font-size: 15px; }
   .footer-bottom { font-size: 12px; }
   .sector-copy .sector-title { font-size: 25px; }
@@ -237,7 +235,7 @@
   .facts-row { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
   .facts-row > div { border: 0; padding-left: 0; }
   .facts-row strong { font-size: 34px; }
-  .facts-row span { font-size: 15px; }
+  .facts-row > div > span { font-size: 15px; }
   .history-list li { grid-template-columns: 1fr; gap: 14px; padding: 26px 0; }
   .group-people { padding-block: 50px; }
   .group-people-inner > img { height: 300px; }
@@ -266,7 +264,7 @@
   .financial-metrics { grid-template-columns: 1fr 1fr; gap: 0 24px; }
   .financial-metrics dt { font-size: 16px; }
   .financial-metrics dd { font-size: 34px; }
-  .financial-metrics span { font-size: 14px; }
+  .financial-metrics > div > span { font-size: 14px; }
   .investor-market { padding-block: 45px; }
   .market-heading { align-items: start; flex-direction: column; gap: 10px; }
   .site main .market-heading h2, .site main .credit-ratings h2 { font-size: 29px; }
@@ -297,9 +295,6 @@
 .hero-bottom { flex-direction: column; align-items: flex-start; gap: 25px; }
 .hero-bottom p { max-width: 520px; line-height: 1.75; }
 .hero-bottom .button { min-height: 58px; }
-.hero-caption { position: static; inset: auto; margin-inline: auto; padding: 22px 0 25px; border-top: 1px solid #ffffff40; gap: 30px; }
-.hero-caption > span { max-width: none; }
-.hero-caption a { flex-shrink: 0; }
 .people-opening, .newsroom-opening { display: grid; grid-template-columns: 1.4fr 1fr; gap: 10%; align-items: end; padding-block: 75px 60px; }
 .people-opening > p, .newsroom-opening > p { max-width: 480px; padding-bottom: 7px; }
 .ceo-section { background: #eef0eb; padding-block: 60px; }
@@ -426,9 +421,6 @@
   .home-hero h1 { font-size: clamp(39px, 9.9vw, 61px); line-height: 1.2; margin-bottom: 25px; }
   .hero-bottom { gap: 24px; }
   .hero-bottom p { font-size: 17px; }
-  .hero-caption { padding: 18px 0 22px; gap: 18px; font-size: 12px; align-items: center; }
-  .hero-caption > span { max-width: 205px; line-height: 1.6; }
-  .hero-caption a > span { display: none; }
   .people-opening, .newsroom-opening, .contact-opening { gap: 25px; }
   .ceo-section { padding-block: 35px; }
   .ceo-feature { grid-template-columns: 1fr; gap: 30px; }
@@ -471,3 +463,7 @@
   .portrait-name { font-size: 23px; }
   .regional-grid { grid-template-columns: 1fr; }
 }
+
+
+.count-up { font: inherit; font-variant-numeric: tabular-nums; }
+.count-up > [aria-hidden='true'] { font: inherit; }
