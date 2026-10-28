@@ -1,7 +1,7 @@
 import CountUpText from '../components/CountUpText';
 import { ArrowUpRight } from 'lucide-react';
 import { NextChapter, PageLink, type CorporatePageProps } from '../components/CorporateLayout';
-import constructionImage from '../images/portfolio-hero.jpg';
+import constructionImage from '../images/group-road-network.jpg';
 import peopleImage from '../images/people.jpg';
 
 const history = [
@@ -16,7 +16,7 @@ export default function About({ onNavigate }: CorporatePageProps) {
   return <div className="redesign group-redesign">
     <section className="group-opening site-container">
       <div className="group-opening-title"><h1>A long view.<br />A lasting <em>impact.</em></h1><p>We are Danhassan & Co. A Nigerian investment holding company building businesses that support Africa’s everyday progress.</p></div>
-      <div className="group-opening-image"><img src={constructionImage} alt="An aerial view of infrastructure under construction" fetchPriority="high" /><div className="group-image-note"><strong>Since 1967</strong><span>Growing with the continent.</span></div></div>
+      <div className="group-opening-image"><img src={constructionImage} alt="Aerial view of interconnected roads and highway bridges" fetchPriority="high" /><div className="group-image-note"><strong>Since 1967</strong><span>Growing with the continent.</span></div></div>
     </section>
 
     <section className="group-purpose site-container">
