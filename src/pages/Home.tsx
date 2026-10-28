@@ -1,6 +1,6 @@
 import CountUpText from '../components/CountUpText';
 import { ArrowUpRight } from 'lucide-react';
-import heroImage from '../images/portfolio-hero.jpg';
+import heroImage from '../images/home-city-sunrise.jpg';
 import energyImage from '../images/saep.jpg';
 import engineeringImage from '../images/ironwood2.jpg';
 import propertyImage from '../images/harbor-residences.jpg';
@@ -24,7 +24,7 @@ export default function Home({ onNavigate }: { onNavigate: (page: string) => voi
   const navigate = (page: string) => (e: React.MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); onNavigate(page); };
   return <div className="home-page">
     <section className="home-hero">
-      <img className="hero-photograph" src={heroImage} alt="An aerial view of workers building essential infrastructure" fetchPriority="high" />
+      <img className="hero-photograph" src={heroImage} alt="A city skyline and harbour in warm sunrise light, with mountains beyond" fetchPriority="high" />
       <div className="hero-shade" />
       <div className="site-container hero-content">
 
