@@ -480,8 +480,11 @@
 .site-header--over-hero .header-contact { border-color: #ffffff40; }
 .site-header--over-hero .brand-period { color: #a7f3d0; }
 .page-home .home-hero { min-height: clamp(650px, 100svh, 900px); max-height: none; }
-.page-home .hero-content { padding-top: calc(var(--header-height) + 48px); padding-bottom: 56px; }
-.page-home .hero-shade { background: linear-gradient(180deg, #0f172a75, transparent 30%), linear-gradient(90deg, #0f172acc, #0f172a55 65%, #0f172a14), linear-gradient(0deg, #0f172a66, transparent 40%); }
+.page-home .hero-content { align-items: center; text-align: center; padding-top: calc(var(--header-height) + 48px); padding-bottom: 56px; }
+.page-home .hero-content h1 { max-width: 940px; text-wrap: balance; }
+.page-home .hero-bottom { align-items: center; gap: 28px; }
+.page-home .hero-bottom p { max-width: 560px; text-wrap: balance; }
+.page-home .hero-shade { background: linear-gradient(180deg, #0f172a94, #0f172a75 50%, #0f172aa6); }
 @media (max-width: 960px) {
   .site { --header-height: 76px; }
 }
