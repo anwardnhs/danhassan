@@ -3,12 +3,12 @@ import { ArrowDown, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { NextChapter, type CorporatePageProps } from '../components/CorporateLayout';
 import damImage from '../images/dam.jpg';
 import engineeringImage from '../images/pacifc.jpg';
-import propertyImage from '../images/harbor-residences.jpg';
+import propertyImage from '../images/harbor-waterfront.jpg';
 
 const businesses = [
   { id: 'power', sector: 'Power & energy', name: 'South Atlantic Energy Plc', image: damImage, alt: 'Hydroelectric generation infrastructure', headline: 'Powering what comes next.', copy: 'We develop and operate generation facilities across hydroelectric, thermal, and renewable energy. Reliable supply supports the homes, businesses, and industries driving regional growth.', capabilities: ['Power generation', 'Renewable energy', 'Energy infrastructure'], domain: 'sae.com' },
   { id: 'engineering', sector: 'Infrastructure & engineering', name: 'Ironwood Engineering Limited', image: engineeringImage, alt: 'Transport infrastructure connecting urban communities', headline: 'Connecting people. Enabling industry.', copy: 'Engineering, procurement, and construction for critical infrastructure. From high-voltage transmission to roads, bridges, and industrial facilities, we build for reliability and regional connectivity.', capabilities: ['Engineering & construction', 'Transmission networks', 'Industrial projects'], domain: 'ironwoodeng.com' },
-  { id: 'property', sector: 'Real estate & property', name: 'Harbor & Hedge Properties', image: propertyImage, alt: 'Modern residential property development', headline: 'Places with a future.', copy: 'We develop and manage commercial, industrial, and residential property. Our focus is on sustainable communities, productive business hubs, and long-term value for the people who use them.', capabilities: ['Commercial & residential', 'Logistics & industrial', 'Property management'], domain: 'harborhedge.com' },
+  { id: 'property', sector: 'Real estate & property', name: 'Harbor & Hedge Properties', image: propertyImage, alt: 'Waterfront cityscape with residential and commercial buildings and a bridge', headline: 'Places with a future.', copy: 'We develop and manage commercial, industrial, and residential property. Our focus is on sustainable communities, productive business hubs, and long-term value for the people who use them.', capabilities: ['Commercial & residential', 'Logistics & industrial', 'Property management'], domain: 'harborhedge.com' },
 ];
 
 export default function Portfolio({ onNavigate }: CorporatePageProps) {
