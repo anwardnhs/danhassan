@@ -467,3 +467,26 @@
 
 .count-up { font: inherit; font-variant-numeric: tabular-nums; }
 .count-up > [aria-hidden='true'] { font: inherit; }
+
+/* Let the homepage photograph extend behind the navigation. */
+.site { --header-height: 88px; }
+.site-header { transition: background-color .2s, border-color .2s, color .2s; }
+.page-home .site-header { position: fixed; inset: 0 0 auto; width: 100%; }
+.site-header--over-hero { background: transparent; border-color: #ffffff30; color: white; }
+.site-header--over-hero .desktop-nav a { color: #f1f5f9; }
+.site-header--over-hero .desktop-nav a:hover,
+.site-header--over-hero .desktop-nav a[aria-current] { color: white; }
+.site-header--over-hero .desktop-nav a::after { background: #a7f3d0; }
+.site-header--over-hero .header-contact { border-color: #ffffff40; }
+.site-header--over-hero .brand-period { color: #a7f3d0; }
+.page-home .home-hero { min-height: clamp(650px, 100svh, 900px); max-height: none; }
+.page-home .hero-content { padding-top: calc(var(--header-height) + 48px); padding-bottom: 56px; }
+.page-home .hero-shade { background: linear-gradient(180deg, #0f172a75, transparent 30%), linear-gradient(90deg, #0f172acc, #0f172a55 65%, #0f172a14), linear-gradient(0deg, #0f172a66, transparent 40%); }
+@media (max-width: 960px) {
+  .site { --header-height: 76px; }
+}
+@media (max-width: 640px) {
+  .site { --header-height: 70px; }
+  .page-home .home-hero { min-height: max(640px, 100svh); }
+  .page-home .hero-content { padding-top: calc(var(--header-height) + 40px); padding-bottom: 42px; }
+}

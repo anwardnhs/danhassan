@@ -34,6 +34,13 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState('');
+  const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 32);
+  useEffect(() => {
+    const updateScroll = () => setIsScrolled(window.scrollY > 32);
+    updateScroll();
+    window.addEventListener('scroll', updateScroll, { passive: true });
+    return () => window.removeEventListener('scroll', updateScroll);
+  }, [currentPage]);
   const navItems = [['home', 'Home'], ['about', 'The group'], ['portfolio', 'Our portfolio'], ['investors', 'Investors'], ['leadership', 'Leadership'], ['newsroom', 'Newsroom']];
   useEffect(() => {
     const shortcut = (e: KeyboardEvent) => { if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); setSearchOpen(value => !value); } };
@@ -46,7 +53,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   }, [query]);
   const go = (page: string) => { setMenuOpen(false); setSearchOpen(false); setQuery(''); onNavigate(page); };
   return <>
-    <header className="site-header"><div className="site-container header-inner">
+    <header className={`site-header${currentPage === 'home' && !isScrolled ? ' site-header--over-hero' : ''}`}><div className="site-container header-inner">
       <a href="/" className="wordmark" aria-label="Danhassan & Co. home" onClick={e => { e.preventDefault(); go('home'); }}>DANHASSAN <span>&</span> CO<span className="brand-period">.</span></a>
       <nav className="desktop-nav" aria-label="Main navigation">{navItems.map(([page, label]) => <a key={page} href={page === 'home' ? '/' : `/${page}`} aria-current={currentPage === page ? 'page' : undefined} onClick={e => { e.preventDefault(); go(page); }}>{label}</a>)}</nav>
       <div className="header-actions"><button className="icon-button" aria-label="Search the website" onClick={() => setSearchOpen(true)}><Search size={18} /></button><a href="/contact" className="header-contact" onClick={e => { e.preventDefault(); go('contact'); }}>Let’s talk <ArrowUpRight size={16} /></a><button className="icon-button menu-toggle" aria-label="Open navigation menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}><Menu size={23} /></button></div>
