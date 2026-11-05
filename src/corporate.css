@@ -482,45 +482,7 @@
   .page-home .hero-content { padding-top: calc(var(--header-height) + 40px); padding-bottom: 42px; }
 }
 
-/* Shared page navigation and clearer interaction states. */
-.section-nav {
-  background: #eef0eb;
-  border-block: 1px solid var(--line);
-  color: var(--ink);
-}
-.section-nav-inner {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 3vw, 40px);
-  padding-block: 12px;
-}
-.section-nav-inner > span {
-  flex: none;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--body);
-}
-.section-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 20px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.section-nav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  font-size: 15px;
-  font-weight: 600;
-  text-underline-offset: 4px;
-}
-.section-nav a:hover, .section-nav a:focus-visible {
-  color: var(--green);
-  text-decoration: underline;
-}
-.section-nav + .featured-release { padding-top: clamp(28px, 5vw, 64px); }
+/* Shared interaction states. */
 .search-field:focus-within { box-shadow: 0 2px 0 var(--green); }
 .search-field > svg, .search-field .icon-button { flex-shrink: 0; }
 .search-field .icon-button { border-radius: 50%; }
@@ -536,8 +498,5 @@
 .footer-back-top:hover { color: var(--green); }
 
 @media (max-width: 640px) {
-  .section-nav-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .section-nav ul { column-gap: 16px; }
-  .section-nav a { font-size: 14px; }
   .team-controls, .library-controls { flex-wrap: wrap; }
 }

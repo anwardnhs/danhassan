@@ -1,6 +1,6 @@
 import CountUpText from '../components/CountUpText';
 import { ArrowUpRight } from 'lucide-react';
-import { NextChapter, PageLink, SectionNav, type CorporatePageProps } from '../components/CorporateLayout';
+import { NextChapter, PageLink, type CorporatePageProps } from '../components/CorporateLayout';
 import constructionImage from '../images/group-road-network.jpg';
 import peopleImage from '../images/people.jpg';
 
@@ -19,12 +19,6 @@ export default function About({ onNavigate }: CorporatePageProps) {
       <div className="group-opening-image"><img src={constructionImage} alt="Aerial view of interconnected roads and highway bridges" fetchPriority="high" /><div className="group-image-note"><strong>Since 1967</strong><span>Growing with the continent.</span></div></div>
     </section>
 
-    <SectionNav links={[
-      { id: 'our-purpose', label: 'Our purpose' },
-      { id: 'group-figures', label: 'Key figures' },
-      { id: 'our-history', label: 'Our history' },
-      { id: 'governance', label: 'Governance' },
-    ]} />
     <section id="our-purpose" className="group-purpose site-container">
       <h2>The essentials of progress.<br /><em>Built for the long term.</em></h2>
       <div><p>Electricity that keeps businesses running. Infrastructure that connects communities. Places where people can live and work. Our portfolio is grounded in the things a growing economy depends on.</p><p>We combine patient capital with hands-on operational expertise across power, engineering, and real estate. Our responsibility is to create lasting value for shareholders, employees, and the communities we serve.</p><PageLink page="portfolio" onNavigate={onNavigate}>Explore our businesses</PageLink></div>

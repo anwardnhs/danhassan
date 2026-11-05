@@ -2,7 +2,7 @@ import CountUpText from '../components/CountUpText';
 import { useState } from 'react';
 import { ArrowDown, ArrowUpRight, FileText, Mail, Phone } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../components/ui/dialog';
-import { NextChapter, SectionNav, type CorporatePageProps } from '../components/CorporateLayout';
+import { NextChapter, type CorporatePageProps } from '../components/CorporateLayout';
 
 const metrics = [
   { end: 27.3, prefix: '₦', suffix: 'T', decimals: 1, label: 'Market capitalisation', note: 'NGX: DANHASSAN' },
@@ -32,12 +32,6 @@ export default function Investors({ onNavigate }: CorporatePageProps) {
   return <div className="redesign investors-redesign">
     <section className="investor-opening"><div className="site-container investor-opening-grid"><div><h1>Conviction in our future.<br /><em>Clarity in our performance.</em></h1><p>Financial results, shareholder information, and the governance behind our long-term approach to investing.</p><a className="action-link on-dark" href="#financial-results">Explore FY2025 results <ArrowDown size={20} /></a></div><div className="annual-report-feature"><span>Danhassan & Co.</span><div><p>Annual report</p><strong>2025</strong><h2>Building value.<br />Advancing Africa.</h2></div><button onClick={() => setRequestedResource('FY2025 Annual Report')}>Request the report <ArrowUpRight size={22} /></button></div></div></section>
 
-    <SectionNav links={[
-      { id: 'financial-results', label: 'Financial results' },
-      { id: 'market-performance', label: 'Market performance' },
-      { id: 'reports', label: 'Reports and disclosures' },
-      { id: 'shareholder-services', label: 'Shareholder services' },
-    ]} />
     <section className="results-section site-container" id="financial-results"><div className="redesign-section-title"><h2>A year in perspective.</h2><p>FY2025 financial highlights<br />Results published 24 January 2026</p></div><dl className="financial-metrics">{metrics.map(metric => <div key={metric.label}><dt>{metric.label}</dt><dd><CountUpText end={metric.end} prefix={metric.prefix} suffix={metric.suffix} decimals={metric.decimals} /></dd><span>{metric.note}</span></div>)}</dl></section>
 
     <section id="market-performance" className="investor-market"><div className="site-container market-grid"><div className="share-snapshot"><div className="market-heading"><h2>Share performance</h2><span>NGX: DANHASSAN</span></div><div className="share-price"><strong><CountUpText end={3200} prefix="₦" /></strong><span><CountUpText end={1.2} prefix="+" suffix="%" decimals={1} /></span></div><p>Market snapshot · 24 Jan 2026, 16:00 WAT</p><dl className="share-details">{[['Day range', '₦3,180 – ₦3,245'], ['52-week range', '₦2,800 – ₦3,400'], ['Volume', '12.4M'], ['Shares outstanding', '8.52B'], ['Free float', '63.6%'], ['P/E ratio', '18.8x']].map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><button className="action-link" onClick={() => setRequestedResource('Stock information')}>Request stock information <ArrowUpRight size={20} /></button></div><div className="credit-ratings"><h2>Credit ratings</h2>{ratings.map(rating => <div className="rating-row" key={rating.agency}><div><h3>{rating.agency}</h3><p>{rating.outlook} outlook · {rating.date}</p></div><strong>{rating.rating}</strong></div>)}</div></div></section>

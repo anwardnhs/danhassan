@@ -20,19 +20,6 @@ export function PageLink({ page, onNavigate, children, className = 'action-link'
   return <SiteLink page={page} onNavigate={onNavigate} className={className}>{children}<ArrowUpRight size={20} aria-hidden="true" /></SiteLink>;
 }
 
-export function SectionNav({ links }: { links: readonly { id: string; label: string }[] }) {
-  return (
-    <nav className="section-nav" aria-label="On this page">
-      <div className="site-container section-nav-inner">
-        <span>On this page</span>
-        <ul>
-          {links.map(({ id, label }) => <li key={id}><a href={`#${id}`}>{label}</a></li>)}
-        </ul>
-      </div>
-    </nav>
-  );
-}
-
 export function NextChapter({ title, copy, page, label, onNavigate }: CorporatePageProps & { title: string; copy: string; page: string; label: string }) {
   return <section className="next-chapter"><div className="site-container next-chapter-inner"><h2>{title}</h2><div><p>{copy}</p><PageLink page={page} onNavigate={onNavigate} className="action-button light-button">{label}</PageLink></div></div></section>;
 }
