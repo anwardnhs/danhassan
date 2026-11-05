@@ -85,15 +85,7 @@
 .portfolio-total strong { font-size: clamp(48px, 5vw, 70px); font-weight: 400; letter-spacing: -.06em; display: block; }
 .portfolio-total > span { font-size: 18px; color: var(--body); display: block; margin: 8px 0 28px; }
 .portfolio-total a { display: inline-flex; align-items: center; gap: 22px; font-size: 16px; }
-.business-index { border-block: 1px solid var(--line); background: #eef0eb; }
-.business-index > div { display: grid; grid-template-columns: repeat(3, 1fr); }
-.business-index a { display: flex; align-items: center; gap: 18px; padding: 28px 24px; border-right: 1px solid var(--line); font-size: 17px; font-weight: 600; }
-.business-index a:first-child { padding-left: 0; }
-.business-index a:last-child { border-right: 0; }
-.business-index a > span { color: var(--green); font-size: 14px; }
-.business-index a > svg { margin-left: auto; flex-shrink: 0; }
-.business-index a:hover { color: var(--green); }
-.business-feature { padding-block: 64px; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+.business-feature { padding-block: 64px; border-bottom: 1px solid var(--line); }
 .business-feature:last-child { border: 0; }
 .business-feature-heading { display: flex; gap: 24px; align-items: baseline; margin-bottom: 30px; }
 .business-feature-heading > span { font-size: 17px; color: var(--green); }
@@ -186,7 +178,6 @@
   .menu-toggle { display: inline-flex; }
   .group-opening-title { gap: 6%; }
   .business-feature-grid { gap: 5%; }
-  .business-index a { font-size: 15px; gap: 12px; padding-inline: 18px; }
   .investor-opening-grid { gap: 6%; }
   .portfolio-performance { flex-wrap: wrap; }
 }
@@ -200,9 +191,6 @@
   .group-people-inner > img { height: 400px; }
   .portfolio-total { padding: 25px 0 0; border-left: 0; border-top: 1px solid var(--line); }
   .portfolio-total strong { font-size: 54px; }
-  .business-index > div { grid-template-columns: 1fr; }
-  .business-index a, .business-index a:first-child { border-right: 0; border-bottom: 1px solid var(--line); padding: 19px 0; font-size: 18px; }
-  .business-index a:last-child { border-bottom: 0; }
   .business-feature-image { height: 430px; }
   .principle-grid { gap: 30px; }
   .annual-report-feature { min-height: 360px; max-width: 540px; width: 100%; }
@@ -492,4 +480,64 @@
   .site { --header-height: 70px; }
   .page-home .home-hero { min-height: max(640px, 100svh); }
   .page-home .hero-content { padding-top: calc(var(--header-height) + 40px); padding-bottom: 42px; }
+}
+
+/* Shared page navigation and clearer interaction states. */
+.section-nav {
+  background: #eef0eb;
+  border-block: 1px solid var(--line);
+  color: var(--ink);
+}
+.section-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  padding-block: 12px;
+}
+.section-nav-inner > span {
+  flex: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--body);
+}
+.section-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+.section-nav a:hover, .section-nav a:focus-visible {
+  color: var(--green);
+  text-decoration: underline;
+}
+.section-nav + .featured-release { padding-top: clamp(28px, 5vw, 64px); }
+.search-field:focus-within { box-shadow: 0 2px 0 var(--green); }
+.search-field > svg, .search-field .icon-button { flex-shrink: 0; }
+.search-field .icon-button { border-radius: 50%; }
+.search-field .icon-button:hover { background: var(--paper); }
+.search-summary { color: var(--body); font-size: 14px; font-weight: 600; }
+.search-results > a:focus-visible { outline-offset: -3px; }
+.navigation-dialog nav a[aria-current='page'] { background: #eef0eb; }
+.news-card { display: flex; flex-direction: column; }
+.news-card .news-read { margin-top: auto; }
+.news-category > span { color: var(--body); }
+.news-card:hover h3, .sector-card:hover .sector-title { color: var(--green); }
+.footer-back-top { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; }
+.footer-back-top:hover { color: var(--green); }
+
+@media (max-width: 640px) {
+  .section-nav-inner { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .section-nav ul { column-gap: 16px; }
+  .section-nav a { font-size: 14px; }
+  .team-controls, .library-controls { flex-wrap: wrap; }
 }
