@@ -3,7 +3,7 @@ import portImage from '../images/port.jpg';
 export const rimHolding = {
   id: 'rim',
   name: 'RIM Holdings Limited',
-  sector: 'Shipping, logistics & retail',
+  sector: 'Shipping & logistics',
   image: portImage,
   alt: 'Container ship alongside cranes and freight containers at a port terminal',
   ownership: 'Majority owned by Danhassan & Co.',
