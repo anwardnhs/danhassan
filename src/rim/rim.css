@@ -6,251 +6,1871 @@
   --rim-line: #00171f26;
   background: #fff;
   color: var(--rim-ink);
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 17px;
   line-height: 1.8;
   overflow: clip;
 }
-.rim-site * { box-sizing: border-box; }
-.rim-site p { margin: 0 0 22px; }
-.rim-site img { display: block; width: 100%; object-fit: cover; }
-.rim-site a { text-decoration: none; color: inherit; }
-.rim-site button { cursor: pointer; }
-.rim-site :is(a, button, input, select, textarea):focus-visible { outline: 3px solid var(--rim-sky); outline-offset: 5px; }
-.rim-site h1, .rim-site h2, .rim-site h3 { font-family: 'Manrope', sans-serif; font-weight: 500; line-height: 1.12; letter-spacing: -.055em; margin: 0; }
-.rim-site h1 { font-size: clamp(48px, 6.4vw, 98px); }
-.rim-site h2 { font-size: clamp(36px, 4vw, 60px); }
-.rim-site h3 { font-size: 27px; line-height: 1.35; letter-spacing: -.035em; }
-.rim-site em { font-style: normal; color: var(--rim-blue); }
-.rim-wrap { width: min(1440px, calc(100% - 112px)); margin-inline: auto; }
-.rim-section { padding-block: 110px; }
-.rim-kicker { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; line-height: 1.6; }
-.rim-skip { position: fixed; z-index: 100; left: 20px; top: -100px; padding: 12px 20px; background: #fff; color: #00171f; }
-.rim-skip:focus { top: 12px; }
-.rim-header { position: relative; z-index: 30; border-bottom: 1px solid var(--rim-line); }
-.rim-home .rim-header { position: absolute; top: 0; left: 0; width: 100%; color: white; border-bottom-color: #ffffff35; }
-.rim-header > .rim-wrap { min-height: 102px; display: flex; align-items: center; justify-content: space-between; gap: 45px; }
-.rim-brand { display: flex; flex-direction: column; width: 104px; }
-.rim-brand-mark { font-size: 41px; font-weight: 800; line-height: .95; letter-spacing: -.08em; position: relative; }
-.rim-brand-mark > span { color: var(--rim-sky); font-size: 29px; position: absolute; top: -4px; right: -4px; }
-.rim-brand-subtitle { font-size: 9px; line-height: 2; letter-spacing: .35em; padding-left: 2px; }
-.rim-nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 46px); font-size: 14px; font-weight: 500; }
-.rim-nav a { padding-block: 10px; position: relative; }
-.rim-nav a:hover { color: var(--rim-sky); }
-.rim-nav-active::after { content: ''; height: 2px; background: var(--rim-blue); position: absolute; bottom: 0; left: 0; right: 0; }
-.rim-nav-contact { display: flex; align-items: center; gap: 20px; margin-left: 25px; }
-.rim-menu-button { display: none; border: 0; background: transparent; color: inherit; min-width: 44px; min-height: 44px; }
-.rim-hero { min-height: 780px; height: min(980px, 100svh); position: relative; background: var(--rim-deep); color: white; isolation: isolate; }
-.rim-hero > img { position: absolute; inset: 0; height: 100%; z-index: -2; object-position: 65% 50%; }
-.rim-hero-wash { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #00171ff0 0%, #00171fa6 42%, #00171f15 100%), linear-gradient(0deg, #00171f90, transparent 55%); }
-.rim-hero-content { padding-top: max(180px, 22vh); }
-.rim-hero-content > .rim-kicker { color: #c4e8f6; margin-bottom: 24px; }
-.rim-hero h1 { font-size: clamp(64px, 7.9vw, 118px); line-height: .99; letter-spacing: -.065em; }
-.rim-hero h1 > span { color: #43c7f3; }
-.rim-hero-bottom { display: flex; align-items: end; justify-content: space-between; gap: 45px; margin-top: 40px; max-width: 1080px; }
-.rim-hero-bottom p { line-height: 1.8; font-size: 16px; margin: 0; color: #ffffffd0; }
-.rim-action { display: inline-flex; justify-content: space-between; align-items: center; gap: 40px; min-height: 52px; border-bottom: 1px solid #00171f60; padding-block: 12px; font-size: 15px; font-weight: 600; margin-top: 18px; }
-.rim-action:hover { color: var(--rim-blue); border-bottom-color: var(--rim-blue); }
-.rim-action svg { flex-shrink: 0; transition: transform .2s; }
-.rim-action:hover svg { transform: translate(3px, -3px); }
-.rim-action-light { color: white; border-bottom-color: #ffffff70; }
-.rim-action-light:hover { color: #5ed4ff; border-bottom-color: #5ed4ff; }
-.rim-hero-scroll { position: absolute; left: 56px; bottom: 30px; display: grid; place-items: center; border: 1px solid #ffffff60; width: 42px; height: 42px; border-radius: 50%; }
-.rim-hero-index { position: absolute; bottom: 38px; right: 56px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #ffffffc0; }
-.rim-introduction { padding-block: 110px 70px; }
-.rim-introduction > .rim-kicker { margin-bottom: 36px; color: var(--rim-blue); }
-.rim-split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 12%; }
-.rim-large-copy { font-size: 24px; line-height: 1.65; letter-spacing: -.025em; }
-.rim-split > div > p:not(.rim-large-copy) { color: #3d565e; }
-.rim-home-facts { margin-top: 65px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rim-line); }
-.rim-home-facts > div { display: flex; flex-direction: column; padding: 30px 20px 0 0; }
-.rim-home-facts strong { font-size: 46px; letter-spacing: -.065em; font-weight: 500; line-height: 1.2; }
-.rim-home-facts span { font-size: 13px; color: #52666d; margin-top: 12px; }
-.rim-portfolio-section { padding-block: 95px; background: #f0f5f7; }
-.rim-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 45px; }
-.rim-section-heading .rim-kicker { color: var(--rim-blue); }
-.rim-business-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px 30px; }
-.rim-card-image { position: relative; aspect-ratio: 1.55; overflow: hidden; background: var(--rim-deep); }
-.rim-card-image img { height: 100%; transition: transform .5s; }
-.rim-business-card:hover img { transform: scale(1.035); }
-.rim-card-arrow { position: absolute; right: 0; bottom: 0; background: white; color: var(--rim-ink); width: 64px; height: 64px; display: grid; place-items: center; }
-.rim-business-card:hover .rim-card-arrow { background: var(--rim-blue); color: white; }
-.rim-card-label { padding-top: 20px; }
-.rim-card-label > span { color: var(--rim-blue); font-size: 11px; text-transform: uppercase; letter-spacing: .09em; }
-.rim-card-label h3 { font-size: 33px; margin-block: 12px; }
-.rim-card-label p { max-width: 470px; color: #45606a; font-size: 15px; margin-bottom: 0; }
-.rim-editorial { display: grid; grid-template-columns: 1fr 1fr; background: var(--rim-deep); color: white; }
-.rim-editorial-image img { height: 100%; min-height: 560px; }
-.rim-editorial-copy { padding: 90px clamp(35px, 6vw, 95px); align-self: center; }
-.rim-editorial-copy > p:not(.rim-kicker) { margin-top: 30px; color: #d0e0e7; }
-.rim-editorial-copy .rim-kicker { color: #6cd5fb; }
-.rim-stories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
-.rim-story-image { aspect-ratio: 1.4; overflow: hidden; background: #d7e5eb; margin-bottom: 24px; }
-.rim-story-image img { height: 100%; transition: transform .5s; }
-.rim-stories > a:hover img { transform: scale(1.04); }
-.rim-stories .rim-kicker { color: #4a6975; font-size: 10px; margin-bottom: 15px; }
-.rim-stories h3 { font-size: 26px; line-height: 1.35; margin-bottom: 18px; }
-.rim-stories > a > p:not(.rim-kicker) { font-size: 15px; color: #4a6975; }
-.rim-story-link { display: flex; align-items: center; gap: 20px; font-size: 13px; margin-top: 24px; }
-.rim-connect { background: var(--rim-blue); color: white; padding-block: 70px 85px; }
-.rim-connect .rim-kicker { color: #d4f0fa; }
-.rim-connect > .rim-wrap > div { display: flex; align-items: end; justify-content: space-between; gap: 60px; }
-.rim-connect h2 { font-size: clamp(50px, 6vw, 85px); }
-.rim-connect p:not(.rim-kicker) { font-size: 16px; color: #effaff; }
-.rim-footer { background: var(--rim-ink); color: white; padding-top: 65px; }
-.rim-footer-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 45px; border-bottom: 1px solid #ffffff25; }
-.rim-footer-brand { font-size: clamp(80px, 12vw, 170px); font-weight: 800; line-height: .9; letter-spacing: -.09em; }
-.rim-footer-brand > span { color: var(--rim-sky); font-size: .7em; }
-.rim-footer-top > p { font-size: 22px; line-height: 1.5; margin: 0; }
-.rim-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 45px; padding-block: 50px; font-size: 13px; }
-.rim-footer-grid :is(nav,div) > a { display: flex; align-items: center; gap: 10px; color: #b6c9d1; margin-top: 10px; width: fit-content; }
-.rim-footer-grid a:hover { color: #58d1fc; }
-.rim-footer-grid p { margin-bottom: 18px; }
-.rim-footer-bottom { border-top: 1px solid #ffffff25; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px; font-size: 11px; color: #8ea9b3; }
-.rim-footer-bottom p { margin: 0; }
-.rim-footer-bottom a { display: flex; align-items: center; gap: 10px; }
-.rim-page-intro { padding-block: 80px 65px; }
-.rim-page-intro > .rim-kicker { color: var(--rim-blue); margin-bottom: 28px; }
-.rim-page-intro h1 { max-width: 1040px; }
-.rim-intro-copy { max-width: 670px; color: #45606a; font-size: 20px; margin-top: 30px !important; margin-bottom: 0 !important; }
-.rim-wide-photo { height: clamp(320px, 40vw, 570px); }
-.rim-wide-photo > img { height: 100%; }
-.rim-history { background: #f0f5f7; padding-block: 90px; }
-.rim-history .rim-section-heading { align-items: start; }
-.rim-history ol { list-style: none; margin: 60px 0 0; padding: 0; }
-.rim-history li { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; border-top: 1px solid var(--rim-line); padding: 34px 0; }
-.rim-history li > span { font-size: 44px; line-height: 1.2; color: var(--rim-blue); letter-spacing: -.05em; }
-.rim-history li p { max-width: 690px; margin-block: 16px 0; color: #45606a; }
-.rim-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 45px; margin-top: 40px; }
-.rim-principles article { border-top: 1px solid var(--rim-line); padding-top: 25px; }
-.rim-principles article > span { font-size: 13px; color: var(--rim-blue); }
-.rim-principles h3 { margin-block: 25px 18px; }
-.rim-principles p { font-size: 15px; color: #45606a; }
-.rim-portfolio-list { padding-bottom: 20px; }
-.rim-capabilities { list-style: none; margin: 30px 0; padding: 0; }
-.rim-capabilities li { border-top: 1px solid var(--rim-line); padding: 16px 0; font-size: 15px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.rim-related { border-top: 1px solid var(--rim-line); padding-bottom: 60px; }
-.rim-chair { display: grid; grid-template-columns: 1fr 1fr; background: #edf2f4; }
-.rim-chair > div { aspect-ratio: .85; overflow: hidden; }
-.rim-chair img { height: 100%; object-position: 50% 12%; transform: scale(1.3); transform-origin: 50% 12%; }
-.rim-chair article { align-self: center; padding: 55px; }
-.rim-chair article .rim-kicker { color: var(--rim-blue); }
-.rim-chair h2 { font-size: clamp(28px, 3vw, 43px); line-height: 1.3; }
-.rim-chair article > p:not(.rim-kicker) { font-size: 16px; color: #45606a; margin-top: 25px; }
-.rim-chair h3 { font-size: 22px; margin-top: 30px; }
-.rim-chair article > span { font-size: 12px; color: #45606a; }
-.rim-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
-.rim-tabs button { font-size: 13px; padding: 12px 18px; border: 1px solid var(--rim-line); background: white; color: var(--rim-ink); min-height: 44px; }
-.rim-tabs button[aria-pressed='true'] { background: var(--rim-deep); color: white; border-color: var(--rim-deep); }
-.rim-leaders { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.rim-leaders article { border-top: 1px solid var(--rim-line); padding-top: 24px; }
-.rim-person-initials { display: grid; place-items: center; width: 65px; height: 65px; background: #edf4f7; color: var(--rim-blue); font-size: 23px; margin-bottom: 24px; }
-.rim-leaders h3 { font-size: 27px; }
-.rim-leader-role { font-size: 13px; color: var(--rim-blue); margin-block: 8px 20px !important; }
-.rim-leaders article > p:last-child { font-size: 15px; color: #45606a; max-width: 480px; }
-.rim-ownership-note { font-size: 16px; color: #45606a; margin-top: 30px !important; max-width: 360px; }
-.rim-policy { padding-block: 95px; background: #f0f5f7; }
-.rim-policy article { border-top: 1px solid var(--rim-line); }
-.rim-policy h3 button { font-size: 20px; padding: 24px 0; display: flex; width: 100%; align-items: center; justify-content: space-between; text-align: left; gap: 20px; color: var(--rim-ink); background: transparent; border: 0; }
-.rim-policy article p { font-size: 15px; color: #45606a; padding-bottom: 15px; }
-.rim-story-filters { margin-bottom: 45px; }
-.rim-article-body { max-width: 740px; width: calc(100% - 64px); margin-inline: auto; padding-block: 80px; font-size: 20px; }
-.rim-article-body > p { line-height: 1.95; margin-bottom: 32px; }
-.rim-contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12%; padding-block: 35px 110px; }
-.rim-contact-layout aside > p:not(.rim-kicker) { margin-top: 30px; }
-.rim-contact-layout aside svg { color: var(--rim-blue); }
-.rim-contact-email { display: flex; gap: 14px; align-items: center; font-size: 18px; margin-block: 28px; }
-.rim-fine-print { font-size: 12px; color: #58727c; line-height: 1.8; }
-.rim-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.rim-contact-layout label { display: block; font-size: 13px; margin-bottom: 24px; }
-.rim-contact-layout :is(input, textarea, select) { width: 100%; border: 0; border-bottom: 1px solid #00171f50; background: #f5f8f9; border-radius: 0; font-size: 16px; color: #00171f; padding: 12px; margin-top: 10px; min-height: 48px; }
-.rim-contact-layout textarea { resize: vertical; }
-.rim-submit { background: var(--rim-deep); color: white; border: 0; padding: 16px 24px; display: inline-flex; align-items: center; gap: 35px; font-size: 14px; min-height: 54px; }
-.rim-submit:hover { background: var(--rim-blue); }
-.rim-contact-layout [role='status'] { margin-top: 20px; color: var(--rim-blue); font-size: 14px; }
-@media (min-width: 1600px) { .rim-hero-content { padding-top: 210px; } }
+.rim-site * {
+  box-sizing: border-box;
+}
+.rim-site p {
+  margin: 0 0 22px;
+}
+.rim-site img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.rim-site a {
+  text-decoration: none;
+  color: inherit;
+}
+.rim-site button {
+  cursor: pointer;
+}
+.rim-site :is(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid var(--rim-sky);
+  outline-offset: 5px;
+}
+.rim-site h1,
+.rim-site h2,
+.rim-site h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.rim-site h1 {
+  font-size: clamp(48px, 6.4vw, 98px);
+}
+.rim-site h2 {
+  font-size: clamp(36px, 4vw, 60px);
+}
+.rim-site h3 {
+  font-size: 27px;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+.rim-site em {
+  font-style: normal;
+  color: var(--rim-blue);
+}
+.rim-wrap {
+  width: min(1440px, calc(100% - 112px));
+  margin-inline: auto;
+}
+.rim-section {
+  padding-block: 110px;
+}
+.rim-skip {
+  position: fixed;
+  z-index: 100;
+  left: 20px;
+  top: -100px;
+  padding: 12px 20px;
+  background: #fff;
+  color: #00171f;
+}
+.rim-skip:focus {
+  top: 12px;
+}
+.rim-header {
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid var(--rim-line);
+}
+.rim-home .rim-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  border-bottom-color: #ffffff35;
+}
+.rim-header > .rim-wrap {
+  min-height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+}
+.rim-brand {
+  display: flex;
+  flex-direction: column;
+  width: 104px;
+}
+.rim-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 46px);
+  font-size: 14px;
+  font-weight: 500;
+}
+.rim-nav a {
+  padding-block: 10px;
+  position: relative;
+}
+.rim-nav a:hover {
+  color: var(--rim-sky);
+}
+.rim-nav-active::after {
+  content: "";
+  height: 2px;
+  background: var(--rim-blue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.rim-nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 25px;
+}
+.rim-menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  min-width: 44px;
+  min-height: 44px;
+}
+.rim-hero {
+  min-height: 780px;
+  height: min(980px, 100svh);
+  position: relative;
+  background: var(--rim-deep);
+  color: white;
+  isolation: isolate;
+}
+.rim-hero > img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: -2;
+  object-position: 65% 50%;
+}
+.rim-hero-wash {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #00171ff0 0%, #00171fa6 42%, #00171f15 100%),
+    linear-gradient(0deg, #00171f90, transparent 55%);
+}
+.rim-hero-content {
+  padding-top: max(180px, 22vh);
+}
+.rim-hero h1 {
+  font-size: clamp(64px, 7.9vw, 118px);
+  line-height: 0.99;
+  letter-spacing: -0.065em;
+}
+.rim-hero h1 > span {
+  color: #43c7f3;
+}
+.rim-hero-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 45px;
+  margin-top: 40px;
+  max-width: 1080px;
+}
+.rim-hero-bottom p {
+  line-height: 1.8;
+  font-size: 16px;
+  margin: 0;
+  color: #ffffffd0;
+}
+.rim-action {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-height: 52px;
+  border-bottom: 1px solid #00171f60;
+  padding-block: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 18px;
+}
+.rim-action:hover {
+  color: var(--rim-blue);
+  border-bottom-color: var(--rim-blue);
+}
+.rim-action svg {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.rim-action:hover svg {
+  transform: translate(3px, -3px);
+}
+.rim-action-light {
+  color: white;
+  border-bottom-color: #ffffff70;
+}
+.rim-action-light:hover {
+  color: #5ed4ff;
+  border-bottom-color: #5ed4ff;
+}
+.rim-hero-scroll {
+  position: absolute;
+  left: 56px;
+  bottom: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff60;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.rim-introduction {
+  padding-block: 110px 70px;
+}
+.rim-split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 12%;
+}
+.rim-large-copy {
+  font-size: 24px;
+  line-height: 1.65;
+  letter-spacing: -0.025em;
+}
+.rim-split > div > p:not(.rim-large-copy) {
+  color: #3d565e;
+}
+.rim-home-facts {
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rim-line);
+}
+.rim-home-facts > div {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 0 0;
+}
+.rim-home-facts strong {
+  font-size: 46px;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.rim-home-facts span {
+  font-size: 13px;
+  color: #52666d;
+  margin-top: 12px;
+}
+.rim-portfolio-section {
+  padding-block: 95px;
+  background: #f0f5f7;
+}
+.rim-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+.rim-business-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 30px;
+}
+.rim-card-image {
+  position: relative;
+  aspect-ratio: 1.55;
+  overflow: hidden;
+  background: var(--rim-deep);
+}
+.rim-card-image img {
+  height: 100%;
+  transition: transform 0.5s;
+}
+.rim-business-card:hover img {
+  transform: scale(1.035);
+}
+.rim-card-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: white;
+  color: var(--rim-ink);
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+}
+.rim-business-card:hover .rim-card-arrow {
+  background: var(--rim-blue);
+  color: white;
+}
+.rim-card-label {
+  padding-top: 20px;
+}
+.rim-card-label > span {
+  color: var(--rim-blue);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.rim-card-label h3 {
+  font-size: 33px;
+  margin-block: 12px;
+}
+.rim-card-label p {
+  max-width: 470px;
+  color: #45606a;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.rim-editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--rim-deep);
+  color: white;
+}
+.rim-editorial-image img {
+  height: 100%;
+  min-height: 560px;
+}
+.rim-editorial-copy {
+  padding: 90px clamp(35px, 6vw, 95px);
+  align-self: center;
+}
+.rim-stories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+.rim-story-image {
+  aspect-ratio: 1.4;
+  overflow: hidden;
+  background: #d7e5eb;
+  margin-bottom: 24px;
+}
+.rim-story-image img {
+  height: 100%;
+  transition: transform 0.5s;
+}
+.rim-stories > a:hover img {
+  transform: scale(1.04);
+}
+.rim-stories h3 {
+  font-size: 26px;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+.rim-story-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  margin-top: 24px;
+}
+.rim-connect {
+  background: var(--rim-blue);
+  color: white;
+  padding-block: 70px 85px;
+}
+.rim-connect > .rim-wrap > div {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 60px;
+}
+.rim-connect h2 {
+  font-size: clamp(50px, 6vw, 85px);
+}
+.rim-footer {
+  background: var(--rim-ink);
+  color: white;
+  padding-top: 65px;
+}
+.rim-footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #ffffff25;
+}
+.rim-footer-brand {
+  font-size: clamp(80px, 12vw, 170px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.09em;
+}
+.rim-footer-brand > span {
+  color: var(--rim-sky);
+  font-size: 0.7em;
+}
+.rim-footer-top > p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+}
+.rim-footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 45px;
+  padding-block: 50px;
+  font-size: 13px;
+}
+.rim-footer-grid :is(nav, div) > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b6c9d1;
+  margin-top: 10px;
+  width: fit-content;
+}
+.rim-footer-grid a:hover {
+  color: #58d1fc;
+}
+.rim-footer-grid p {
+  margin-bottom: 18px;
+}
+.rim-footer-bottom {
+  border-top: 1px solid #ffffff25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 24px;
+  font-size: 11px;
+  color: #8ea9b3;
+}
+.rim-footer-bottom p {
+  margin: 0;
+}
+.rim-footer-bottom a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rim-page-intro {
+  padding-block: 80px 65px;
+}
+.rim-page-intro h1 {
+  max-width: 1040px;
+}
+.rim-intro-copy {
+  max-width: 670px;
+  color: #45606a;
+  font-size: 20px;
+  margin-top: 30px !important;
+  margin-bottom: 0 !important;
+}
+.rim-wide-photo {
+  height: clamp(320px, 40vw, 570px);
+}
+.rim-wide-photo > img {
+  height: 100%;
+}
+.rim-history {
+  background: #f0f5f7;
+  padding-block: 90px;
+}
+.rim-history .rim-section-heading {
+  align-items: start;
+}
+.rim-history ol {
+  list-style: none;
+  margin: 60px 0 0;
+  padding: 0;
+}
+.rim-history li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  border-top: 1px solid var(--rim-line);
+  padding: 34px 0;
+}
+.rim-history li > span {
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--rim-blue);
+  letter-spacing: -0.05em;
+}
+.rim-history li p {
+  max-width: 690px;
+  margin-block: 16px 0;
+  color: #45606a;
+}
+.rim-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-top: 40px;
+}
+.rim-principles article {
+  border-top: 1px solid var(--rim-line);
+  padding-top: 25px;
+}
+.rim-principles article > span {
+  font-size: 13px;
+  color: var(--rim-blue);
+}
+.rim-principles h3 {
+  margin-block: 25px 18px;
+}
+.rim-principles p {
+  font-size: 15px;
+  color: #45606a;
+}
+.rim-portfolio-list {
+  padding-bottom: 20px;
+}
+.rim-capabilities {
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+}
+.rim-capabilities li {
+  border-top: 1px solid var(--rim-line);
+  padding: 16px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rim-related {
+  border-top: 1px solid var(--rim-line);
+  padding-bottom: 60px;
+}
+.rim-chair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #edf2f4;
+}
+.rim-chair > div {
+  aspect-ratio: 0.85;
+  overflow: hidden;
+}
+.rim-chair img {
+  height: 100%;
+  object-position: 50% 12%;
+  transform: scale(1.3);
+  transform-origin: 50% 12%;
+}
+.rim-chair article {
+  align-self: center;
+  padding: 55px;
+}
+.rim-chair h2 {
+  font-size: clamp(28px, 3vw, 43px);
+  line-height: 1.3;
+}
+.rim-chair h3 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+.rim-chair article > span {
+  font-size: 12px;
+  color: #45606a;
+}
+.rim-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.rim-tabs button {
+  font-size: 13px;
+  padding: 12px 18px;
+  border: 1px solid var(--rim-line);
+  background: white;
+  color: var(--rim-ink);
+  min-height: 44px;
+}
+.rim-tabs button[aria-pressed="true"] {
+  background: var(--rim-deep);
+  color: white;
+  border-color: var(--rim-deep);
+}
+.rim-leaders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.rim-leaders article {
+  border-top: 1px solid var(--rim-line);
+  padding-top: 24px;
+}
+.rim-leaders h3 {
+  font-size: 27px;
+}
+.rim-leader-role {
+  font-size: 13px;
+  color: var(--rim-blue);
+  margin-block: 8px 20px !important;
+}
+.rim-leaders article > p:last-child {
+  font-size: 15px;
+  color: #45606a;
+  max-width: 480px;
+}
+.rim-ownership-note {
+  font-size: 16px;
+  color: #45606a;
+  margin-top: 30px !important;
+  max-width: 360px;
+}
+.rim-policy {
+  padding-block: 95px;
+  background: #f0f5f7;
+}
+.rim-policy article {
+  border-top: 1px solid var(--rim-line);
+}
+.rim-policy h3 button {
+  font-size: 20px;
+  padding: 24px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 20px;
+  color: var(--rim-ink);
+  background: transparent;
+  border: 0;
+}
+.rim-policy article p {
+  font-size: 15px;
+  color: #45606a;
+  padding-bottom: 15px;
+}
+.rim-story-filters {
+  margin-bottom: 45px;
+}
+.rim-article-body {
+  max-width: 740px;
+  width: calc(100% - 64px);
+  margin-inline: auto;
+  padding-block: 80px;
+  font-size: 20px;
+}
+.rim-article-body > p {
+  line-height: 1.95;
+  margin-bottom: 32px;
+}
+.rim-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 12%;
+  padding-block: 35px 110px;
+}
+.rim-contact-layout aside svg {
+  color: var(--rim-blue);
+}
+.rim-contact-email {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 18px;
+  margin-block: 28px;
+}
+.rim-fine-print {
+  font-size: 12px;
+  color: #58727c;
+  line-height: 1.8;
+}
+.rim-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.rim-contact-layout label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+.rim-contact-layout :is(input, textarea, select) {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #00171f50;
+  background: #f5f8f9;
+  border-radius: 0;
+  font-size: 16px;
+  color: #00171f;
+  padding: 12px;
+  margin-top: 10px;
+  min-height: 48px;
+}
+.rim-contact-layout textarea {
+  resize: vertical;
+}
+.rim-submit {
+  background: var(--rim-deep);
+  color: white;
+  border: 0;
+  padding: 16px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 35px;
+  font-size: 14px;
+  min-height: 54px;
+}
+.rim-submit:hover {
+  background: var(--rim-blue);
+}
+.rim-contact-layout [role="status"] {
+  margin-top: 20px;
+  color: var(--rim-blue);
+  font-size: 14px;
+}
+@media (min-width: 1600px) {
+  .rim-hero-content {
+    padding-top: 210px;
+  }
+}
 @media (max-width: 1000px) {
-  .rim-wrap { width: calc(100% - 64px); }
-  .rim-header > .rim-wrap { min-height: 90px; gap: 25px; }
-  .rim-nav { gap: 20px; font-size: 12px; }
-  .rim-nav-contact { margin-left: 0; gap: 8px; }
-  .rim-split, .rim-contact-layout { gap: 6%; }
-  .rim-editorial-copy { padding: 50px 32px; }
-  .rim-editorial-image img { min-height: 500px; }
-  .rim-stories { gap: 22px; }
-  .rim-stories h3 { font-size: 23px; }
-  .rim-chair article { padding: 30px; }
-  .rim-footer-grid { gap: 25px; }
+  .rim-wrap {
+    width: calc(100% - 64px);
+  }
+  .rim-header > .rim-wrap {
+    min-height: 90px;
+    gap: 25px;
+  }
+  .rim-nav {
+    gap: 20px;
+    font-size: 12px;
+  }
+  .rim-nav-contact {
+    margin-left: 0;
+    gap: 8px;
+  }
+  .rim-split,
+  .rim-contact-layout {
+    gap: 6%;
+  }
+  .rim-editorial-copy {
+    padding: 50px 32px;
+  }
+  .rim-editorial-image img {
+    min-height: 500px;
+  }
+  .rim-stories {
+    gap: 22px;
+  }
+  .rim-stories h3 {
+    font-size: 23px;
+  }
+  .rim-chair article {
+    padding: 30px;
+  }
+  .rim-footer-grid {
+    gap: 25px;
+  }
 }
 @media (max-width: 760px) {
-  .rim-site { font-size: 16px; }
-  .rim-wrap { width: calc(100% - 40px); }
-  .rim-header > .rim-wrap { min-height: 82px; }
-  .rim-brand-mark { font-size: 36px; }
-  .rim-brand { width: 94px; }
-  .rim-menu-button { display: grid; place-items: center; }
-  .rim-nav { display: none; }
-  .rim-nav-open { display: flex; position: absolute; top: 82px; left: 0; right: 0; background: var(--rim-ink); color: white; flex-direction: column; align-items: stretch; gap: 0; padding: 20px; box-shadow: 0 20px 25px #00171f30; }
-  .rim-nav-open > a { font-size: 18px; padding: 14px 0; border-bottom: 1px solid #ffffff20; }
-  .rim-nav-open .rim-nav-contact { margin-top: 15px; justify-content: space-between; }
-  .rim-nav-active::after { display: none; }
-  .rim-hero { min-height: 730px; height: 95svh; max-height: 920px; }
-  .rim-hero-wash { background: linear-gradient(90deg, #00171fe8, #00171f45), linear-gradient(0deg, #00171fa0, transparent); }
-  .rim-hero-content { padding-top: 165px; }
-  .rim-hero h1 { font-size: clamp(62px, 12vw, 90px); }
-  .rim-hero-bottom { align-items: start; flex-direction: column; gap: 16px; margin-top: 30px; }
-  .rim-hero-bottom p { font-size: 14px; }
-  .rim-hero-scroll { left: 20px; bottom: 25px; }
-  .rim-hero-index { right: 20px; font-size: 9px; bottom: 37px; }
-  .rim-section, .rim-introduction { padding-block: 65px; }
-  .rim-split, .rim-contact-layout, .rim-editorial, .rim-chair { grid-template-columns: 1fr; gap: 35px; }
-  .rim-introduction > .rim-kicker { margin-bottom: 25px; }
-  .rim-large-copy { font-size: 21px; }
-  .rim-home-facts { margin-top: 35px; gap: 20px; }
-  .rim-home-facts strong { font-size: 32px; }
-  .rim-home-facts span { font-size: 11px; line-height: 1.6; }
-  .rim-home-facts > div { padding-right: 0; }
-  .rim-portfolio-section, .rim-history, .rim-policy { padding-block: 60px; }
-  .rim-section-heading { align-items: start; flex-direction: column; gap: 20px; margin-bottom: 35px; }
-  .rim-business-grid { grid-template-columns: 1fr; gap: 38px; }
-  .rim-card-image { aspect-ratio: 1.4; }
-  .rim-card-label h3 { font-size: 30px; }
-  .rim-card-arrow { width: 54px; height: 54px; }
-  .rim-editorial { gap: 0; }
-  .rim-editorial-image img { min-height: 0; height: 320px; }
-  .rim-editorial-copy { padding: 50px 20px; }
-  .rim-stories { grid-template-columns: 1fr; gap: 45px; }
-  .rim-story-image { aspect-ratio: 1.55; }
-  .rim-stories h3 { font-size: 29px; }
-  .rim-connect { padding-block: 50px 60px; }
-  .rim-connect > .rim-wrap > div { flex-direction: column; gap: 30px; align-items: start; }
-  .rim-connect h2 { font-size: 58px; }
-  .rim-footer { padding-top: 45px; }
-  .rim-footer-brand { font-size: 90px; }
-  .rim-footer-top > p { font-size: 15px; }
-  .rim-footer-top { padding-bottom: 30px; }
-  .rim-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; padding-block: 35px; }
-  .rim-footer-bottom { flex-wrap: wrap; gap: 12px; font-size: 10px; }
-  .rim-footer-bottom > span { display: none; }
-  .rim-page-intro { padding-block: 50px 45px; }
-  .rim-page-intro h1 { font-size: clamp(44px, 9vw, 68px); }
-  .rim-intro-copy { font-size: 18px; margin-top: 24px !important; }
-  .rim-wide-photo { width: 100%; height: 330px; }
-  .rim-history li { grid-template-columns: 75px 1fr; gap: 20px; padding-block: 26px; }
-  .rim-history li > span { font-size: 29px; }
-  .rim-history li h3 { font-size: 23px; }
-  .rim-history li p { font-size: 14px; }
-  .rim-principles { grid-template-columns: 1fr; gap: 25px; }
-  .rim-chair { gap: 0; }
-  .rim-chair > div { aspect-ratio: 1; }
-  .rim-chair article { padding: 35px 25px; }
-  .rim-chair h2 { font-size: 32px; }
-  .rim-leaders { grid-template-columns: 1fr; gap: 32px; }
-  .rim-leaders article > p:last-child { max-width: none; }
-  .rim-article-body { padding-block: 50px; font-size: 18px; width: calc(100% - 40px); }
-  .rim-contact-layout { padding-block: 0 60px; gap: 35px; }
-  .rim-form-grid { grid-template-columns: 1fr; gap: 0; }
-  .rim-contact-email { font-size: 16px; }
-  .rim-tabs button { padding-inline: 14px; }
+  .rim-site {
+    font-size: 16px;
+  }
+  .rim-wrap {
+    width: calc(100% - 40px);
+  }
+  .rim-header > .rim-wrap {
+    min-height: 82px;
+  }
+  .rim-brand {
+    width: 94px;
+  }
+  .rim-menu-button {
+    display: grid;
+    place-items: center;
+  }
+  .rim-nav {
+    display: none;
+  }
+  .rim-nav-open {
+    display: flex;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+    background: var(--rim-ink);
+    color: white;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 20px;
+    box-shadow: 0 20px 25px #00171f30;
+  }
+  .rim-nav-open > a {
+    font-size: 18px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ffffff20;
+  }
+  .rim-nav-open .rim-nav-contact {
+    margin-top: 15px;
+    justify-content: space-between;
+  }
+  .rim-nav-active::after {
+    display: none;
+  }
+  .rim-hero {
+    min-height: 730px;
+    height: 95svh;
+    max-height: 920px;
+  }
+  .rim-hero-wash {
+    background:
+      linear-gradient(90deg, #00171fe8, #00171f45),
+      linear-gradient(0deg, #00171fa0, transparent);
+  }
+  .rim-hero-content {
+    padding-top: 165px;
+  }
+  .rim-hero h1 {
+    font-size: clamp(62px, 12vw, 90px);
+  }
+  .rim-hero-bottom {
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+  }
+  .rim-hero-bottom p {
+    font-size: 14px;
+  }
+  .rim-hero-scroll {
+    left: 20px;
+    bottom: 25px;
+  }
+  .rim-section,
+  .rim-introduction {
+    padding-block: 65px;
+  }
+  .rim-split,
+  .rim-contact-layout,
+  .rim-editorial,
+  .rim-chair {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .rim-large-copy {
+    font-size: 21px;
+  }
+  .rim-home-facts {
+    margin-top: 35px;
+    gap: 20px;
+  }
+  .rim-home-facts strong {
+    font-size: 32px;
+  }
+  .rim-home-facts span {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .rim-home-facts > div {
+    padding-right: 0;
+  }
+  .rim-portfolio-section,
+  .rim-history,
+  .rim-policy {
+    padding-block: 60px;
+  }
+  .rim-section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+  .rim-business-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .rim-card-image {
+    aspect-ratio: 1.4;
+  }
+  .rim-card-label h3 {
+    font-size: 30px;
+  }
+  .rim-card-arrow {
+    width: 54px;
+    height: 54px;
+  }
+  .rim-editorial {
+    gap: 0;
+  }
+  .rim-editorial-image img {
+    min-height: 0;
+    height: 320px;
+  }
+  .rim-editorial-copy {
+    padding: 50px 20px;
+  }
+  .rim-stories {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .rim-story-image {
+    aspect-ratio: 1.55;
+  }
+  .rim-stories h3 {
+    font-size: 29px;
+  }
+  .rim-connect {
+    padding-block: 50px 60px;
+  }
+  .rim-connect > .rim-wrap > div {
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+  }
+  .rim-connect h2 {
+    font-size: 58px;
+  }
+  .rim-footer {
+    padding-top: 45px;
+  }
+  .rim-footer-brand {
+    font-size: 90px;
+  }
+  .rim-footer-top > p {
+    font-size: 15px;
+  }
+  .rim-footer-top {
+    padding-bottom: 30px;
+  }
+  .rim-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 20px;
+    padding-block: 35px;
+  }
+  .rim-footer-bottom {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+  }
+  .rim-footer-bottom > span {
+    display: none;
+  }
+  .rim-page-intro {
+    padding-block: 50px 45px;
+  }
+  .rim-page-intro h1 {
+    font-size: clamp(44px, 9vw, 68px);
+  }
+  .rim-intro-copy {
+    font-size: 18px;
+    margin-top: 24px !important;
+  }
+  .rim-wide-photo {
+    width: 100%;
+    height: 330px;
+  }
+  .rim-history li {
+    grid-template-columns: 75px 1fr;
+    gap: 20px;
+    padding-block: 26px;
+  }
+  .rim-history li > span {
+    font-size: 29px;
+  }
+  .rim-history li h3 {
+    font-size: 23px;
+  }
+  .rim-history li p {
+    font-size: 14px;
+  }
+  .rim-principles {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .rim-chair {
+    gap: 0;
+  }
+  .rim-chair > div {
+    aspect-ratio: 1;
+  }
+  .rim-chair article {
+    padding: 35px 25px;
+  }
+  .rim-chair h2 {
+    font-size: 32px;
+  }
+  .rim-leaders {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .rim-leaders article > p:last-child {
+    max-width: none;
+  }
+  .rim-article-body {
+    padding-block: 50px;
+    font-size: 18px;
+    width: calc(100% - 40px);
+  }
+  .rim-contact-layout {
+    padding-block: 0 60px;
+    gap: 35px;
+  }
+  .rim-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .rim-contact-email {
+    font-size: 16px;
+  }
+  .rim-tabs button {
+    padding-inline: 14px;
+  }
 }
-@media (prefers-reduced-motion: reduce) { .rim-site *, .rim-site *::before, .rim-site *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+@media (prefers-reduced-motion: reduce) {
+  .rim-site *,
+  .rim-site *::before,
+  .rim-site *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+/* Floating navigation and the new page compositions. */
+.rim-site .rim-header {
+  position: fixed;
+  inset: 18px 24px auto;
+  width: auto;
+  max-width: 1440px;
+  margin-inline: auto;
+  background: #ffffffee;
+  color: var(--rim-ink);
+  border: 1px solid #ffffffb0;
+  border-radius: 100px;
+  box-shadow: 0 8px 40px #00171f12;
+  backdrop-filter: blur(20px);
+  transition:
+    box-shadow 0.25s,
+    top 0.25s;
+}
+.rim-header > .rim-wrap {
+  width: 100%;
+  min-height: 86px;
+  padding: 12px 20px 12px 28px;
+  gap: 32px;
+}
+.rim-site .rim-header-scrolled {
+  top: 12px;
+  box-shadow: 0 6px 35px #00171f25;
+}
+.rim-header-scrolled > .rim-wrap {
+  min-height: 74px;
+}
+.rim-brand {
+  width: auto;
+  min-width: 178px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding-right: 24px;
+  border-right: 1px solid #00171f20;
+}
+.rim-brand > img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+.rim-brand > span {
+  font-size: 27px;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+  line-height: 1;
+}
+.rim-brand > span > span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.27em;
+  font-weight: 600;
+  margin-top: 7px;
+}
+.rim-nav {
+  flex: 1;
+  justify-content: space-between;
+  gap: 23px;
+  font-size: 13px;
+}
+.rim-nav-contact {
+  background: var(--rim-deep);
+  color: #fff !important;
+  border-radius: 100px;
+  padding: 13px 20px !important;
+  margin-left: 12px;
+  gap: 20px;
+}
+.rim-nav-contact:hover {
+  background: var(--rim-blue);
+}
+.rim-nav-active::after {
+  bottom: 4px;
+}
+.rim-inner main {
+  padding-top: 130px;
+}
+.rim-page-intro {
+  padding-block: 38px 65px;
+}
+.rim-hero {
+  margin: 16px;
+  border-radius: 28px;
+  min-height: 780px;
+  height: calc(100svh - 32px);
+  overflow: hidden;
+}
+.rim-hero > img {
+  object-position: 50% 65%;
+}
+.rim-hero-wash {
+  background:
+    linear-gradient(90deg, #00171fe0 0%, #00171f75 48%, #00171f0d 100%),
+    linear-gradient(0deg, #00171f75, transparent 65%);
+}
+.rim-hero-content {
+  width: calc(100% - 96px);
+  padding-top: clamp(185px, 25vh, 260px);
+}
+.rim-title-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.rim-title-line > span {
+  display: block;
+}
+.rim-hero h1 > .rim-title-line {
+  color: #fff;
+}
+.rim-hero h1 > .rim-title-line:last-child {
+  color: #61d0f7;
+}
+.rim-hero h1 {
+  max-width: 950px;
+  font-size: clamp(64px, 7.9vw, 118px);
+}
+.rim-hero-bottom {
+  max-width: 1150px;
+  margin-top: 34px;
+}
+.rim-hero-bottom p {
+  max-width: 490px;
+}
+.rim-hero-scroll {
+  left: auto;
+  right: 36px;
+  bottom: 32px;
+  background: #ffffff15;
+  backdrop-filter: blur(10px);
+}
+.rim-action {
+  gap: 28px;
+  border: 0;
+  border-radius: 100px;
+  padding: 13px 14px 13px 24px;
+  background: var(--rim-deep);
+  color: #fff;
+  min-height: 58px;
+  width: fit-content;
+  font-size: 14px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.rim-action > svg {
+  box-sizing: content-box;
+  padding: 10px;
+  border-radius: 50%;
+  background: #ffffff20;
+}
+.rim-action:hover {
+  background: var(--rim-blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.rim-action-light {
+  background: #fff;
+  color: var(--rim-ink);
+}
+.rim-action-light > svg {
+  background: #e5f1f5;
+}
+.rim-action-light:hover {
+  background: #d6f3ff;
+  color: var(--rim-ink);
+}
+.rim-introduction {
+  padding-block: 100px 70px;
+}
+.rim-home-facts strong {
+  font-size: clamp(48px, 5.5vw, 72px);
+}
+.rim-home-facts > div {
+  padding-block: 35px 0;
+}
+.rim-portfolio-section {
+  background: #f2f6f8;
+}
+.rim-business-grid {
+  grid-template-columns: 1.15fr 1fr;
+  gap: 45px 64px;
+}
+.rim-business-card:nth-child(2),
+.rim-business-card:nth-child(4) {
+  padding-top: 90px;
+}
+.rim-card-image {
+  border-radius: 24px;
+  aspect-ratio: 1.35;
+}
+.rim-business-card:nth-child(2) .rim-card-image,
+.rim-business-card:nth-child(3) .rim-card-image {
+  aspect-ratio: 1.6;
+}
+.rim-card-arrow {
+  border-radius: 50%;
+  right: 18px;
+  bottom: 18px;
+  width: 52px;
+  height: 52px;
+}
+.rim-card-label h3 {
+  margin-block: 4px 14px;
+  font-size: 35px;
+}
+.rim-card-label p {
+  font-size: 16px;
+  max-width: 470px;
+}
+.rim-editorial {
+  grid-template-columns: 1.15fr 1fr;
+  margin: 24px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+.rim-editorial-image img {
+  min-height: 570px;
+}
+.rim-editorial-copy {
+  padding: 65px;
+}
+.rim-portfolio-row {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 8%;
+  align-items: center;
+  padding-block: 65px;
+  border-top: 1px solid var(--rim-line);
+}
+.rim-portfolio-row:nth-child(even) {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+.rim-portfolio-row:nth-child(even) > div {
+  order: 2;
+}
+.rim-portfolio-row h2 {
+  font-size: clamp(40px, 4.5vw, 68px);
+  margin-block: 20px 24px;
+}
+.rim-portfolio-row p {
+  color: #45606a;
+  font-size: 17px;
+}
+.rim-row-index {
+  font-size: 14px;
+  color: var(--rim-blue);
+}
+.rim-row-image {
+  display: block;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+.rim-row-image > img {
+  height: 100%;
+  transition: transform 0.6s;
+}
+.rim-row-image:hover > img {
+  transform: scale(1.035);
+}
+.rim-history .rim-wrap {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 10%;
+  align-items: start;
+}
+.rim-history .rim-section-heading {
+  position: sticky;
+  top: 135px;
+}
+.rim-history ol {
+  margin: 0;
+}
+.rim-history li {
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+}
+.rim-history li > span {
+  font-size: 32px;
+}
+.rim-history li h3 {
+  font-size: 25px;
+}
+.rim-history li p {
+  font-size: 15px;
+}
+.rim-chair {
+  grid-template-columns: 0.75fr 1.25fr;
+  border-radius: 28px;
+  overflow: hidden;
+}
+.rim-chair > div {
+  aspect-ratio: 0.82;
+  max-height: 570px;
+}
+.rim-chair img {
+  transform: scale(1.2);
+  transform-origin: 50% 12%;
+}
+.rim-chair article {
+  padding: 60px;
+}
+.rim-chair article > h2 {
+  font-size: clamp(28px, 3.2vw, 46px);
+}
+.rim-leaders {
+  display: block;
+}
+.rim-leaders article {
+  display: grid;
+  grid-template-columns: 40px 1fr 1.1fr;
+  gap: 32px;
+  padding: 30px 0;
+  align-items: start;
+}
+.rim-leaders article:last-child {
+  border-bottom: 1px solid var(--rim-line);
+}
+.rim-person-index {
+  font-size: 12px;
+  color: var(--rim-blue);
+  padding-top: 9px;
+}
+.rim-leaders article h3 {
+  font-size: 25px;
+}
+.rim-leaders .rim-leader-role {
+  margin-bottom: 0 !important;
+}
+.rim-leaders article > p:last-child {
+  margin: 0;
+  max-width: none;
+}
+.rim-tabs {
+  background: #edf3f5;
+  border-radius: 100px;
+  padding: 5px;
+  gap: 3px;
+}
+.rim-tabs button {
+  border-radius: 100px;
+  border: 0;
+  background: transparent;
+}
+.rim-governance-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  padding: 60px;
+  background: #edf4f7;
+  border-radius: 28px;
+  margin-bottom: 80px;
+}
+.rim-governance-board h2 {
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+.rim-governance-board p {
+  font-size: 16px;
+  color: #45606a;
+}
+.rim-governance-board dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  margin: 0;
+}
+.rim-governance-board dl > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rim-line);
+}
+.rim-governance-board dt {
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+}
+.rim-governance-board dd {
+  font-size: 14px;
+  color: #45606a;
+  text-align: right;
+}
+.rim-inner .rim-stories {
+  grid-template-columns: 1fr;
+  gap: 45px;
+}
+.rim-inner .rim-stories > a {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 16px 50px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid var(--rim-line);
+}
+.rim-inner .rim-story-image {
+  grid-row: 1 / 4;
+  margin: 0;
+  border-radius: 22px;
+  min-height: 270px;
+}
+.rim-inner .rim-stories h3 {
+  font-size: clamp(28px, 3vw, 43px);
+  align-self: end;
+  margin-bottom: 0;
+}
+.rim-inner .rim-stories > a > p {
+  margin-bottom: 0;
+  align-self: center;
+}
+.rim-inner .rim-story-link {
+  margin: 0;
+}
+.rim-connect {
+  padding: 24px;
+  background: #fff;
+}
+.rim-connect-shell {
+  max-width: 1440px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  background: var(--rim-deep);
+  border-radius: 32px;
+  overflow: hidden;
+  min-height: 440px;
+}
+.rim-connect-copy {
+  padding: 65px 70px;
+  align-self: center;
+}
+.rim-connect-copy h2 {
+  font-size: clamp(48px, 5.5vw, 78px);
+}
+.rim-connect .rim-connect-copy > p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 400px;
+  margin-top: 25px;
+  color: #d5eaf4;
+}
+.rim-connect-visual {
+  position: relative;
+  overflow: hidden;
+}
+.rim-connect-visual > img {
+  height: 100%;
+  min-height: 440px;
+  object-position: 50% 85%;
+}
+.rim-connect-symbol {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  padding: 18px;
+}
+.rim-connect-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rim-footer-top {
+  gap: 35px;
+}
+.rim-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: clamp(72px, 9vw, 130px);
+}
+.rim-footer-brand > img {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+  filter: invert(1);
+}
+.rim-footer-brand > span {
+  font-size: 1em;
+  color: white;
+}
+.rim-footer-top > p {
+  font-size: 20px;
+}
+.rim-footer-grid {
+  padding-top: 45px;
+}
+.rim-contact-layout {
+  gap: 10%;
+}
+.rim-contact-layout form {
+  padding: 36px;
+  background: #f3f7f8;
+  border-radius: 24px;
+}
+.rim-contact-layout :is(input, textarea, select) {
+  background: #fff;
+  border: 1px solid #00171f25;
+  border-radius: 9px;
+}
+.rim-submit {
+  border-radius: 100px;
+}
+@media (max-width: 1100px) {
+  .rim-header > .rim-wrap {
+    gap: 22px;
+    padding-left: 22px;
+  }
+  .rim-brand {
+    min-width: 155px;
+    padding-right: 20px;
+  }
+  .rim-nav {
+    gap: 16px;
+    font-size: 12px;
+  }
+  .rim-nav-contact {
+    padding-inline: 15px !important;
+    margin-left: 0;
+    gap: 12px;
+  }
+  .rim-editorial-copy,
+  .rim-chair article {
+    padding: 38px;
+  }
+  .rim-connect-copy {
+    padding: 50px 40px;
+  }
+  .rim-business-grid {
+    gap: 35px;
+  }
+}
+@media (max-width: 950px) {
+  .rim-nav {
+    display: none;
+  }
+  .rim-menu-button {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+  }
+  .rim-nav-open {
+    display: flex;
+    position: absolute;
+    inset: calc(100% + 12px) 0 auto;
+    border-radius: 24px;
+    flex-direction: column;
+    background: #fff;
+    color: var(--rim-ink);
+    padding: 22px;
+    gap: 0;
+    align-items: stretch;
+    box-shadow: 0 15px 45px #00171f25;
+  }
+  .rim-nav-open > a {
+    padding: 14px 10px;
+    font-size: 17px;
+    border-bottom: 1px solid var(--rim-line);
+  }
+  .rim-nav-open .rim-nav-contact {
+    padding: 15px 20px !important;
+    margin-top: 14px;
+  }
+  .rim-nav-active::after {
+    display: none;
+  }
+  .rim-history .rim-wrap {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .rim-history .rim-section-heading {
+    position: static;
+  }
+  .rim-governance-board {
+    padding: 40px;
+    gap: 6%;
+  }
+  .rim-leaders article {
+    grid-template-columns: 25px 1fr 1fr;
+    gap: 22px;
+  }
+}
+@media (max-width: 760px) {
+  .rim-site .rim-header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    border-radius: 24px;
+  }
+  .rim-header > .rim-wrap {
+    min-height: 72px;
+    padding: 10px 15px 10px 18px;
+  }
+  .rim-header-scrolled > .rim-wrap {
+    min-height: 68px;
+  }
+  .rim-brand {
+    border-right: 0;
+    min-width: 0;
+    gap: 10px;
+    padding: 0;
+  }
+  .rim-brand > img {
+    width: 38px;
+    height: 38px;
+  }
+  .rim-brand > span {
+    font-size: 25px;
+  }
+  .rim-brand > span > span {
+    font-size: 8px;
+    margin-top: 6px;
+  }
+  .rim-inner main {
+    padding-top: 112px;
+  }
+  .rim-page-intro {
+    padding-block: 25px 45px;
+  }
+  .rim-hero {
+    margin: 8px;
+    border-radius: 24px;
+    min-height: 740px;
+    height: calc(100svh - 16px);
+    max-height: 950px;
+  }
+  .rim-hero-content {
+    width: calc(100% - 40px);
+    padding-top: 190px;
+  }
+  .rim-hero h1 {
+    font-size: clamp(53px, 10.8vw, 80px);
+    letter-spacing: -0.06em;
+  }
+  .rim-hero-bottom {
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .rim-hero-bottom p {
+    font-size: 15px;
+  }
+  .rim-hero-scroll {
+    right: 24px;
+    left: auto;
+    bottom: 24px;
+  }
+  .rim-hero-wash {
+    background:
+      linear-gradient(90deg, #00171fe0, #00171f50),
+      linear-gradient(0deg, #00171f90, transparent);
+  }
+  .rim-hero > img {
+    object-position: 60% 70%;
+  }
+  .rim-action {
+    padding-left: 20px;
+    min-height: 56px;
+    font-size: 13px;
+    gap: 20px;
+  }
+  .rim-introduction {
+    padding-block: 65px 50px;
+  }
+  .rim-home-facts {
+    gap: 16px;
+  }
+  .rim-home-facts strong {
+    font-size: 42px;
+  }
+  .rim-home-facts span {
+    font-size: 11px;
+  }
+  .rim-business-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .rim-business-card:nth-child(2),
+  .rim-business-card:nth-child(4) {
+    padding-top: 0;
+  }
+  .rim-card-image {
+    aspect-ratio: 1.4;
+    border-radius: 20px;
+  }
+  .rim-card-label h3 {
+    font-size: 30px;
+  }
+  .rim-editorial {
+    margin: 12px;
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+  .rim-editorial-image img {
+    min-height: 0;
+    height: 300px;
+  }
+  .rim-editorial-copy {
+    padding: 40px 24px;
+  }
+  .rim-portfolio-row,
+  .rim-portfolio-row:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 40px;
+  }
+  .rim-portfolio-row:nth-child(even) > div {
+    order: 0;
+  }
+  .rim-portfolio-row h2 {
+    margin-block: 12px 20px;
+    font-size: 44px;
+  }
+  .rim-row-image {
+    height: 310px;
+    border-radius: 22px;
+  }
+  .rim-history li {
+    grid-template-columns: 65px 1fr;
+    gap: 20px;
+  }
+  .rim-history li > span {
+    font-size: 27px;
+  }
+  .rim-history li h3 {
+    font-size: 23px;
+  }
+  .rim-chair {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+  .rim-chair > div {
+    aspect-ratio: 1;
+    max-height: 460px;
+  }
+  .rim-chair article {
+    padding: 35px 25px;
+  }
+  .rim-chair article > h2 {
+    font-size: 31px;
+  }
+  .rim-leaders article {
+    grid-template-columns: 24px 1fr;
+    gap: 12px 15px;
+    padding-block: 26px;
+  }
+  .rim-leaders article > p:last-child {
+    grid-column: 2;
+    font-size: 14px;
+  }
+  .rim-leaders article h3 {
+    font-size: 24px;
+  }
+  .rim-leader-role {
+    font-size: 12px;
+  }
+  .rim-tabs {
+    border-radius: 24px;
+    gap: 2px;
+  }
+  .rim-tabs button {
+    font-size: 12px;
+    padding: 11px 14px;
+  }
+  .rim-governance-board {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .rim-governance-board h2 {
+    font-size: 31px;
+  }
+  .rim-governance-board dt {
+    font-size: 42px;
+  }
+  .rim-inner .rim-stories > a {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .rim-inner .rim-story-image {
+    grid-row: auto;
+    min-height: 0;
+  }
+  .rim-inner .rim-stories h3 {
+    font-size: 31px;
+  }
+  .rim-connect {
+    padding: 12px;
+  }
+  .rim-connect-shell {
+    grid-template-columns: 1fr;
+    border-radius: 26px;
+  }
+  .rim-connect-copy {
+    padding: 40px 26px;
+  }
+  .rim-connect-copy h2 {
+    font-size: 55px;
+  }
+  .rim-connect .rim-connect-copy > p {
+    font-size: 15px;
+  }
+  .rim-connect-visual > img {
+    height: 230px;
+    min-height: 0;
+    object-position: 50% 80%;
+  }
+  .rim-connect-symbol {
+    width: 78px;
+    height: 78px;
+    top: 20px;
+    right: 20px;
+    padding: 14px;
+  }
+  .rim-footer-brand {
+    gap: 16px;
+    font-size: 68px;
+  }
+  .rim-footer-brand > img {
+    width: 58px;
+    height: 58px;
+  }
+  .rim-footer-top > p {
+    font-size: 12px;
+  }
+  .rim-contact-layout form {
+    padding: 26px 20px;
+  }
+}

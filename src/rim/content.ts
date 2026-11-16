@@ -1,7 +1,7 @@
-import portImage from "../images/port.jpg";
+import portImage from "../images/rim-containers.jpg";
 import retailImage from "../images/rim-retail.jpg";
 import logisticsImage from "../images/rim-logistics.jpg";
-import capitalImage from "../images/trading.jpg";
+import capitalImage from "../images/rim-capital-planning.jpg";
 
 export const rimBusinesses = [
   {
@@ -74,7 +74,7 @@ export const rimBusinesses = [
     category: "Investment & growth",
     line: "Capital with a commercial perspective.",
     image: capitalImage,
-    alt: "Business performance data displayed on a screen",
+    alt: "Financial planning documents and a calculator on a desk",
     summary:
       "Investment expertise for businesses across retail, distribution, and the wider commerce economy.",
     description:
@@ -165,5 +165,96 @@ export const rimArticles = [
       "That connection shapes the RIM investment approach. We look for businesses with a clear role in their markets, leaders who understand execution, and opportunities to improve the systems customers depend on.",
       "The long view also requires restraint. A compelling growth story needs cash discipline, appropriate governance, and a realistic assessment of operating risk. These are the foundations of durable commercial value.",
     ],
+  },
+];
+
+export const rimBoard = [
+  {
+    name: "Fatai Imrani",
+    role: "Chair & Chief Executive Officer",
+    bio: "Leads investment strategy and the development of the holding company, with responsibility for execution and long-term performance.",
+  },
+  {
+    name: "Anwar Alhassan",
+    role: "Non-Executive Director",
+    bio: "Brings investment and infrastructure experience to board deliberations on strategy, capital allocation, and governance.",
+  },
+  {
+    name: "Ovie Ejere",
+    role: "Non-Executive Director",
+    bio: "Contributes operating experience in maritime services, port development, and inland freight networks.",
+  },
+  {
+    name: "Tope Majeakunmi",
+    role: "Non-Executive Director",
+    bio: "Brings a customer-led perspective on retail, wholesale distribution, and supplier development.",
+  },
+  {
+    name: "Dr. Teni Akinwale",
+    role: "Independent Non-Executive Director",
+    bio: "Chairs the Audit & Risk Committee, with a focus on financial stewardship, internal controls, and enterprise resilience.",
+  },
+  {
+    name: "Kelechi Okafor",
+    role: "Independent Non-Executive Director",
+    bio: "Chairs the People & Remuneration Committee, supporting leadership development and succession planning.",
+  },
+  {
+    name: "Aisha Bello",
+    role: "Independent Non-Executive Director",
+    bio: "Brings legal and regulatory experience to corporate governance, business conduct, and responsible investment.",
+  },
+  {
+    name: "Julius Danquah",
+    role: "Independent Non-Executive Director",
+    bio: "Contributes regional experience in terminal operations, logistics infrastructure, and cross-border trade.",
+  },
+  {
+    name: "Prof. Sani Mohammed",
+    role: "Independent Non-Executive Director",
+    bio: "Chairs the Investment Committee, bringing economic and capital-market perspectives to investment decisions.",
+  },
+];
+
+export const rimExecutives = [
+  {
+    name: "Fatai Imrani",
+    role: "Chair & Chief Executive Officer",
+    bio: "Sets the commercial direction of the holding company and leads the executive team.",
+  },
+  {
+    name: "Nneka Eze",
+    role: "EVP, Finance & Treasury",
+    bio: "Oversees financial planning, portfolio reporting, treasury, and capital discipline.",
+  },
+  {
+    name: "Ibrahim Sulaiman",
+    role: "EVP, Operations",
+    bio: "Works with company leadership on operating performance, resilience, and delivery.",
+  },
+  {
+    name: "Amara Nwosu",
+    role: "EVP, Strategy & Corporate Development",
+    bio: "Leads strategic planning, commercial partnerships, and portfolio development.",
+  },
+  {
+    name: "Adana Okemini",
+    role: "EVP, Investments",
+    bio: "Directs investment evaluation, transaction execution, and the monitoring of investment performance.",
+  },
+  {
+    name: "Yewande Balogun",
+    role: "EVP, Legal & Risk",
+    bio: "Oversees legal affairs, enterprise risk, compliance, and governance standards.",
+  },
+  {
+    name: "Bolanle Adebayo",
+    role: "EVP, People & Culture",
+    bio: "Leads talent development, succession planning, and the organisation’s people strategy.",
+  },
+  {
+    name: "Daniel Asiedu",
+    role: "EVP, Technology & Transformation",
+    bio: "Supports digital capability, information security, and business transformation across the investment platform.",
   },
 ];
