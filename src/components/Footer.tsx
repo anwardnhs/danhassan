@@ -3,7 +3,7 @@ import { SiteLink, type CorporatePageProps } from './CorporateLayout';
 
 const groups = [
   { title: 'The group', links: [['Corporate profile', 'about'], ['Our leadership', 'leadership#leadership-team'], ['Newsroom', 'newsroom']] },
-  { title: 'Our businesses', links: [['Power & energy', 'portfolio#power'], ['Infrastructure & engineering', 'portfolio#engineering'], ['Real estate & property', 'portfolio#property']] },
+  { title: 'Our businesses', links: [['Power & energy', 'portfolio#power'], ['Infrastructure & engineering', 'portfolio#engineering'], ['Real estate & property', 'portfolio#property'], ['RIM Holdings', 'portfolio#rim']] },
   { title: 'Connect', links: [['Investor relations', 'investors'], ['Reports and disclosures', 'investors#reports'], ['Contact us', 'contact']] },
 ];
 
