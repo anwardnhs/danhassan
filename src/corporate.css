@@ -121,7 +121,7 @@
 .site main .annual-report-feature p { font-size: 16px; margin-top: 25px; }
 .annual-report-feature strong { display: block; font-size: 94px; letter-spacing: -.07em; font-weight: 400; line-height: 1.2; }
 .site main .annual-report-feature h2 { font-size: 25px; margin: 8px 0 28px; }
-.annual-report-feature > button { display: flex; justify-content: space-between; align-items: center; text-align: left; padding-top: 20px; border-top: 1px solid var(--line); font-size: 16px; font-weight: 600; }
+.annual-report-feature > :is(button, a) { display: flex; justify-content: space-between; align-items: center; text-align: left; padding-top: 20px; border-top: 1px solid var(--line); font-size: 16px; font-weight: 600; }
 .results-section { padding-block: 85px; }
 .redesign-section-title { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
 .site main .redesign-section-title > p { font-size: 16px; }

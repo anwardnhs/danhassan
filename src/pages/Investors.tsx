@@ -73,6 +73,7 @@ const metrics = [
 const reports = [
   {
     title: "FY2026 Financial Outlook & Valuation Model",
+    inline: true,
     date: "16 Nov 2026",
     type: "Financial outlook",
     size: "",
@@ -119,6 +120,16 @@ const ratings = [
     date: "Oct 2025",
   },
 ];
+
+function openValuationModel() {
+  const model = document.getElementById('valuation-model');
+  if (model instanceof HTMLDetailsElement) {
+    model.open = true;
+    model.tabIndex = -1;
+    model.focus({ preventScroll: true });
+    model.scrollIntoView({ behavior: 'instant' });
+  }
+}
 
 export default function Investors({ onNavigate }: CorporatePageProps) {
   const [category, setCategory] = useState<"reports" | "governance">("reports");
@@ -336,10 +347,7 @@ export default function Investors({ onNavigate }: CorporatePageProps) {
             <a
               className="action-link"
               href="#valuation-model"
-              onClick={() => {
-                const model = document.getElementById("valuation-model");
-                if (model instanceof HTMLDetailsElement) model.open = true;
-              }}
+              onClick={openValuationModel}
             >
               View valuation assumptions <ArrowUpRight size={20} />
             </a>
@@ -395,18 +403,18 @@ export default function Investors({ onNavigate }: CorporatePageProps) {
                 <button
                   className="document-row"
                   key={report.title}
-                  onClick={() => setRequestedResource(report.title)}
+                  onClick={() => report.inline ? openValuationModel() : setRequestedResource(report.title)}
                 >
                   <FileText size={25} aria-hidden="true" />
                   <span>
                     <strong>{report.title}</strong>
                     <span>
-                      {report.type} · {report.date} · PDF
+                      {report.type} · {report.date} · {report.inline ? "Online model" : "PDF"}
                       {report.size ? ` · ${report.size}` : ""}
                     </span>
                   </span>
                   <span className="document-action">
-                    Request PDF <ArrowUpRight size={20} />
+                    {report.inline ? "View model" : "Request PDF"} <ArrowUpRight size={20} />
                   </span>
                 </button>
               ))
