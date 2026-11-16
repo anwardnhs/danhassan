@@ -38,8 +38,8 @@ export default function Portfolio({ onNavigate }: CorporatePageProps) {
                   Visit {business.domain}<ExternalLink size={19} />
                 </a>
               ) : (
-                <a className="action-link" href="mailto:ir@danhassan.co?subject=RIM%20Holdings%20investment%20enquiry">
-                  Enquire about RIM Holdings <ArrowUpRight size={19} />
+                <a className="action-link" href="/rim">
+                  Visit rimholdco.com <ArrowUpRight size={19} />
                 </a>
               )}
             </div>
