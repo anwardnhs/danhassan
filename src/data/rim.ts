@@ -6,8 +6,9 @@ export const rimHolding = {
   sector: 'Shipping & logistics',
   image: portImage,
   alt: 'Container ship alongside cranes and freight containers at a port terminal',
-  ownership: 'Majority owned by Danhassan & Co.',
   headline: 'Connecting trade to everyday life.',
-  copy: 'Headquartered in Lagos, RIM Holdings connects maritime trade, inland logistics, and consumer retail. Danhassan & Co. holds a majority stake alongside other shareholders. RIM Holdings holds controlling interests in RIMCO Limited and NGX-listed RIM Plc, supported by Overland Limited and RIM Capital Limited.',
+  copy: 'From container terminals to the shop floor, RIM Holdings connects the businesses behind everyday trade. Based in Lagos, its portfolio spans RIMCO’s shipping and logistics network, RIM Plc’s retail and e-commerce platforms, and investments through Overland and RIM Capital.',
   capabilities: ['RIMCO · Shipping, ports & logistics', 'RIM Plc · Retail, wholesale & e-commerce', 'Overland · Warehousing & property', 'RIM Capital · Retail investments'],
 };
+
+export const rimInterests = { danhassan: 0.36, rimco: 0.29, rimPlc: 0.43 };

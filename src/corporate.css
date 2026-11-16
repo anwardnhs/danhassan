@@ -95,7 +95,6 @@
 .business-feature-image img { width: 100%; height: 100%; object-fit: cover; }
 .business-feature-image > span { position: absolute; left: 0; bottom: 0; right: 0; background: linear-gradient(transparent, #0f172acc); color: white; padding: 60px 26px 25px; font-size: 19px; }
 .site main .business-feature-copy h3 { font-size: 31px; margin-bottom: 22px; }
-.site main .business-ownership { color: var(--green); font-size: 16px; font-weight: 600; margin-bottom: 18px; }
 .portfolio-investment { padding-bottom: 65px; }
 .portfolio-investment > p { max-width: 800px; margin-bottom: 24px; }
 .business-feature-copy ul { margin: 24px 0; list-style: none; padding: 0; }
@@ -306,6 +305,8 @@
 .portrait-image { position: relative; display: block; width: 100%; aspect-ratio: 4 / 4.6; overflow: hidden; background: #e7e9e5; }
 .portrait-image > img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .4s; }
 .portrait-card:hover .portrait-image > img { transform: scale(1.025); }
+.portrait-rim-chair > img { transform: scale(1.6); transform-origin: 50% 12%; }
+.portrait-card:hover .portrait-rim-chair > img { transform: scale(1.64); }
 .portrait-open { position: absolute; right: 18px; bottom: 18px; width: 43px; height: 43px; display: grid; place-items: center; background: var(--paper); color: var(--ink); }
 .portrait-name { font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; line-height: 1.45; margin-top: 22px; letter-spacing: -.025em; }
 .portrait-role { color: var(--body); font-size: 16px; line-height: 1.7; margin-top: 7px; }

@@ -4,11 +4,11 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '../compon
 import { NextChapter, type CorporatePageProps } from '../components/CorporateLayout';
 import { executiveManagement, boardOfDirectors } from '../data/leadership';
 
-type Leader = { name: string; role?: string; category: string; bio: string; image: string };
+type Leader = { name: string; role?: string; category: string; bio: string; image: string; portraitClass?: string };
 
 function Portrait({ leader, onSelect }: { leader: Leader; onSelect: (leader: Leader) => void }) {
   return <button className="portrait-card" onClick={() => onSelect(leader)} aria-label={`Read biography of ${leader.name}`}>
-    <span className="portrait-image"><img src={leader.image} alt="" loading="lazy" /><span className="portrait-open"><ArrowUpRight size={23} aria-hidden="true" /></span></span>
+    <span className={`portrait-image ${leader.portraitClass || ''}`}><img src={leader.image} alt="" loading="lazy" /><span className="portrait-open"><ArrowUpRight size={23} aria-hidden="true" /></span></span>
     <span className="portrait-name">{leader.name}</span>
     <span className="portrait-role">{leader.role || `${leader.category} Director`}</span>
   </button>;

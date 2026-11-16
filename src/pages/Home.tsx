@@ -16,7 +16,7 @@ const sectors = [
   { id: 'power', title: 'Power & energy', image: energyImage, description: 'Reliable power. Lasting progress.', detail: 'Thermal and renewable generation supporting homes, industry, and opportunity across West Africa.' },
   { id: 'engineering', title: 'Infrastructure & engineering', image: engineeringImage, description: 'Connecting ambition to possibility.', detail: 'Engineering, procurement, and construction for the systems that move our economies forward.' },
   { id: 'property', title: 'Real estate & property', image: propertyImage, description: 'Places built for what comes next.', detail: 'Commercial, residential, and logistics developments designed to create enduring value.' },
-  { id: rimHolding.id, title: rimHolding.sector, image: rimHolding.image, description: rimHolding.headline, detail: 'Container shipping, port operations, and inland freight through RIMCO, part of majority-owned RIM Holdings Limited.' },
+  { id: rimHolding.id, title: rimHolding.sector, image: rimHolding.image, description: rimHolding.headline, detail: 'Container shipping, port operations, and inland freight connecting producers, businesses, and markets through RIMCO.' },
 ];
 const stories = [
   { ...featuredStory, id: 'featured-announcement', image: portImage },

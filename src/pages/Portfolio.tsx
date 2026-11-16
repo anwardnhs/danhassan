@@ -3,13 +3,14 @@ import { ArrowDown, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { NextChapter, type CorporatePageProps } from '../components/CorporateLayout';
 import damImage from '../images/dam.jpg';
 import engineeringImage from '../images/pacifc.jpg';
-import propertyImage from '../images/harbor-waterfront.jpg';
+// Photograph by Achyut on Unsplash, photo lC2Atn-fmow.
+import propertyImage from '../images/harbor-architecture.jpg';
 import { rimHolding } from '../data/rim';
 
 const businesses = [
   { id: 'power', sector: 'Power & energy', name: 'South Atlantic Energy Plc', image: damImage, alt: 'Hydroelectric generation infrastructure', headline: 'Powering what comes next.', copy: 'We develop and operate generation facilities across hydroelectric, thermal, and renewable energy. Reliable supply supports the homes, businesses, and industries driving regional growth.', capabilities: ['Power generation', 'Renewable energy', 'Energy infrastructure'], domain: 'sae.com' },
   { id: 'engineering', sector: 'Infrastructure & engineering', name: 'Ironwood Engineering Limited', image: engineeringImage, alt: 'Transport infrastructure connecting urban communities', headline: 'Connecting people. Enabling industry.', copy: 'Engineering, procurement, and construction for critical infrastructure. From high-voltage transmission to roads, bridges, and industrial facilities, we build for reliability and regional connectivity.', capabilities: ['Engineering & construction', 'Transmission networks', 'Industrial projects'], domain: 'ironwoodeng.com' },
-  { id: 'property', sector: 'Real estate & property', name: 'Harbor & Hedge Properties', image: propertyImage, alt: 'Waterfront cityscape with residential and commercial buildings and a bridge', headline: 'Places with a future.', copy: 'We develop and manage commercial, industrial, and residential property. Our focus is on sustainable communities, productive business hubs, and long-term value for the people who use them.', capabilities: ['Commercial & residential', 'Logistics & industrial', 'Property management'], domain: 'harborhedge.com' },
+  { id: 'property', sector: 'Real estate & property', name: 'Harbor & Hedge Properties', image: propertyImage, alt: 'Modern residential facade with glass balconies, white walls, and teal glazing', headline: 'Places with a future.', copy: 'We develop and manage commercial, industrial, and residential property. Our focus is on sustainable communities, productive business hubs, and long-term value for the people who use them.', capabilities: ['Commercial & residential', 'Logistics & industrial', 'Property management'], domain: 'harborhedge.com' },
   { ...rimHolding, domain: null },
 ];
 
@@ -30,7 +31,6 @@ export default function Portfolio({ onNavigate }: CorporatePageProps) {
             </div>
             <div className="business-feature-copy">
               <h3>{business.headline}</h3>
-              {'ownership' in business && <p className="business-ownership">{business.ownership}</p>}
               <p>{business.copy}</p>
               <ul>{business.capabilities.map(capability => <li key={capability}>{capability}</li>)}</ul>
               {business.domain ? (
@@ -47,7 +47,7 @@ export default function Portfolio({ onNavigate }: CorporatePageProps) {
         </section>
       ))}
     </div>
-    <section className="portfolio-approach"><div className="site-container"><div className="approach-heading"><h2>How we build<br /><em>lasting value.</em></h2><p>Our businesses operate in different sectors. The principles behind them stay consistent.</p></div><div className="principle-grid">{[['Patient capital', 'We invest with a long-term perspective, giving essential businesses the time and support to grow.'], ['Operational control', 'We stay close to our assets, focusing on execution, risk management, and consistent performance.'], ['Essential services', 'We focus on businesses that meet real needs and contribute to economic development.']].map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div><div className="portfolio-performance"><p><strong><CountUpText end={12} suffix="%" decimals={1} /></strong> Return on equity</p><p><strong><CountUpText end={63.6} suffix="%" decimals={1} /></strong> Free float</p><a href="mailto:ir@danhassan.co?subject=Portfolio%20information%20request">Request portfolio information <ArrowUpRight size={20} /></a></div></div></section>
+    <section className="portfolio-approach"><div className="site-container"><div className="approach-heading"><h2>How we build<br /><em>lasting value.</em></h2><p>Our businesses operate in different sectors. The principles behind them stay consistent.</p></div><div className="principle-grid">{[['Patient capital', 'We invest with a long-term perspective, giving essential businesses the time and support to grow.'], ['Active stewardship', 'We work with our companies and investment partners to support disciplined execution and long-term performance.'], ['Essential services', 'We focus on businesses that meet real needs and contribute to economic development.']].map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div><div className="portfolio-performance"><p><strong><CountUpText end={12} suffix="%" decimals={1} /></strong> Return on equity</p><p><strong><CountUpText end={63.6} suffix="%" decimals={1} /></strong> Free float</p><a href="mailto:ir@danhassan.co?subject=Portfolio%20information%20request">Request portfolio information <ArrowUpRight size={20} /></a></div></div></section>
     <NextChapter title="The performance behind the portfolio." copy="Explore our financial results, reporting, and governance in the investor centre." page="investors" label="Visit investor relations" onNavigate={onNavigate} />
   </div>;
 }

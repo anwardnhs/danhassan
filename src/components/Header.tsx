@@ -20,7 +20,7 @@ const SEARCH_INDEX: SearchItem[] = [
   { id: 'sub-ironwood', title: 'Ironwood Engineering', category: 'Subsidiary', description: 'EPC contractor for high-voltage transmission grids and civil works (www.ironwoodeng.com).', route: 'portfolio#engineering', keywords: ['ironwood engineering', 'ironwood', 'epc', 'construction', 'transmission', 'grid', 'infrastructure'] },
   { id: 'sub-harbor', title: 'Harbor & Hedge Property', category: 'Subsidiary', description: 'Commercial offices, logistics hubs, and residential estates (www.harborhedge.com).', route: 'portfolio#property', keywords: ['harbor', 'hedge', 'real estate', 'property', 'logistics', 'commercial', 'housing'] },
 
-  { id: 'sub-rim', title: 'RIM Holdings Limited', category: 'Subsidiary', description: 'Majority owned by Danhassan & Co., with controlling interests in RIMCO shipping and logistics and NGX-listed RIM Plc retail.', route: 'portfolio#rim', keywords: ['rim', 'rimco', 'rim holdings', 'rim plc', 'shipping', 'logistics', 'retail', 'overland', 'rim capital', 'supermarkets', 'wholesale', 'e-commerce'] },
+  { id: 'sub-rim', title: 'RIM Holdings Limited', category: 'Investment', description: 'Shipping, logistics, and retail through the RIMCO and RIM Plc investment portfolio.', route: 'portfolio#rim', keywords: ['rim', 'rimco', 'rim holdings', 'rim plc', 'shipping', 'logistics', 'retail', 'overland', 'rim capital', 'supermarkets', 'wholesale', 'e-commerce'] },
 
   // Financials & Performance
   { id: 'fin-market-cap', title: 'Market Capitalization — ₦27.3 Trillion', category: 'Financials', description: 'NGX listed market capitalization as of 2026.', route: 'investors', keywords: ['market cap', 'naira', 'ngx', '27.3t', 'valuation', 'capitalization'] },
