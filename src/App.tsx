@@ -34,6 +34,7 @@ export default function App() {
     document.title = `${titles[currentPage]} | Danhassan & Co.`;
     const target = hash && document.getElementById(hash.slice(1));
     if (target) {
+      if (target instanceof HTMLDetailsElement) target.open = true;
       if (!target.hasAttribute('tabindex')) target.tabIndex = -1;
       target.focus({ preventScroll: true });
       target.scrollIntoView({ behavior: 'instant' });

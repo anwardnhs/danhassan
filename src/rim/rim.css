@@ -148,11 +148,6 @@
 .rim-leaders h3 { font-size: 27px; }
 .rim-leader-role { font-size: 13px; color: var(--rim-blue); margin-block: 8px 20px !important; }
 .rim-leaders article > p:last-child { font-size: 15px; color: #45606a; max-width: 480px; }
-.rim-ownership { margin: 0 0 25px; }
-.rim-ownership > div { display: flex; justify-content: space-between; gap: 25px; padding: 25px 0; border-top: 1px solid var(--rim-line); }
-.rim-ownership dt { font-weight: 600; }
-.rim-ownership dt span { display: block; color: #45606a; font-size: 13px; font-weight: 400; }
-.rim-ownership dd { font-size: 42px; color: var(--rim-blue); line-height: 1.2; letter-spacing: -.05em; margin: 0; }
 .rim-ownership-note { font-size: 16px; color: #45606a; margin-top: 30px !important; max-width: 360px; }
 .rim-policy { padding-block: 95px; background: #f0f5f7; }
 .rim-policy article { border-top: 1px solid var(--rim-line); }

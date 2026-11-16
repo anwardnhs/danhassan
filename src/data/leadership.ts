@@ -101,7 +101,6 @@ export const executiveManagement = [
     category: 'Segment CEO',
     image: obiImage
   },
-  rimLeader,
 ];
 
 export const boardOfDirectors = [
@@ -134,7 +133,6 @@ export const boardOfDirectors = [
     {
       group: 'Non-Executive Directors',
       members: [
-        { ...rimLeader, role: 'Non-Executive Director · Chair & CEO, RIM Holdings Limited', category: 'Non-Executive' },
         {
           name: 'Alhaji Abdullahi Alhassan, CFR',
           role: 'Chairman',
@@ -169,7 +167,8 @@ export const boardOfDirectors = [
           category: 'Non-Executive',
           image: emekaImage,
           bio: 'Henry Oboli is a Non-Executive Director of Danhassan & Co, Plc. He is a seasoned executive with extensive experience in infrastructure development and project management. Serves on the Strategy & Innovation Committee, driving growth and transformation initiatives.'
-        }
+        },
+        { ...rimLeader, role: 'Non-Executive Director', category: 'Non-Executive' }
       ]
     },
     {

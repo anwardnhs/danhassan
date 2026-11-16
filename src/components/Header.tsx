@@ -1,3 +1,4 @@
+import { groupEstimates, historicalFinancials } from '../data/financials';
 import { Menu, Search, ArrowUpRight, X } from 'lucide-react';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from './ui/dialog';
@@ -23,10 +24,13 @@ const SEARCH_INDEX: SearchItem[] = [
   { id: 'sub-rim', title: 'RIM Holdings Limited', category: 'Investment', description: 'Shipping, logistics, and retail through the RIMCO and RIM Plc investment portfolio.', route: 'portfolio#rim', keywords: ['rim', 'rimco', 'rim holdings', 'rim plc', 'shipping', 'logistics', 'retail', 'overland', 'rim capital', 'supermarkets', 'wholesale', 'e-commerce'] },
 
   // Financials & Performance
-  { id: 'fin-market-cap', title: 'Market Capitalization — ₦27.3 Trillion', category: 'Financials', description: 'NGX listed market capitalization as of 2026.', route: 'investors', keywords: ['market cap', 'naira', 'ngx', '27.3t', 'valuation', 'capitalization'] },
-  { id: 'fin-revenue', title: 'Audited Revenue — ₦11.8 Trillion', category: 'Financials', description: 'FY2025 audited revenue performance across operating verticals.', route: 'investors#financial-results', keywords: ['revenue', '11.8t', 'audited', 'financials', 'income', 'performance'] },
+  { id: 'fin-market-cap', title: `Estimated Market Capitalisation — ₦${groupEstimates.marketCapTrillions.toFixed(1)} Trillion`, category: 'Financials', description: 'FY2026 valuation estimate based on the updated earnings outlook.', route: 'investors', keywords: ['market cap', 'naira', 'ngx', groupEstimates.marketCapTrillions.toFixed(1), 'valuation', 'capitalization'] },
+  { id: 'fin-revenue', title: `FY2026 Estimated Revenue — ₦${groupEstimates.revenueTrillions.toFixed(1)} Trillion`, category: 'Financials', description: 'FY2026 operating revenue estimate, with associate earnings accounted for separately.', route: 'investors#financial-results', keywords: ['revenue', groupEstimates.revenueTrillions.toFixed(1), '2026', 'estimates', 'financials', 'income', 'performance'] },
   { id: 'fin-ratings', title: 'Credit Ratings (BB- / Ba3)', category: 'Financials', description: 'Fitch, S&P, and Moody\'s stable and positive outlook credit ratings.', route: 'investors#market-performance', keywords: ['credit rating', 'fitch', 's&p', 'moodys', 'bb-', 'ba3', 'ratings'] },
-  { id: 'fin-assets', title: 'Total Group Assets — ₦34.3 Trillion', category: 'Financials', description: 'Combined asset base across energy, EPC, and real estate portfolios.', route: 'portfolio', keywords: ['total assets', '34.3t', 'asset base', 'balance sheet'] },
+  { id: 'fin-assets', title: 'Historical Group Assets — ₦34.3 Trillion', category: 'Financials', description: 'Existing legacy portfolio asset figure. An updated asset total requires the investment carrying value and acquisition funding.', route: 'investors#historical-results', keywords: ['total assets', '34.3t', 'asset base', 'balance sheet'] },
+
+  { id: 'fin-net-income', title: `FY2026 Estimated Net Income — ₦${groupEstimates.netIncomeTrillions.toFixed(2)} Trillion`, category: 'Financials', description: 'FY2026 net income estimate including the earnings contribution from associate investments.', route: 'investors#financial-results', keywords: ['profit', 'net income', 'estimates', 'earnings'] },
+  { id: 'fin-baseline', title: `FY2025 Revenue — ₦${historicalFinancials.revenueTrillions.toFixed(1)} Trillion`, category: 'Financials', description: 'Archived FY2025 results.', route: 'investors#historical-results', keywords: ['2025', 'historical', 'audited', 'revenue', 'baseline'] },
 
   // News Items
   ...[{ ...featuredStory, id: 'featured-announcement' }, ...allUpdates].map(story => ({

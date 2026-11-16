@@ -305,8 +305,8 @@
 .portrait-image { position: relative; display: block; width: 100%; aspect-ratio: 4 / 4.6; overflow: hidden; background: #e7e9e5; }
 .portrait-image > img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .4s; }
 .portrait-card:hover .portrait-image > img { transform: scale(1.025); }
-.portrait-rim-chair > img { transform: scale(1.6); transform-origin: 50% 12%; }
-.portrait-card:hover .portrait-rim-chair > img { transform: scale(1.64); }
+.portrait-rim-chair > img { transform: scale(1.1); transform-origin: 50% 12%; }
+.portrait-card:hover .portrait-rim-chair > img { transform: scale(1.125); }
 .portrait-open { position: absolute; right: 18px; bottom: 18px; width: 43px; height: 43px; display: grid; place-items: center; background: var(--paper); color: var(--ink); }
 .portrait-name { font-family: 'Libre Baskerville', Georgia, serif; font-size: 24px; line-height: 1.45; margin-top: 22px; letter-spacing: -.025em; }
 .portrait-role { color: var(--body); font-size: 16px; line-height: 1.7; margin-top: 7px; }
@@ -504,3 +504,14 @@
 @media (max-width: 640px) {
   .team-controls, .library-controls { flex-wrap: wrap; }
 }
+
+@media (min-width: 741px) { .portrait-name { min-height: 2.9em; } }
+.financial-assumptions { margin-top: 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.financial-assumptions > summary { cursor: pointer; padding: 20px 0; font-size: 17px; font-weight: 500; }
+.financial-assumptions > div { padding-bottom: 24px; max-width: 850px; }
+.financial-assumptions p { font-size: 16px; margin-bottom: 18px; }
+.financial-model-inputs { margin: 20px 0; }
+.financial-model-inputs > div { display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 15px; }
+.financial-model-inputs dd { text-align: right; }
+.financial-assumptions .financial-metrics { max-width: none; }
+.portfolio-investment .redesign-section-title h2 { font-size: clamp(28px, 3vw, 40px); }

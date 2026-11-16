@@ -7,8 +7,8 @@ export const rimHolding = {
   image: portImage,
   alt: 'Container ship alongside cranes and freight containers at a port terminal',
   headline: 'Connecting trade to everyday life.',
-  copy: 'From container terminals to the shop floor, RIM Holdings connects the businesses behind everyday trade. Based in Lagos, its portfolio spans RIMCO’s shipping and logistics network, RIM Plc’s retail and e-commerce platforms, and investments through Overland and RIM Capital.',
-  capabilities: ['RIMCO · Shipping, ports & logistics', 'RIM Plc · Retail, wholesale & e-commerce', 'Overland · Warehousing & property', 'RIM Capital · Retail investments'],
+  copy: 'We invest in the movement and distribution of goods, from coastal shipping and container terminals to inland freight and retail supply networks. Our focus is on dependable connections between producers, businesses, and the markets they serve.',
+  capabilities: ['Shipping & port services', 'Freight & inland logistics', 'Warehousing & distribution', 'Retail & wholesale networks'],
 };
 
 export const rimInterests = { danhassan: 0.36, rimco: 0.29, rimPlc: 0.43 };

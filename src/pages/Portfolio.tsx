@@ -1,3 +1,4 @@
+import { groupEstimates, estimateBasis } from '../data/financials';
 import CountUpText from '../components/CountUpText';
 import { ArrowDown, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { NextChapter, type CorporatePageProps } from '../components/CorporateLayout';
@@ -16,7 +17,7 @@ const businesses = [
 
 export default function Portfolio({ onNavigate }: CorporatePageProps) {
   return <div className="redesign portfolio-redesign">
-    <section className="portfolio-opening site-container"><div><h1>Different businesses.<br /><em>One shared ambition.</em></h1><p>We invest in essential sectors, building a portfolio that supports the way Africa lives, works, and grows.</p></div><div className="portfolio-total"><strong><CountUpText end={34.3} prefix="₦" suffix="T" decimals={1} /></strong><span>Total group assets</span><a href="#businesses">Explore our businesses <ArrowDown size={19} /></a></div></section>
+    <section className="portfolio-opening site-container"><div><h1>Different businesses.<br /><em>One shared ambition.</em></h1><p>We invest in essential sectors, building a portfolio that supports the way Africa lives, works, and grows.</p></div><div className="portfolio-total"><strong><CountUpText end={groupEstimates.marketCapTrillions} prefix="₦" suffix="T" decimals={1} /></strong><span>Estimated market capitalisation</span><p className="figure-note">{estimateBasis}</p><a href="#businesses">Explore our businesses <ArrowDown size={19} /></a></div></section>
     <div id="businesses" className="businesses-list site-container">
       {businesses.map((business, index) => (
         <section className="business-feature" id={business.id} key={business.id} aria-labelledby={`${business.id}-heading`}>
@@ -47,7 +48,7 @@ export default function Portfolio({ onNavigate }: CorporatePageProps) {
         </section>
       ))}
     </div>
-    <section className="portfolio-approach"><div className="site-container"><div className="approach-heading"><h2>How we build<br /><em>lasting value.</em></h2><p>Our businesses operate in different sectors. The principles behind them stay consistent.</p></div><div className="principle-grid">{[['Patient capital', 'We invest with a long-term perspective, giving essential businesses the time and support to grow.'], ['Active stewardship', 'We work with our companies and investment partners to support disciplined execution and long-term performance.'], ['Essential services', 'We focus on businesses that meet real needs and contribute to economic development.']].map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div><div className="portfolio-performance"><p><strong><CountUpText end={12} suffix="%" decimals={1} /></strong> Return on equity</p><p><strong><CountUpText end={63.6} suffix="%" decimals={1} /></strong> Free float</p><a href="mailto:ir@danhassan.co?subject=Portfolio%20information%20request">Request portfolio information <ArrowUpRight size={20} /></a></div></div></section>
+    <section className="portfolio-approach"><div className="site-container"><div className="approach-heading"><h2>How we build<br /><em>lasting value.</em></h2><p>Our businesses operate in different sectors. The principles behind them stay consistent.</p></div><div className="principle-grid">{[['Patient capital', 'We invest with a long-term perspective, giving essential businesses the time and support to grow.'], ['Active stewardship', 'We work with our companies and investment partners to support disciplined execution and long-term performance.'], ['Essential services', 'We focus on businesses that meet real needs and contribute to economic development.']].map(([title, copy]) => <article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div><div className="portfolio-performance"><p><strong><CountUpText end={groupEstimates.netIncomeTrillions} prefix="₦" suffix="T" decimals={2} /></strong> FY2026 net income estimate</p><p><strong><CountUpText end={groupEstimates.employees} suffix="+" /></strong> People across the group</p><a href="mailto:ir@danhassan.co?subject=Portfolio%20information%20request">Request portfolio information <ArrowUpRight size={20} /></a></div></div></section>
     <NextChapter title="The performance behind the portfolio." copy="Explore our financial results, reporting, and governance in the investor centre." page="investors" label="Visit investor relations" onNavigate={onNavigate} />
   </div>;
 }

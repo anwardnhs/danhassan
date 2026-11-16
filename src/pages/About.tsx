@@ -1,4 +1,5 @@
 import { boardOfDirectors } from '../data/leadership';
+import { groupHighlights, estimateBasis } from '../data/financials';
 import CountUpText from '../components/CountUpText';
 import { ArrowUpRight } from 'lucide-react';
 import { NextChapter, PageLink, type CorporatePageProps } from '../components/CorporateLayout';
@@ -9,8 +10,9 @@ const history = [
   ['1967–1987', 'A trading beginning', 'Established as SB Trading Limited in Kano, moving from general merchandise into electrical equipment for public infrastructure.'],
   ['1988–2002', 'Building industrial expertise', 'Expanded into engineering and construction, developing a strong presence in Nigerian infrastructure.'],
   ['2003–2010', 'A new group structure', 'Restructured as a diversified investment holding company with a focus on sustainable growth and value creation.'],
-  ['2011–2020', 'Investing in power', 'Grew our position in the Nigerian power sector through strategic investment and project development.'],
-  ['2021–2026', 'A broader African ambition', 'Expanded into new African markets, renewable energy, and infrastructure opportunities.'],
+  ['2011–2017', 'Investing in power', 'Grew our position in the Nigerian power sector through strategic investment and project development.'],
+  ['2018–2020', 'Connecting infrastructure and trade', 'Entered shipping, logistics, and retail through an investment in RIM Holdings, broadening the portfolio beyond power, engineering, and property.'],
+  ['2021–2026', 'A broader African ambition', 'Expanded across African markets while developing the businesses and partnerships behind energy supply, trade, and everyday commerce.'],
 ];
 
 export default function About({ onNavigate }: CorporatePageProps) {
@@ -22,10 +24,10 @@ export default function About({ onNavigate }: CorporatePageProps) {
 
     <section id="our-purpose" className="group-purpose site-container">
       <h2>The essentials of progress.<br /><em>Built for the long term.</em></h2>
-      <div><p>Electricity that keeps businesses running. Infrastructure that connects communities. Places where people can live and work. Trade that brings goods to market. Our portfolio is grounded in the things a growing economy depends on.</p><p>We combine patient capital with hands-on operational expertise across power, engineering, real estate, shipping, logistics, and retail. RIM Holdings extends our portfolio into maritime trade, supply chains, and consumer markets. Our responsibility is to create lasting value for shareholders, employees, and the communities we serve.</p><PageLink page="portfolio" onNavigate={onNavigate}>Explore our businesses</PageLink></div>
+      <div><p>Electricity that keeps businesses running. Infrastructure that connects communities. Places where people can live and work. Trade that brings goods to market. Our portfolio is grounded in the things a growing economy depends on.</p><p>We combine patient capital with hands-on operational expertise across power, engineering, real estate, shipping, logistics, and retail. Our investments support both essential infrastructure and the supply networks that connect it to everyday life. Our responsibility is to create lasting value for shareholders, employees, and the communities we serve.</p><PageLink page="portfolio" onNavigate={onNavigate}>Explore our businesses</PageLink></div>
     </section>
 
-    <section id="group-figures" className="group-facts"><div className="site-container facts-row"><div><strong><CountUpText end={27.3} prefix="₦" suffix="T" decimals={1} /></strong><span>Market capitalisation</span></div><div><strong><CountUpText end={11.8} prefix="₦" suffix="T" decimals={1} /></strong><span>FY2025 revenue</span></div><div><strong><CountUpText end={25200} suffix="+" /></strong><span>People across the group</span></div><div><strong>Abuja</strong><span>Our headquarters</span></div></div></section>
+    <section id="group-figures" className="group-facts"><div className="site-container"><div className="facts-row">{groupHighlights.map(({ label, ...metric }) => <div key={label}><strong><CountUpText {...metric} /></strong><span>{label}</span></div>)}</div><p className="figure-note">{estimateBasis}</p></div></section>
 
     <section id="our-history" className="group-history site-container"><div className="history-intro"><h2>Our story keeps<br /><em>moving forward.</em></h2><p>From trading in Kano to investing across the continent, each chapter has built on the experience of the last.</p><a className="action-link" href="mailto:ir@danhassan.co?subject=Corporate%20profile%20request">Request our company profile <ArrowUpRight size={20} /></a></div><ol className="history-list">{history.map(([year, title, copy]) => <li key={year}><span>{year}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol></section>
 

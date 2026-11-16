@@ -10,7 +10,6 @@ import {
   Mail,
 } from "lucide-react";
 import { rimBusinesses, rimHistory, rimArticles } from "./content";
-import { rimInterests } from "../data/rim";
 import { rimLeader } from "../data/leadership";
 import portImage from "../images/port.jpg";
 import peopleImage from "../images/people.jpg";
@@ -610,30 +609,10 @@ function Governance() {
           </p>
         </div>
         <div>
-          <dl className="rim-ownership">
-            <div>
-              <dt>
-                Danhassan & Co.<span>Interest in RIM Holdings Limited</span>
-              </dt>
-              <dd>{(rimInterests.danhassan * 100).toFixed(0)}%</dd>
-            </div>
-            <div>
-              <dt>
-                RIM Holdings<span>Interest in RIMCO Limited</span>
-              </dt>
-              <dd>{(rimInterests.rimco * 100).toFixed(0)}%</dd>
-            </div>
-            <div>
-              <dt>
-                RIM Holdings<span>Interest in RIM Plc</span>
-              </dt>
-              <dd>{(rimInterests.rimPlc * 100).toFixed(0)}%</dd>
-            </div>
-          </dl>
+          <p>Our shareholder base brings together long-term investment experience and a shared commercial outlook. Danhassan & Co. is an investment partner in the holding company.</p>
+          <p>We participate in shipping and retail through established businesses with their own management teams. Property and investment activities complement the wider portfolio.</p>
           <p>
-            Overland Limited and RIM Capital Limited complete the investment
-            platform. Each business maintains its own operating leadership and
-            responsibilities.
+            Each company has its own operating leadership, with board oversight and reporting appropriate to its business.
           </p>
           <a className="rim-action" href="/portfolio#rim">
             Explore Danhassan & Co.
