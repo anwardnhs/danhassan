@@ -261,7 +261,7 @@
   font-weight: 500;
   line-height: 1.2;
 }
-.rim-home-facts span {
+.rim-home-facts > div > span {
   font-size: 13px;
   color: #52666d;
   margin-top: 12px;
@@ -865,7 +865,7 @@
   .rim-home-facts strong {
     font-size: 32px;
   }
-  .rim-home-facts span {
+  .rim-home-facts > div > span {
     font-size: 11px;
     line-height: 1.6;
   }
@@ -1065,7 +1065,7 @@
 }
 .rim-brand {
   width: auto;
-  min-width: 178px;
+  min-width: 145px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1094,8 +1094,8 @@
 .rim-nav {
   flex: 1;
   justify-content: space-between;
-  gap: 23px;
-  font-size: 13px;
+  gap: 20px;
+  font-size: 16px;
 }
 .rim-nav-contact {
   background: var(--rim-deep);
@@ -1554,12 +1554,12 @@
     padding-left: 22px;
   }
   .rim-brand {
-    min-width: 155px;
+    min-width: 130px;
     padding-right: 20px;
   }
   .rim-nav {
-    gap: 16px;
-    font-size: 12px;
+    gap: 12px;
+    font-size: 15px;
   }
   .rim-nav-contact {
     padding-inline: 15px !important;
@@ -1714,7 +1714,7 @@
   .rim-home-facts strong {
     font-size: 42px;
   }
-  .rim-home-facts span {
+  .rim-home-facts > div > span {
     font-size: 11px;
   }
   .rim-business-grid {
@@ -1874,7 +1874,27 @@
     padding: 26px 20px;
   }
 }
-.rim-site .rim-action { color: #fff; }
-.rim-site .rim-action-light, .rim-site .rim-action-light:hover { color: var(--rim-ink); }
+/* Keep CTA text and icons legible in every surrounding section. */
+.rim-site a.rim-action,
+.rim-site a.rim-action:visited,
+.rim-site a.rim-action:hover,
+.rim-site a.rim-action:focus-visible {
+  color: #fff;
+}
+.rim-site a.rim-action-light,
+.rim-site a.rim-action-light:visited,
+.rim-site a.rim-action-light:hover,
+.rim-site a.rim-action-light:focus-visible {
+  color: var(--rim-ink);
+}
+.rim-site a.rim-action > svg {
+  color: inherit;
+}
+.rim-home-facts .count-up,
+.rim-home-facts .count-up > [aria-hidden="true"] {
+  font: inherit;
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+}
 .rim-site [id] { scroll-margin-top: 130px; }
 @media (max-width: 760px) { .rim-site [id] { scroll-margin-top: 112px; } }

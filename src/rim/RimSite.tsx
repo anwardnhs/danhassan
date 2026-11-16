@@ -503,7 +503,7 @@ function Leadership() {
         <div>
           <img
             src={rimLeader.image}
-            alt="Fatai Imrani, Chair and Chief Executive Officer"
+            alt="Fatai Imrani, Chairman and Chief Executive Officer"
           />
         </div>
         <article>
@@ -514,7 +514,7 @@ function Leadership() {
             its people, and help it grow.
           </p>
           <h3>Fatai Imrani</h3>
-          <span>Chair & Chief Executive Officer</span>
+          <span>Chairman & Chief Executive Officer</span>
         </article>
       </section>
       <section className="rim-wrap rim-section" id="board">
@@ -1000,9 +1000,7 @@ export default function RimSite() {
         <div className="rim-wrap">
           <Link className="rim-brand">
             <img src="/rim-mark.png" alt="" />
-            <span>
-              RIM<span>HOLDINGS</span>
-            </span>
+            <span>RIM</span>
           </Link>
           <nav
             aria-label="RIM main navigation"

@@ -119,7 +119,7 @@ export const rimHistory = [
   [
     "2026",
     "One perspective. Many possibilities.",
-    "RIM Holdings continues to develop its investments across shipping, logistics, retail, property, and capital, with Fatai Imrani as Chair & CEO.",
+    "RIM Holdings continues to develop its investments across shipping, logistics, retail, property, and capital, with Fatai Imrani as Chairman & CEO.",
   ],
 ];
 
@@ -171,7 +171,7 @@ export const rimArticles = [
 export const rimBoard = [
   {
     name: "Fatai Imrani",
-    role: "Chair & Chief Executive Officer",
+    role: "Chairman & Chief Executive Officer",
     bio: "Leads investment strategy and the development of the holding company, with responsibility for execution and long-term performance.",
   },
   {
@@ -219,7 +219,7 @@ export const rimBoard = [
 export const rimExecutives = [
   {
     name: "Fatai Imrani",
-    role: "Chair & Chief Executive Officer",
+    role: "Chairman & Chief Executive Officer",
     bio: "Sets the commercial direction of the holding company and leads the executive team.",
   },
   {

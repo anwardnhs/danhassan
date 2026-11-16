@@ -20,11 +20,11 @@ import fataiImage from '../images/fatai-imrani.jpeg';
 
 export const rimLeader = {
   name: 'Fatai Imrani',
-  role: 'Chair & CEO, RIM Holdings Limited',
+  role: 'Chairman & CEO, RIM Holdings Limited',
   category: 'Segment CEO',
   image: fataiImage,
   portraitClass: 'portrait-rim-chair',
-  bio: 'Fatai Imrani is Chair and Chief Executive Officer of RIM Holdings Limited, overseeing its shipping, logistics, and retail businesses. He also serves as a Non-Executive Director of Danhassan & Co., bringing an operating perspective on maritime trade, supply chains, and consumer markets to the board.',
+  bio: 'Fatai Imrani is Chairman and Chief Executive Officer of RIM Holdings Limited, overseeing its shipping, logistics, and retail businesses. He also serves as a Non-Executive Director of Danhassan & Co., bringing an operating perspective on maritime trade, supply chains, and consumer markets to the board.',
 };
 
 
